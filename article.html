@@ -64,7 +64,11 @@
   .article-hero h1{font-size:clamp(44px,7vw,88px);line-height:0.95;margin-bottom:var(--space-3);}
   .byline{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;font-size:14px;color:#cfd9e6;}
   .byline b{color:var(--color-accent);}
-  .cover{width:100%;height:380px;display:block;background:var(--color-primary);margin-top:var(--space-5);}
+  .cover-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2);margin-top:var(--space-5);}
+  .cover-img{width:100%;height:340px;object-fit:cover;display:block;}
+  .source-link{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:14px;color:var(--color-gold-dark);border-top:1px solid var(--color-border);padding-top:var(--space-3);margin-top:var(--space-5);}
+  .source-link a{color:var(--color-gold-dark);text-decoration:underline;text-underline-offset:3px;}
+  .source-link a:hover{color:var(--color-accent);}
 
   /* ---------- ARTICLE BODY ---------- */
   .article-body{max-width:760px;margin:0 auto;padding:var(--space-6) var(--space-3);}
@@ -136,11 +140,10 @@
     <div class="eyebrow">Essay · Going Global</div>
     <h1 class="display">Why Macau Should Be The Free Port</h1>
     <div class="byline">By <b>Sean Own</b> · Aug 28, 2026 · 5 min read</div>
-    <svg class="cover" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Abstract cover">
-      <rect width="1200" height="380" fill="#003262"/>
-      <circle cx="600" cy="190" r="120" fill="#FDB515"/>
-      <path d="M520 230 Q600 290 680 230" stroke="#003262" stroke-width="10" fill="none" stroke-linecap="round"/>
-    </svg>
+    <div class="cover-grid">
+      <img class="cover-img" src="img/asia-electronics-forum-1.jpg" alt="Wang Ning, President of the China Electronic Chamber of Commerce, addressing the 16th Asian Electronics Forum">
+      <img class="cover-img" src="img/asia-electronics-forum-2.jpg" alt="Delegates in the audience at the 16th Asian Electronics Forum in Macau">
+    </div>
   </div>
 </header>
 
@@ -151,7 +154,7 @@
   <p>People sleep on Macau. They see casinos and nothing else. I see a free port with two computing centers, a bridge to the Greater Bay Area, and a cultural fluency with the West that the mainland can't fake. That is leverage. That is the kind of underpriced attention I have spent my whole career hunting for.</p>
 
   <h2 class="display">The Dual-Computing Play</h2>
-  <p>With twin computing centers in Macau and Taiwan, we open a compliant, efficient AI pathway for Chinese enterprises to reach the world. Not a workaround. A real, defensible architecture. I introduced the Longyou dual-computing model at the 16th Asian Electronics Forum, and the room got it immediately — Macau Chief Executive Sam Hou Fai included.</p>
+  <p>With twin computing centers in Macau and Taiwan, we open a compliant, efficient AI pathway for Chinese enterprises to reach the world. Not a workaround. A real, defensible architecture. I introduced the Longyou dual-computing model at the 16th Asian Electronics Forum, and the room got it immediately — Wang Ning, President of the China Electronic Chamber of Commerce, included.</p>
 
   <div class="pull display">"Legacy is greater than currency. Build the port, and the ships will come."</div>
 
@@ -161,6 +164,8 @@
   <p>The West does not just want Chinese goods. It wants Chinese culture — and it has no idea how to reach it. That is why I built the Macao Silk Culture &amp; Art Center and the Macao Culture IP Copyright Center. We take heritage, protect it, and turn it into living, commercial IP. Heritage that sits in a vault creates no legacy. Heritage that travels does.</p>
 
   <p>So here is my thesis, and I will say it the way I say everything: <span class="hl">wealth grows from the right way, and profit comes through what is just.</span> Macau is the free port. The question is not whether — it is who moves first.</p>
+
+  <p class="source-link">Source: <a href="https://www.macaodaily.com/html/2025-12/07/content_1875259.htm" target="_blank" rel="noopener">Macau Daily — 16th Asian Electronics Forum coverage (Dec 7, 2025)</a></p>
 </article>
 
 <!-- ============ RELATED ============ -->
