@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speaking &amp; Keynotes — Sean Own</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-primary:#003262;
+    --color-primary-hover:#001B3A;
+    --color-accent:#FDB515;
+    --color-accent-hover:#FC9313;
+    --color-blue-dark:#010133;
+    --color-blue-medium:#004AAE;
+    --color-gold-dark:#C4820E;
+    --color-founders:#3B7EA1;
+    --color-white:#FFFFFF;
+    --color-surface-alt:#F4F4F4;
+    --color-gray-mid:#9A9A9A;
+    --color-gray-deep:#2B2B2B;
+    --color-border:#E0E0E0;
+    --color-ink:#0A0A0A;
+    --shadow-color-sm:rgba(1,27,58,0.08);
+    --shadow-color-md:rgba(1,27,58,0.12);
+    --shadow-color-lg:rgba(1,27,58,0.18);
+    --font-display:"Bebas Neue","Arial Narrow",Impact,sans-serif;
+    --font-body:"Inter","Helvetica Neue",Arial,sans-serif;
+    --font-alt:"Open Sans","Helvetica Neue",Arial,sans-serif;
+    --font-condensed:"Oswald","Arial Narrow",sans-serif;
+    --space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--space-5:48px;--space-6:64px;--space-7:96px;--space-8:128px;
+    --container:1200px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);color:var(--color-primary);background:var(--color-white);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .container{max-width:var(--container);margin:0 auto;padding:0 var(--space-3);}
+  .display{font-family:var(--font-display);text-transform:uppercase;line-height:0.92;letter-spacing:0.01em;font-weight:400;}
+  a{text-decoration:none;}
+
+  /* ---------- NAV ---------- */
+  .nav{background:var(--color-primary);color:var(--color-white);position:sticky;top:0;z-index:100;}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo{font-family:var(--font-display);font-size:30px;color:var(--color-white);letter-spacing:0.04em;}
+  .logo span{color:var(--color-accent);}
+  .nav-links{display:flex;align-items:center;gap:var(--space-3);}
+  .nav-links a{color:var(--color-white);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;font-size:13px;transition:color .15s;}
+  .nav-links a:hover{color:var(--color-accent);}
+  .nav-links a.active{color:var(--color-accent);}
+  .btn{display:inline-block;padding:14px 28px;font-family:var(--font-body);font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;border:2px solid transparent;cursor:pointer;border-radius:0;transition:background-color .15s,color .15s,border-color .15s;}
+  .btn-accent{background:var(--color-accent);color:var(--color-primary);border-color:var(--color-accent);}
+  .btn-accent:hover{background:var(--color-accent-hover);border-color:var(--color-accent-hover);color:var(--color-blue-dark);}
+  .btn-primary{background:var(--color-primary);color:var(--color-white);border-color:var(--color-primary);}
+  .btn-primary:hover{background:var(--color-primary-hover);border-color:var(--color-primary-hover);}
+  .btn-ghost{background:none;border:none;color:var(--color-white);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;padding:14px 12px;}
+  .btn-ghost:hover{color:var(--color-accent);}
+
+  /* ---------- HERO ---------- */
+  .hero{background:var(--color-primary);color:var(--color-white);padding:var(--space-8) 0;}
+  .eyebrow{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-accent);font-size:14px;margin-bottom:var(--space-2);}
+  .hero h1{font-size:clamp(56px,9vw,120px);margin-bottom:var(--space-3);}
+  .hero .gold-line{color:var(--color-accent);font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;font-size:clamp(16px,2vw,22px);max-width:680px;}
+
+  /* ---------- SECTION ---------- */
+  .section{padding:var(--space-7) 0;}
+  .section.alt{background:var(--color-surface-alt);}
+  .section-head{margin-bottom:var(--space-5);}
+  .section-head .kicker{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-accent);font-size:13px;}
+  .section-head h2{font-family:var(--font-display);font-size:clamp(40px,6vw,72px);text-transform:uppercase;line-height:0.95;margin-top:var(--space-1);}
+
+  /* ---------- TOPIC CARDS ---------- */
+  .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);}
+  .card{background:var(--color-white);border:1px solid var(--color-border);padding:var(--space-4);box-shadow:0 1px 3px var(--shadow-color-sm);transition:box-shadow .15s;}
+  .card:hover{box-shadow:0 4px 12px var(--shadow-color-md);}
+  .card .num{font-family:var(--font-display);font-size:40px;color:var(--color-accent);line-height:1;margin-bottom:var(--space-2);}
+  .card h3{font-family:var(--font-display);font-size:32px;text-transform:uppercase;line-height:0.95;margin-bottom:var(--space-2);color:var(--color-primary);}
+  .card p{color:var(--color-gray-deep);font-size:15px;}
+
+  /* ---------- FORUMS LIST ---------- */
+  .forum-list{display:grid;gap:0;}
+  .forum-item{display:grid;grid-template-columns:120px 1fr;gap:var(--space-4);padding:var(--space-3) 0;border-top:1px solid var(--color-border);}
+  .forum-item:first-child{border-top:none;}
+  .forum-year{font-family:var(--font-display);font-size:38px;color:var(--color-accent);line-height:1;}
+  .forum-item h3{font-family:var(--font-display);font-size:28px;text-transform:uppercase;line-height:0.98;margin-bottom:var(--space-1);color:var(--color-primary);}
+  .forum-item p{color:var(--color-gray-deep);font-size:15px;}
+
+  /* ---------- INVITE FORM ---------- */
+  .invite-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);align-items:start;}
+  .invite-form{display:grid;gap:var(--space-3);}
+  .field label{display:block;font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:13px;margin-bottom:var(--space-1);}
+  .field input,.field select,.field textarea{width:100%;padding:14px 16px;font-size:15px;font-family:var(--font-body);border:2px solid var(--color-border);border-radius:0;background:var(--color-white);color:var(--color-primary);}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--color-accent);}
+  .field textarea{resize:vertical;min-height:120px;}
+  .invite-aside{background:var(--color-primary);color:var(--color-white);padding:var(--space-4);}
+  .invite-aside h3{font-family:var(--font-display);font-size:34px;text-transform:uppercase;line-height:0.95;margin-bottom:var(--space-2);color:var(--color-accent);}
+  .invite-aside p{color:#cfd9e6;font-size:15px;margin-bottom:var(--space-2);}
+
+  /* ---------- CTA + FOOTER ---------- */
+  .cta{background:var(--color-accent);color:var(--color-primary);padding:var(--space-8) 0;text-align:center;}
+  .cta blockquote{font-family:var(--font-display);font-size:clamp(40px,7vw,96px);text-transform:uppercase;line-height:0.92;max-width:900px;margin:0 auto var(--space-5);}
+  .cta .btn-primary{background:var(--color-primary);color:var(--color-white);border-color:var(--color-primary);}
+  .cta .btn-primary:hover{background:var(--color-blue-dark);border-color:var(--color-blue-dark);}
+  .footer{background:var(--color-primary);color:var(--color-white);padding:var(--space-7) 0 var(--space-4);}
+  .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1.4fr;gap:var(--space-5);}
+  .footer h4{font-family:var(--font-condensed);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:15px;color:var(--color-accent);margin-bottom:var(--space-3);}
+  .footer p,.footer li{color:#cfd9e6;font-size:14px;line-height:1.9;list-style:none;}
+  .footer a{color:#cfd9e6;}
+  .footer a:hover{color:var(--color-accent);}
+  .copyright{border-top:1px solid rgba(255,255,255,0.15);margin-top:var(--space-6);padding-top:var(--space-3);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#9fb3c8;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:900px){
+    .cards-3{grid-template-columns:repeat(2,1fr);}
+    .invite-grid{grid-template-columns:1fr;gap:var(--space-4);}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){
+    .nav-links a:not(.btn){display:none;}
+    .cards-3{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    .forum-item{grid-template-columns:1fr;gap:var(--space-1);}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="logo">SEAN<span>OWN</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="news.html">News</a>
+      <a href="portfolio.html">Work</a>
+      <a href="speaking.html" class="active">Speaking</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html#subscribe" class="btn btn-accent">Subscribe</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Speaking &amp; Keynotes</div>
+    <h1 class="display">Book Me</h1>
+    <p class="gold-line">I've spent my career turning underpriced attention into actionable strategy. Bring me to your stage and I'll give your room the playbook — not the theory.</p>
+  </div>
+</header>
+
+<!-- ============ TOPICS ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Keynote Topics</div>
+      <h2 class="display">Three Talks</h2>
+    </div>
+    <div class="cards-3">
+      <div class="card">
+        <div class="num display">01</div>
+        <h3 class="display">Digital Going-Global</h3>
+        <p>How Chinese enterprises actually ship to the world: compliant compute, cross-strait associations, and the Macau free-port thesis. No theory — the real architecture I introduced at the 16th Asian Electronics Forum.</p>
+      </div>
+      <div class="card">
+        <div class="num display">02</div>
+        <h3 class="display">AI Literacy For The Next Gen</h3>
+        <p>The "teach-the-taught" model. I don't fear AI replacing people — I teach people to use it, the way I built my whole career on practical, self-aware execution.</p>
+      </div>
+      <div class="card">
+        <div class="num display">03</div>
+        <h3 class="display">Culture IP &amp; Commerce</h3>
+        <p>Heritage is not a museum piece. I show brands how to protect Chinese-culture IP and turn it into living, commercial craft — the work of the Silk Culture &amp; Art Center.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECENT FORUMS ============ -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Recent Stages</div>
+      <h2 class="display">Forums &amp; Appearances</h2>
+    </div>
+    <div class="forum-list">
+      <div class="forum-item">
+        <div class="forum-year display">2026</div>
+        <div><h3 class="display">Bay Youth AI Connects The World</h3><p>Conference Chairman. Five strategic partnerships signed across media, music, culture, and education.</p></div>
+      </div>
+      <div class="forum-item">
+        <div class="forum-year display">2026</div>
+        <div><h3 class="display">ECI Macau AI Forum</h3><p>Keynote on a "teach-the-taught" AI literacy strategy with dual ECI + Education Bureau certification.</p></div>
+      </div>
+      <div class="forum-item">
+        <div class="forum-year display">2025</div>
+        <div><h3 class="display">16th Asian Electronics Forum</h3><p>Speaker. Introduced the Longyou dual-computing architecture; Macau Chief Executive Sam Hou Fai attended.</p></div>
+      </div>
+      <div class="forum-item">
+        <div class="forum-year display">2025</div>
+        <div><h3 class="display">Longyou AI Going-Global Platform Launch</h3><p>Host. The distribution layer that turns underpriced attention into real cross-border pipelines.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INVITE FORM ============ -->
+<section class="section" id="invite">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Invite Me</div>
+      <h2 class="display">Speaking Request</h2>
+    </div>
+    <div class="invite-grid">
+      <form class="invite-form" onsubmit="return false;">
+        <div class="field"><label for="name">Name</label><input id="name" type="text" placeholder="Your name"></div>
+        <div class="field"><label for="org">Organization</label><input id="org" type="text" placeholder="Company / Event"></div>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="you@org.com"></div>
+        <div class="field"><label for="topic">Topic</label>
+          <select id="topic">
+            <option>Digital Going-Global</option>
+            <option>AI Literacy For The Next Gen</option>
+            <option>Culture IP &amp; Commerce</option>
+            <option>Other / Custom</option>
+          </select>
+        </div>
+        <div class="field"><label for="msg">Message</label><textarea id="msg" placeholder="Tell me about your stage, audience, and date."></textarea></div>
+        <button type="submit" class="btn btn-accent">Send Request</button>
+      </form>
+      <aside class="invite-aside">
+        <h3 class="display">What You Get</h3>
+        <p>A practical, no-fluff keynote built for operators — not a TED-talk abstraction. I bring the cross-strait playbook: going global, AI literacy, and culture IP, straight from the forums I actually run.</p>
+        <p>Response time: I read everything. Expect a reply within a week.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="container">
+    <blockquote class="display">"Legacy Is Greater Than Currency."</blockquote>
+    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>Sean Own (Weng Chen-Hsuan) is a Macau-based Taiwanese entrepreneur, author, and creator — building China's digital services going-global and a global stage for Chinese culture.</p>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">X / Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Go</h4>
+        <ul>
+          <li><a href="portfolio.html">Work &amp; Ventures</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News &amp; Writing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Sean Own · Built Static · All Rights Reserved</div>
+  </div>
+</footer>
+
+</body>
+</html>

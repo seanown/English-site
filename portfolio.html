@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work &amp; Ventures — Sean Own</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-primary:#003262;
+    --color-primary-hover:#001B3A;
+    --color-accent:#FDB515;
+    --color-accent-hover:#FC9313;
+    --color-blue-dark:#010133;
+    --color-blue-medium:#004AAE;
+    --color-gold-dark:#C4820E;
+    --color-founders:#3B7EA1;
+    --color-white:#FFFFFF;
+    --color-surface-alt:#F4F4F4;
+    --color-gray-mid:#9A9A9A;
+    --color-gray-deep:#2B2B2B;
+    --color-border:#E0E0E0;
+    --color-ink:#0A0A0A;
+    --shadow-color-sm:rgba(1,27,58,0.08);
+    --shadow-color-md:rgba(1,27,58,0.12);
+    --shadow-color-lg:rgba(1,27,58,0.18);
+    --font-display:"Bebas Neue","Arial Narrow",Impact,sans-serif;
+    --font-body:"Inter","Helvetica Neue",Arial,sans-serif;
+    --font-alt:"Open Sans","Helvetica Neue",Arial,sans-serif;
+    --font-condensed:"Oswald","Arial Narrow",sans-serif;
+    --space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--space-5:48px;--space-6:64px;--space-7:96px;--space-8:128px;
+    --container:1200px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);color:var(--color-primary);background:var(--color-white);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .container{max-width:var(--container);margin:0 auto;padding:0 var(--space-3);}
+  .display{font-family:var(--font-display);text-transform:uppercase;line-height:0.92;letter-spacing:0.01em;font-weight:400;}
+  a{text-decoration:none;}
+
+  /* ---------- NAV ---------- */
+  .nav{background:var(--color-primary);color:var(--color-white);position:sticky;top:0;z-index:100;}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo{font-family:var(--font-display);font-size:30px;color:var(--color-white);letter-spacing:0.04em;}
+  .logo span{color:var(--color-accent);}
+  .nav-links{display:flex;align-items:center;gap:var(--space-3);}
+  .nav-links a{color:var(--color-white);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;font-size:13px;transition:color .15s;}
+  .nav-links a:hover{color:var(--color-accent);}
+  .nav-links a.active{color:var(--color-accent);}
+  .btn{display:inline-block;padding:14px 28px;font-family:var(--font-body);font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;border:2px solid transparent;cursor:pointer;border-radius:0;transition:background-color .15s,color .15s,border-color .15s;}
+  .btn-accent{background:var(--color-accent);color:var(--color-primary);border-color:var(--color-accent);}
+  .btn-accent:hover{background:var(--color-accent-hover);border-color:var(--color-accent-hover);color:var(--color-blue-dark);}
+  .btn-primary{background:var(--color-primary);color:var(--color-white);border-color:var(--color-primary);}
+  .btn-primary:hover{background:var(--color-primary-hover);border-color:var(--color-primary-hover);}
+  .btn-ghost{background:none;border:none;color:var(--color-white);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;padding:14px 12px;}
+  .btn-ghost:hover{color:var(--color-accent);}
+
+  /* ---------- HERO ---------- */
+  .hero{background:var(--color-primary);color:var(--color-white);padding:var(--space-8) 0;}
+  .eyebrow{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-accent);font-size:14px;margin-bottom:var(--space-2);}
+  .hero h1{font-size:clamp(56px,9vw,120px);margin-bottom:var(--space-3);}
+  .hero .gold-line{color:var(--color-accent);font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;font-size:clamp(16px,2vw,22px);max-width:680px;}
+
+  /* ---------- SECTION ---------- */
+  .section{padding:var(--space-7) 0;}
+  .section.alt{background:var(--color-surface-alt);}
+  .section-head{margin-bottom:var(--space-5);}
+  .section-head .kicker{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-accent);font-size:13px;}
+  .section-head h2{font-family:var(--font-display);font-size:clamp(40px,6vw,72px);text-transform:uppercase;line-height:0.95;margin-top:var(--space-1);}
+
+  /* ---------- VENTURE CARDS ---------- */
+  .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);}
+  .card{background:var(--color-white);border:1px solid var(--color-border);padding:var(--space-4);box-shadow:0 1px 3px var(--shadow-color-sm);transition:box-shadow .15s;display:flex;flex-direction:column;}
+  .card:hover{box-shadow:0 4px 12px var(--shadow-color-md);}
+  .card .icon{width:64px;height:64px;margin-bottom:var(--space-3);}
+  .card h3{font-family:var(--font-display);font-size:32px;text-transform:uppercase;line-height:0.95;margin-bottom:var(--space-2);color:var(--color-primary);}
+  .card .role{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;font-size:13px;color:var(--color-gold-dark);margin-bottom:var(--space-2);}
+  .card p{color:var(--color-gray-deep);font-size:15px;margin-bottom:var(--space-3);}
+  .badge{display:inline-block;align-self:flex-start;padding:4px 10px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;border-radius:0;background:var(--color-accent);color:var(--color-primary);}
+  .badge.soon{background:var(--color-surface-alt);color:var(--color-primary);border:1px solid var(--color-border);}
+
+  /* ---------- CTA + FOOTER ---------- */
+  .cta{background:var(--color-accent);color:var(--color-primary);padding:var(--space-8) 0;text-align:center;}
+  .cta blockquote{font-family:var(--font-display);font-size:clamp(40px,7vw,96px);text-transform:uppercase;line-height:0.92;max-width:900px;margin:0 auto var(--space-5);}
+  .cta .btn-primary{background:var(--color-primary);color:var(--color-white);border-color:var(--color-primary);}
+  .cta .btn-primary:hover{background:var(--color-blue-dark);border-color:var(--color-blue-dark);}
+  .footer{background:var(--color-primary);color:var(--color-white);padding:var(--space-7) 0 var(--space-4);}
+  .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1.4fr;gap:var(--space-5);}
+  .footer h4{font-family:var(--font-condensed);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:15px;color:var(--color-accent);margin-bottom:var(--space-3);}
+  .footer p,.footer li{color:#cfd9e6;font-size:14px;line-height:1.9;list-style:none;}
+  .footer a{color:#cfd9e6;}
+  .footer a:hover{color:var(--color-accent);}
+  .copyright{border-top:1px solid rgba(255,255,255,0.15);margin-top:var(--space-6);padding-top:var(--space-3);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#9fb3c8;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:900px){
+    .cards-3{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){
+    .nav-links a:not(.btn){display:none;}
+    .cards-3{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="logo">SEAN<span>OWN</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="news.html">News</a>
+      <a href="portfolio.html" class="active">Work</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html#subscribe" class="btn btn-accent">Subscribe</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Work &amp; Ventures</div>
+    <h1 class="display">What I Build</h1>
+    <p class="gold-line">Companies, associations, and IP — the operating stack I use to take Chinese culture and Chinese enterprises global.</p>
+  </div>
+</header>
+
+<!-- ============ VENTURES ============ -->
+<section class="section">
+  <div class="container">
+    <div class="cards-3">
+      <div class="card">
+        <svg class="icon" viewBox="0 0 64 64" fill="none"><rect x="10" y="14" width="44" height="36" fill="#003262"/><path d="M10 26 H54" stroke="#FDB515" stroke-width="4"/><circle cx="32" cy="42" r="8" fill="#FDB515"/></svg>
+        <div class="role">Founder &amp; Managing Director</div>
+        <h3 class="display">Macau Longyou Group</h3>
+        <p>The holding company. From dual-computing architecture to cross-strait deal-making, this is the engine room of everything I touch.</p>
+        <span class="badge">Active</span>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="22" fill="#003262"/><path d="M22 32 H42 M32 22 V42" stroke="#FDB515" stroke-width="4"/><circle cx="32" cy="32" r="6" fill="#FDB515"/></svg>
+        <div class="role">Chairman</div>
+        <h3 class="display">GBA E-Commerce Association</h3>
+        <p>The connective tissue of the Greater Bay Area. I turn associations into real cross-border projects — handshake by handshake.</p>
+        <span class="badge">Active</span>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 64 64" fill="none"><path d="M8 40 L24 24 L40 40 L56 22" stroke="#003262" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 22 H56 V34" stroke="#FDB515" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="role">Co-Founder</div>
+        <h3 class="display">Going-Global Platform</h3>
+        <p>The distribution layer. We turn underpriced attention into real export pipelines for Chinese brands and creators.</p>
+        <span class="badge">Active</span>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 64 64" fill="none"><path d="M32 8 L40 24 L58 26 L44 38 L49 56 L32 46 L15 56 L20 38 L6 26 L24 24 Z" fill="#003262"/><circle cx="32" cy="34" r="7" fill="#FDB515"/></svg>
+        <div class="role">Curator</div>
+        <h3 class="display">Silk Culture &amp; Art Center</h3>
+        <p>A hub that integrates cross-strait resources to take Chinese-culture IP global — heritage, made commercial and alive.</p>
+        <span class="badge">Active</span>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 64 64" fill="none"><rect x="14" y="10" width="36" height="44" fill="#003262"/><path d="M22 22 H42 M22 30 H42 M22 38 H36" stroke="#FDB515" stroke-width="4" stroke-linecap="round"/><path d="M44 50 l8 8" stroke="#FDB515" stroke-width="4" stroke-linecap="round"/></svg>
+        <div class="role">Founder</div>
+        <h3 class="display">Culture IP Copyright Center</h3>
+        <p>The infrastructure that lets Chinese creators own, protect, and scale what they make. Meaningful IP, built to last.</p>
+        <span class="badge soon">Preparing</span>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="22" fill="none" stroke="#003262" stroke-width="4"/><path d="M32 10 V54 M10 32 H54" stroke="#FDB515" stroke-width="3"/><circle cx="32" cy="32" r="7" fill="#FDB515"/></svg>
+        <div class="role">Lead Researcher</div>
+        <h3 class="display">GBA AI Strategy Research</h3>
+        <p>The brain trust. We map the strategy that positions the Greater Bay Area as the free port for digital services going global.</p>
+        <span class="badge soon">Ongoing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="container">
+    <blockquote class="display">"Legacy Is Greater Than Currency."</blockquote>
+    <a href="contact.html" class="btn btn-primary">Work With Me</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>Sean Own (Weng Chen-Hsuan) is a Macau-based Taiwanese entrepreneur, author, and creator — building China's digital services going-global and a global stage for Chinese culture.</p>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">X / Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Go</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="speaking.html">Speaking</a></li>
+          <li><a href="news.html">News &amp; Writing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Sean Own · Built Static · All Rights Reserved</div>
+  </div>
+</footer>
+
+</body>
+</html>
