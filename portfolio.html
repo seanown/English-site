@@ -74,7 +74,8 @@
   .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);}
   .card{background:var(--color-white);border:1px solid var(--color-border);padding:var(--space-4);box-shadow:0 1px 3px var(--shadow-color-sm);transition:box-shadow .15s;display:flex;flex-direction:column;}
   .card:hover{box-shadow:0 4px 12px var(--shadow-color-md);}
-  .card .icon{width:96px;height:96px;margin-bottom:var(--space-3);object-fit:contain;background:var(--color-white);}
+  .card .icon-wrap{width:96px;height:96px;border-radius:50%;overflow:hidden;background:var(--color-white);border:2px solid var(--color-accent);margin-bottom:var(--space-3);display:flex;align-items:center;justify-content:center;}
+.card .icon-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
   .card h3{font-family:var(--font-display);font-size:32px;text-transform:uppercase;line-height:0.95;margin-bottom:var(--space-2);color:var(--color-primary);}
   .card .role{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;font-size:13px;color:var(--color-gold-dark);margin-bottom:var(--space-2);}
   .card p{color:var(--color-gray-deep);font-size:15px;margin-bottom:var(--space-3);}
@@ -138,42 +139,42 @@
   <div class="container">
     <div class="cards-3">
       <div class="card">
-        <img class="icon" src="img/macau-longyou-group.jpg" alt="Macau Longyou Group logo">
+        <div class="icon-wrap"><img src="img/macau-longyou-group.jpg" alt="Macau Longyou Group logo"></div>
         <div class="role">Founder &amp; Managing Director</div>
         <h3 class="display">Macau Longyou Group</h3>
         <p>The holding company. From dual-computing architecture to cross-strait deal-making, this is the engine room of everything I touch.</p>
         <span class="badge">Active</span>
       </div>
       <div class="card">
-        <img class="icon" src="img/gba-ecommerce-association.jpg" alt="GBA E-Commerce Association logo">
+        <div class="icon-wrap"><img src="img/gba-ecommerce-association.jpg" alt="GBA E-Commerce Association logo"></div>
         <div class="role">Chairman</div>
         <h3 class="display">GBA E-Commerce Association</h3>
         <p>The connective tissue of the Greater Bay Area. I turn associations into real cross-border projects — handshake by handshake.</p>
         <span class="badge">Active</span>
       </div>
       <div class="card">
-        <img class="icon" src="img/longyou-platform.jpg" alt="Going-Global Platform logo">
+        <div class="icon-wrap"><img src="img/longyou-platform.jpg" alt="Going-Global Platform logo"></div>
         <div class="role">Founder</div>
         <h3 class="display">Global Media Bridges</h3>
         <p>Rooted in Macau's East-West gateway advantage, we run a global media hub linking Greater China with mainstream press, freelance correspondents and independent agencies across Europe, America and worldwide markets.</p>
         <span class="badge">Active</span>
       </div>
       <div class="card">
-        <img class="icon" src="img/silk-culture-art-center.jpg" alt="Macao Silk Culture &amp; Art Center logo">
+        <div class="icon-wrap"><img src="img/silk-culture-art-center.jpg" alt="Macao Silk Culture &amp; Art Center logo"></div>
         <div class="role">Curator</div>
         <h3 class="display">Macao Silk Culture &amp; Art Center</h3>
         <p>A hub that integrates cross-strait resources to take Chinese-culture IP global — heritage, made commercial and alive.</p>
         <span class="badge">Active</span>
       </div>
       <div class="card">
-        <img class="icon" src="img/culture-ip-copyright.jpg" alt="Macao Culture IP Copyright Center logo">
+        <div class="icon-wrap"><img src="img/culture-ip-copyright.jpg" alt="Macao Culture IP Copyright Center logo"></div>
         <div class="role">Founder</div>
         <h3 class="display">Macao Culture IP Copyright Center</h3>
         <p>The infrastructure that lets Chinese creators own, protect, and scale what they make. Meaningful IP, built to last.</p>
         <span class="badge soon">Preparing</span>
       </div>
       <div class="card">
-        <img class="icon" src="img/gba-ai-bluebook.jpg" alt="GBA AI Strategy Research logo">
+        <div class="icon-wrap"><img src="img/gba-ai-bluebook.jpg" alt="GBA AI Strategy Research logo"></div>
         <div class="role">Lead Researcher</div>
         <h3 class="display">GBA AI Strategy Research</h3>
         <p>The brain trust. We map the strategy that positions the Greater Bay Area as the free port for digital services going global.</p>
