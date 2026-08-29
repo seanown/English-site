@@ -67,7 +67,7 @@
   .section{padding:var(--space-7) 0;}
   .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:var(--space-6);align-items:start;}
   .info-card{background:var(--color-primary);color:var(--color-white);padding:var(--space-4);}
-  .avatar{width:120px;height:120px;margin:0 auto var(--space-3);display:block;}
+  .avatar{width:140px;height:140px;border-radius:50%;border:4px solid var(--color-accent);box-shadow:0 8px 24px rgba(0,0,0,0.35);margin:0 auto var(--space-3);display:block;object-fit:cover;}
   .info-card h3{font-family:var(--font-display);font-size:40px;text-transform:uppercase;line-height:0.95;color:var(--color-accent);text-align:center;margin-bottom:var(--space-3);}
   .info-row{display:flex;justify-content:space-between;gap:var(--space-3);padding:var(--space-2) 0;border-top:1px solid rgba(255,255,255,0.15);}
   .info-row .k{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:12px;color:#9fb3c8;}
@@ -137,25 +137,11 @@
   <div class="container">
     <div class="contact-grid">
       <aside class="info-card">
-        <svg class="avatar" viewBox="0 0 200 200" role="img" aria-label="Cartoon avatar of Sean Own">
-          <circle cx="100" cy="100" r="96" fill="#FDB515"/>
-          <circle cx="100" cy="100" r="88" fill="#003262"/>
-          <path d="M36 184 Q100 132 164 184 Z" fill="#0A0A0A"/>
-          <path d="M93 150 L100 184 L107 150 Z" fill="#FDB515"/>
-          <rect x="88" y="118" width="24" height="28" fill="#F2C9A0"/>
-          <circle cx="100" cy="98" r="34" fill="#F2C9A0"/>
-          <path d="M66 96 Q70 56 100 56 Q130 56 134 96 Q118 76 100 76 Q82 76 66 96 Z" fill="#0A0A0A"/>
-          <circle cx="88" cy="98" r="4.5" fill="#0A0A0A"/>
-          <circle cx="112" cy="98" r="4.5" fill="#0A0A0A"/>
-          <path d="M84 114 Q100 130 116 114" stroke="#0A0A0A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-        </svg>
+        <img class="avatar" src="avatar.png" alt="Sean Own" />
         <h3 class="display">Sean Own</h3>
         <div class="info-row"><span class="k">Email</span><span class="v"><a href="mailto:hello@seanown.org">hello@seanown.org</a></span></div>
         <div class="info-row"><span class="k">Based In</span><span class="v">Macau · GBA</span></div>
-        <div class="info-row"><span class="k">Instagram</span><span class="v"><a href="#">@seanown</a></span></div>
-        <div class="info-row"><span class="k">YouTube</span><span class="v"><a href="#">Sean Own</a></span></div>
-        <div class="info-row"><span class="k">X / Twitter</span><span class="v"><a href="#">@seanown</a></span></div>
-        <div class="info-row"><span class="k">LinkedIn</span><span class="v"><a href="#">Sean Own</a></span></div>
+        <div class="info-row"><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/sean-own-36b3108/">Sean Own</a></span></div>
       </aside>
       <form class="contact-form" onsubmit="return false;">
         <div class="field"><label for="name">Name</label><input id="name" type="text" placeholder="Your name"></div>
@@ -182,15 +168,12 @@
     <div class="footer-grid">
       <div>
         <h4>About</h4>
-        <p>Sean Own (Weng Chen-Hsuan) is a Macau-based Taiwanese entrepreneur, author, and creator — building China's digital services going-global and a global stage for Chinese culture.</p>
+        <p>Sean Own (OWN ZHEN XUAN) is a Macau-based entrepreneur, investor, author, and curator — building China's digital services going-global and a global stage for Chinese culture. Let's build what outlasts beyond profit.</p>
       </div>
       <div>
         <h4>Social</h4>
         <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">YouTube</a></li>
-          <li><a href="#">X / Twitter</a></li>
-          <li><a href="#">LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/in/sean-own-36b3108/">LinkedIn</a></li>
         </ul>
       </div>
       <div>
