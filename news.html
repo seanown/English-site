@@ -73,7 +73,7 @@
   .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);}
   .news-card{background:var(--color-white);border:1px solid var(--color-border);box-shadow:0 1px 3px var(--shadow-color-sm);transition:box-shadow .15s;display:flex;flex-direction:column;}
   .news-card:hover{box-shadow:0 4px 12px var(--shadow-color-md);}
-  .news-cover{width:100%;height:180px;display:block;background:var(--color-primary);}
+  .news-cover{width:100%;height:180px;display:block;background:var(--color-primary);object-fit:cover;object-position:center 38%;}
   .news-body{padding:var(--space-3);flex:1;display:flex;flex-direction:column;}
   .badge{display:inline-block;padding:4px 10px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;border-radius:0;background:var(--color-accent);color:var(--color-primary);margin-bottom:var(--space-2);align-self:flex-start;}
   .news-body h3{font-family:var(--font-display);font-size:26px;text-transform:uppercase;line-height:0.98;margin-bottom:var(--space-2);color:var(--color-primary);}
@@ -146,11 +146,11 @@
     </div>
     <div class="news-grid">
       <article class="news-card">
-        <svg class="news-cover" viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice"><rect width="400" height="180" fill="#003262"/><circle cx="200" cy="90" r="60" fill="#FDB515"/><path d="M170 110 Q200 140 230 110" stroke="#003262" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+        <img class="news-cover" src="img/aef16-cover.jpg" alt="16th Asian Electronics Forum — Wang Ning on stage at the Global Summit on Intelligent Technology">
         <div class="news-body">
           <span class="badge">Forum</span>
           <h3 class="display">16th Asian Electronics Forum</h3>
-          <p>Introduced the Longyou dual-computing architecture; Macau Chief Executive Sam Hou Fai attended. The port conversation went mainstream.</p>
+          <p>Introduced the Longyou dual-computing architecture; Wang Ning, President of the China Electronic Chamber of Commerce, attended. The port conversation went mainstream.</p>
           <a href="article.html" class="read">Read This →</a>
         </div>
       </article>
