@@ -69,12 +69,16 @@
   .source-link{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:14px;color:var(--color-gold-dark);border-top:1px solid var(--color-border);padding-top:var(--space-3);margin-top:var(--space-5);}
   .source-link a{color:var(--color-gold-dark);text-decoration:underline;text-underline-offset:3px;}
   .source-link a:hover{color:var(--color-accent);}
-  .companion-paper{margin-top:var(--space-5);border:1px solid var(--color-border);border-left:6px solid var(--color-accent);padding:var(--space-4);background:var(--color-surface-alt);}
+  /* ---------- COMPANION PAPER ---------- */
+  .companion-paper{margin-top:var(--space-6);border:1px solid var(--color-border);border-left:6px solid var(--color-accent);padding:0;background:var(--color-surface-alt);overflow:hidden;}
+  .companion-paper .cp-cover{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;}
+  .companion-paper .cp-body{padding:var(--space-4);}
   .companion-paper .cp-kicker{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-gold-dark);font-size:12px;margin-bottom:var(--space-1);}
   .companion-paper h3{font-family:var(--font-display);font-size:32px;text-transform:uppercase;line-height:0.98;margin-bottom:var(--space-2);color:var(--color-primary);}
   .companion-paper p{color:var(--color-gray-deep);font-size:15px;margin-bottom:var(--space-3);max-width:640px;}
   .companion-paper .cp-actions{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;}
   .companion-paper .cp-actions .cp-meta{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:12px;color:var(--color-gray-mid);}
+  @media (max-width:700px){.companion-paper h3{font-size:24px;}}
 
   /* ---------- ARTICLE BODY ---------- */
   .article-body{max-width:760px;margin:0 auto;padding:var(--space-6) var(--space-3);}
@@ -174,12 +178,15 @@
   <p class="source-link">Source: <a href="https://www.macaodaily.com/html/2025-12/07/content_1875259.htm" target="_blank" rel="noopener">Macau Daily — 16th Asian Electronics Forum coverage (Dec 7, 2025)</a></p>
 
   <aside class="companion-paper">
-    <div class="cp-kicker">Companion Paper</div>
-    <h3 class="display">Longyou AI: The Core Differentiation in Digital Services Going-Global</h3>
-    <p>The full white paper behind this essay. Read it if you want the architecture, the case studies, and the operating playbook in detail — including the dual-computing model, the GBA policy stack, and the cross-border go-to-market sequence we are running.</p>
-    <div class="cp-actions">
-      <a href="docs/longyou-ai-going-global-differentiation.pdf" download class="btn btn-accent">Download White Paper ↓</a>
-      <span class="cp-meta">PDF · 13.2 MB · 2026</span>
+    <img class="cp-cover" src="img/longyou-ai-cover.jpg" alt="Longyou AI: The Core Differentiation in Digital Services Going-Global">
+    <div class="cp-body">
+      <div class="cp-kicker">Companion Paper</div>
+      <h3 class="display">Longyou AI: The Core Differentiation in Digital Services Going-Global</h3>
+      <p>The full white paper behind this essay. Read it if you want the architecture, the case studies, and the operating playbook in detail — including the dual-computing model, the GBA policy stack, and the cross-border go-to-market sequence we are running.</p>
+      <div class="cp-actions">
+        <a href="docs/longyou-ai-going-global-differentiation.pdf" download class="btn btn-accent">Download White Paper ↓</a>
+        <span class="cp-meta">PDF · 13.2 MB · 2026</span>
+      </div>
     </div>
   </aside>
 </article>
