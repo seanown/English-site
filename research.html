@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Work &amp; Ventures — Sean Own</title>
+<title>Research &amp; Reports — Sean Own</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
@@ -54,14 +54,12 @@
   .btn-accent:hover{background:var(--color-accent-hover);border-color:var(--color-accent-hover);color:var(--color-blue-dark);}
   .btn-primary{background:var(--color-primary);color:var(--color-white);border-color:var(--color-primary);}
   .btn-primary:hover{background:var(--color-primary-hover);border-color:var(--color-primary-hover);}
-  .btn-ghost{background:none;border:none;color:var(--color-white);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;padding:14px 12px;}
-  .btn-ghost:hover{color:var(--color-accent);}
 
   /* ---------- HERO ---------- */
   .hero{background:var(--color-primary);color:var(--color-white);padding:var(--space-8) 0;}
   .eyebrow{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-accent);font-size:14px;margin-bottom:var(--space-2);}
   .hero h1{font-size:clamp(56px,9vw,120px);margin-bottom:var(--space-3);}
-  .hero .gold-line{color:var(--color-accent);font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;font-size:clamp(16px,2vw,22px);max-width:680px;}
+  .hero .gold-line{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;font-size:clamp(16px,2vw,22px);max-width:720px;}
 
   /* ---------- SECTION ---------- */
   .section{padding:var(--space-7) 0;}
@@ -70,26 +68,21 @@
   .section-head .kicker{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-accent);font-size:13px;}
   .section-head h2{font-family:var(--font-display);font-size:clamp(40px,6vw,72px);text-transform:uppercase;line-height:0.95;margin-top:var(--space-1);}
 
-  /* ---------- VENTURE CARDS ---------- */
-  .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);}
-  .card{background:var(--color-white);border:1px solid var(--color-border);padding:var(--space-4);box-shadow:0 1px 3px var(--shadow-color-sm);transition:box-shadow .15s;display:flex;flex-direction:column;}
-  .card:hover{box-shadow:0 4px 12px var(--shadow-color-md);}
-  .card .icon-wrap{width:96px;height:96px;border-radius:50%;overflow:hidden;background:var(--color-primary);border:2px solid var(--color-accent);margin-bottom:var(--space-3);display:flex;align-items:center;justify-content:center;}
-.card .icon-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
-  .card h3{font-family:var(--font-display);font-size:32px;text-transform:uppercase;line-height:0.95;margin-bottom:var(--space-2);color:var(--color-primary);}
-  .card .role{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;font-size:13px;color:var(--color-gold-dark);margin-bottom:var(--space-2);}
-  .card p{color:var(--color-gray-deep);font-size:15px;margin-bottom:var(--space-3);}
-  .badge{display:inline-block;align-self:flex-start;padding:4px 10px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;border-radius:0;background:var(--color-accent);color:var(--color-primary);}
-  .badge.soon{background:var(--color-surface-alt);color:var(--color-primary);border:1px solid var(--color-border);}
-
-  /* ---------- DOWNLOADABLE CARD ---------- */
-  .card-download{display:flex;flex-direction:column;text-decoration:none;color:inherit;position:relative;border-top:4px solid transparent;margin-top:-4px;}
-  .card-download:hover{box-shadow:0 8px 24px var(--shadow-color-lg);border-top-color:var(--color-accent);}
-  .card-download .dl-row{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:var(--space-3);font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:13px;color:var(--color-primary);}
-  .card-download .dl-row .arrow{display:inline-block;transition:transform .15s;}
-  .card-download:hover .dl-row .arrow{transform:translateY(2px);}
-  .card-download .dl-row strong{color:var(--color-primary);font-weight:700;}
-  .card-download .dl-row .meta{color:var(--color-gray-mid);font-size:11px;letter-spacing:0.06em;font-weight:500;text-transform:uppercase;}
+  /* ---------- REPORT CARDS ---------- */
+  .report-list{display:flex;flex-direction:column;gap:var(--space-4);}
+  .report-card{display:flex;gap:var(--space-4);background:var(--color-white);border:1px solid var(--color-border);padding:var(--space-4);box-shadow:0 1px 3px var(--shadow-color-sm);transition:box-shadow .15s;align-items:flex-start;}
+  .report-card:hover{box-shadow:0 6px 18px var(--shadow-color-md);}
+  .report-icon{width:128px;height:128px;border-radius:50%;overflow:hidden;border:3px solid var(--color-accent);flex-shrink:0;background:var(--color-primary);}
+  .report-icon img{width:100%;height:100%;object-fit:cover;display:block;}
+  .report-body{flex:1;min-width:0;}
+  .report-meta{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.1em;font-size:12px;color:var(--color-gold-dark);margin-bottom:var(--space-1);}
+  .report-body h3{font-family:var(--font-display);font-size:38px;text-transform:uppercase;line-height:0.95;margin-bottom:var(--space-2);color:var(--color-primary);}
+  .report-body p{color:var(--color-gray-deep);font-size:15px;margin-bottom:var(--space-2);max-width:680px;}
+  .report-points{list-style:none;margin:0 0 var(--space-3);padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px var(--space-3);max-width:680px;}
+  .report-points li{position:relative;padding-left:18px;font-size:14px;color:var(--color-gray-deep);line-height:1.5;}
+  .report-points li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;background:var(--color-accent);border-radius:50%;}
+  .report-actions{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;}
+  .report-actions .file-size{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:12px;color:var(--color-gray-mid);}
 
   /* ---------- CTA + FOOTER ---------- */
   .cta{background:var(--color-accent);color:var(--color-primary);padding:var(--space-8) 0;text-align:center;}
@@ -105,13 +98,17 @@
   .copyright{border-top:1px solid rgba(255,255,255,0.15);margin-top:var(--space-6);padding-top:var(--space-3);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#9fb3c8;}
 
   /* ---------- RESPONSIVE ---------- */
+  @media(max-width:720px){
+    .report-card{flex-direction:column;align-items:center;text-align:center;}
+    .report-points{grid-template-columns:1fr;}
+    .report-actions{justify-content:center;}
+    .report-body p,.report-points{max-width:100%;}
+  }
   @media(max-width:900px){
-    .cards-3{grid-template-columns:repeat(2,1fr);}
     .footer-grid{grid-template-columns:1fr 1fr;}
   }
   @media(max-width:560px){
     .nav-links a:not(.btn){display:none;}
-    .cards-3{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr;}
   }
 </style>
@@ -126,7 +123,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="news.html">News</a>
-      <a href="portfolio.html" class="active">Work</a>
+      <a href="portfolio.html">Work</a>
       <a href="speaking.html">Speaking</a>
       <a href="contact.html">Contact</a>
       <a href="index.html#subscribe" class="btn btn-accent">Subscribe</a>
@@ -137,62 +134,41 @@
 <!-- ============ HERO ============ -->
 <header class="hero">
   <div class="container">
-    <div class="eyebrow">Work &amp; Ventures</div>
-    <h1 class="display">What I Build</h1>
-    <p class="gold-line">Companies, associations, and IP — the operating stack I use to take Chinese culture and Chinese enterprises global.</p>
+    <div class="eyebrow">Research &amp; Reports</div>
+    <h1 class="display">GBA AI Strategy</h1>
+    <p class="gold-line">The brain trust. We map the strategy that positions the Greater Bay Area as the free port for digital services going global.</p>
   </div>
 </header>
 
-<!-- ============ VENTURES ============ -->
-<section class="section">
+<!-- ============ REPORTS ============ -->
+<section class="section alt">
   <div class="container">
-    <div class="cards-3">
-      <div class="card">
-        <div class="icon-wrap"><img src="img/macau-longyou-group.png" alt="Macau Longyou Group logo"></div>
-        <div class="role">Founder &amp; Managing Director</div>
-        <h3 class="display">Macau Longyou Group</h3>
-        <p>The holding company. From dual-computing architecture to cross-strait deal-making, this is the engine room of everything I touch.</p>
-        <span class="badge">Active</span>
-      </div>
-      <div class="card">
-        <div class="icon-wrap"><img src="img/gba-ecommerce-association.png" alt="GBA E-Commerce Association logo"></div>
-        <div class="role">Chairman</div>
-        <h3 class="display">GBA E-Commerce Association</h3>
-        <p>The connective tissue of the Greater Bay Area. I turn associations into real cross-border projects — handshake by handshake.</p>
-        <span class="badge">Active</span>
-      </div>
-      <div class="card">
-        <div class="icon-wrap"><img src="img/longyou-platform.png" alt="Global Media Bridges logo"></div>
-        <div class="role">Founder</div>
-        <h3 class="display">Global Media Bridges</h3>
-        <p>Rooted in Macau's East-West gateway advantage, we run a global media hub linking Greater China with mainstream press, freelance correspondents and independent agencies across Europe, America and worldwide markets.</p>
-        <span class="badge">Active</span>
-      </div>
-      <div class="card">
-        <div class="icon-wrap"><img src="img/silk-culture-art-center.png" alt="Macao Silk Culture &amp; Art Center logo"></div>
-        <div class="role">Curator</div>
-        <h3 class="display">Macao Silk Culture &amp; Art Center</h3>
-        <p>A hub that integrates cross-strait resources to take Chinese-culture IP global — heritage, made commercial and alive.</p>
-        <span class="badge">Active</span>
-      </div>
-      <div class="card">
-        <div class="icon-wrap"><img src="img/culture-ip-copyright.png" alt="Macao Culture IP Copyright Center logo"></div>
-        <div class="role">Founder</div>
-        <h3 class="display">Macao Culture IP Copyright Center</h3>
-        <p>The infrastructure that lets Chinese creators own, protect, and scale what they make. Meaningful IP, built to last.</p>
-        <span class="badge soon">Preparing</span>
-      </div>
-      <a class="card card-download" href="research.html">
-        <div class="icon-wrap"><img src="img/gba-ai-bluebook.png" alt="GBA AI Strategy Research logo"></div>
-        <div class="role">Lead Researcher</div>
-        <h3 class="display">GBA AI Strategy Research</h3>
-        <p>The brain trust. We map the strategy that positions the Greater Bay Area as the free port for digital services going global.</p>
-        <span class="badge soon">Ongoing</span>
-        <div class="dl-row">
-          <span class="arrow">→</span>
-          <span><strong>View Research &amp; Reports</strong> <span class="meta">Read the study</span></span>
+    <div class="section-head">
+      <div class="kicker">Latest Publication</div>
+      <h2 class="display">Reports &amp; Papers</h2>
+    </div>
+
+    <div class="report-list">
+      <article class="report-card">
+        <div class="report-icon"><img src="img/gba-ai-bluebook.png" alt="GBA AI Strategy Research seal"></div>
+        <div class="report-body">
+          <div class="report-meta">PDF · 410 KB · 2026</div>
+          <h3 class="display">Macau 3-5 Plan Industrial Report</h3>
+          <p>A field study on how Macau's 14th Five-Year Plan positions the city as the strategic hinge between China's digital-services industry and the global market — with a concrete roadmap for the Greater Bay Area to become the free port for AI, culture IP, and cross-border e-commerce going global.</p>
+          <ul class="report-points">
+            <li>Macau's industrial positioning under the 3-5 Plan</li>
+            <li>Greater Bay Area as a digital-services free port</li>
+            <li>Policy levers for AI going-global</li>
+            <li>Culture IP &amp; cross-border e-commerce bridges</li>
+            <li>Macau–Hengqin integration playbook</li>
+            <li>Action checklist for operators &amp; investors</li>
+          </ul>
+          <div class="report-actions">
+            <a href="docs/macau-35-plan-report.pdf" download class="btn btn-accent">Download Full Report ↓</a>
+            <span class="file-size">Macau-3-5-Plan-Industrial-Report.pdf</span>
+          </div>
         </div>
-      </a>
+      </article>
     </div>
   </div>
 </section>
