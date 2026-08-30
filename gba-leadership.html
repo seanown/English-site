@@ -1,343 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GBA E-Commerce Association — Leadership — Sean Own</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="description" content="Leadership of the Guangdong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association — President, Deputy Director, Supervisors, Department Heads, Regional Chairs, and Honorary Chairs.">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Sean Own">
-<meta property="og:title" content="GBA E-Commerce Association — Leadership">
-<meta property="og:description" content="Leadership of the Guangdong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association.">
-<meta property="og:image" content="https://ownsean.com/img/leadership/weng-zhenxuan.jpg">
-<meta property="og:url" content="https://ownsean.com/gba-leadership.html">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="GBA E-Commerce Association — Leadership">
-<meta name="twitter:description" content="Leadership of the Guangdong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association.">
-<meta name="twitter:image" content="https://ownsean.com/img/leadership/weng-zhenxuan.jpg">
-
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GBA E-Commerce Association — Leadership</title>
+<meta name="description" content="The eighteen leaders connecting Macau, Hong Kong, and the Greater Bay Area through commerce, culture, and AI." />
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --color-primary:#003262;
-    --color-primary-hover:#001B3A;
-    --color-accent:#FDB515;
-    --color-accent-hover:#FC9313;
-    --color-blue-dark:#010133;
-    --color-blue-medium:#004AAE;
-    --color-gold-dark:#C4820E;
-    --color-white:#FFFFFF;
-    --color-surface-alt:#F4F4F4;
-    --color-gray-mid:#9A9A9A;
-    --color-gray-deep:#3A3A3A;
-    --color-border:#E0E0E0;
-    --color-ink:#0A0A0A;
-    --shadow-color-sm:rgba(1,27,58,0.08);
-    --shadow-color-md:rgba(1,27,58,0.12);
-    --shadow-color-lg:rgba(1,27,58,0.18);
-    --font-display:"Bebas Neue","Arial Narrow",Impact,sans-serif;
-    --font-body:"Inter","Helvetica Neue",Arial,sans-serif;
-    --font-alt:"Open Sans","Helvetica Neue",Arial,sans-serif;
-    --font-condensed:"Oswald","Arial Narrow",sans-serif;
-    --space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--space-5:48px;--space-6:64px;--space-7:96px;--space-8:128px;
-    --container:1200px;
+    --navy:#003262;
+    --gold:#FDB515;
+    --ink:#0a0a0a;
+    --paper:#fafaf7;
+    --rule:#1a1a1a;
+    --muted:#5b5b5b;
   }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{font-family:var(--font-body);color:var(--color-primary);background:var(--color-white);line-height:1.6;-webkit-font-smoothing:antialiased;}
-  .container{max-width:var(--container);margin:0 auto;padding:0 var(--space-3);}
-  .display{font-family:var(--font-display);text-transform:uppercase;line-height:0.92;letter-spacing:0.01em;font-weight:400;}
-  a{text-decoration:none;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%;height:auto}
 
-  /* ---------- NAV ---------- */
-  .nav{background:var(--color-primary);color:var(--color-white);position:sticky;top:0;z-index:100;}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
-  .logo{font-family:var(--font-display);font-size:30px;color:var(--color-white);letter-spacing:0.04em;}
-  .logo span{color:var(--color-accent);}
-  .nav-links{display:flex;align-items:center;gap:var(--space-3);}
-  .nav-links a{color:var(--color-white);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;font-size:13px;transition:color .15s;}
-  .nav-links a:hover{color:var(--color-accent);}
-  .nav-links a.active{color:var(--color-accent);}
-  .nav-toggle{display:none;}
-  .nav-burger{display:none;}
-  .btn{display:inline-block;padding:14px 28px;font-family:var(--font-body);font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;border:2px solid transparent;cursor:pointer;border-radius:0;transition:background-color .15s,color .15s,border-color .15s;}
-  .btn-accent{background:var(--color-accent);color:var(--color-primary);border-color:var(--color-accent);}
-  .btn-accent:hover{background:var(--color-accent-hover);border-color:var(--color-accent-hover);color:var(--color-blue-dark);}
+  /* top bar (matches the rest of the site) */
+  .top{background:var(--navy);color:#fff;border-bottom:4px solid var(--gold)}
+  .top-inner{max-width:1180px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .brand{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:.12em;color:#fff}
+  .brand b{color:var(--gold)}
+  nav.main{display:flex;align-items:center;gap:28px;font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+  nav.main a{padding:6px 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+  nav.main a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+  nav.main a.cta{background:var(--gold);color:var(--navy);padding:12px 22px;letter-spacing:.16em}
+  nav.main a.cta:hover{background:#fff;color:var(--navy);border-bottom-color:transparent}
 
-  /* ---------- HERO (compact) ---------- */
-  .hero{background:var(--color-primary);color:var(--color-white);padding:var(--space-6) 0 var(--space-5);}
-  .back-link{display:inline-block;color:var(--color-accent);font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.12em;font-size:12px;margin-bottom:var(--space-3);transition:color .15s;}
-  .back-link:hover{color:var(--color-white);}
-  .eyebrow{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-accent);font-size:14px;margin-bottom:var(--space-2);}
-  .hero h1{font-size:clamp(40px,6.5vw,88px);margin-bottom:var(--space-2);}
-  .hero .gold-line{color:var(--color-accent);font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;font-size:clamp(14px,1.6vw,18px);max-width:680px;}
+  /* hero band */
+  .hero{background:var(--navy);color:#fff;border-bottom:4px solid var(--gold);padding:64px 32px 72px}
+  .hero-inner{max-width:1180px;margin:0 auto}
+  .hero h1{font-family:'Bebas Neue',sans-serif;font-size:64px;letter-spacing:.06em;line-height:1;text-transform:uppercase;color:#fff}
+  .hero p{margin-top:14px;font-family:'Oswald',sans-serif;font-weight:500;font-size:18px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
 
-  /* ---------- LEADERSHIP CAROUSEL ---------- */
-  .section{padding:var(--space-6) 0 var(--space-7);}
+  /* content */
+  main{max-width:1180px;margin:0 auto;padding:56px 32px 96px}
+  .lede{font-size:18px;color:var(--ink);max-width:760px;margin-bottom:40px}
 
-  .leadership-controls{display:flex;align-items:center;justify-content:space-between;gap:var(--space-2);margin-bottom:var(--space-4);flex-wrap:wrap;}
-  .leadership-jumps{display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap;}
-  .jump-btn,.arrow-btn{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:13px;color:var(--color-primary);background:transparent;border:1.5px solid var(--color-border);padding:10px 18px;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s;line-height:1;}
-  .jump-btn:hover,.arrow-btn:hover{border-color:var(--color-primary);}
-  .jump-btn.active{background:var(--color-primary);color:var(--color-white);border-color:var(--color-primary);}
-  .arrow-btns{display:flex;gap:var(--space-1);}
-  .arrow-btn{font-size:18px;padding:8px 14px;}
+  /* the grid — fully static, no JS, no controls */
+  .people{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 28px}
+  @media (max-width:880px){.people{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.people{grid-template-columns:1fr}}
 
-  .leadership-viewport{overflow:hidden;position:relative;}
-  .leadership-track{display:flex;gap:var(--space-3);overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 4px 24px;}
-  .leadership-track::-webkit-scrollbar{display:none;}
-
-  .track-section{flex:0 0 100%;display:flex;align-items:center;justify-content:flex-start;padding-left:4px;scroll-snap-align:start;}
-  .track-section .section-tag{font-family:var(--font-condensed);font-weight:700;text-transform:uppercase;letter-spacing:0.24em;font-size:13px;color:var(--color-accent);border-left:4px solid var(--color-accent);padding:6px 14px;background:var(--color-primary);color:var(--color-white);}
-
-  .person-card{flex:0 0 calc((100% - var(--space-3) * 2) / 3);scroll-snap-align:start;background:var(--color-white);border:1px solid var(--color-border);padding:var(--space-3);display:flex;flex-direction:column;align-items:center;text-align:center;transition:box-shadow .15s,transform .15s;}
-  .person-card:hover{box-shadow:0 6px 20px var(--shadow-color-md);}
-  .person-card .photo{width:100%;aspect-ratio:1/1;overflow:hidden;background:var(--color-surface-alt);border:2px solid var(--color-accent);margin-bottom:var(--space-3);}
-  .person-card .photo img{width:100%;height:100%;object-fit:cover;display:block;}
-  .person-card .name{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;font-size:18px;color:var(--color-primary);}
-
-  /* ---------- FOOTER ---------- */
-  .footer{background:var(--color-primary);color:var(--color-white);padding:var(--space-7) 0 var(--space-4);}
-  .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1.4fr;gap:var(--space-5);}
-  .footer h4{font-family:var(--font-condensed);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:15px;color:var(--color-accent);margin-bottom:var(--space-3);}
-  .footer p,.footer li{color:#cfd9e6;font-size:14px;line-height:1.9;list-style:none;}
-  .footer a{color:#cfd9e6;}
-  .footer a:hover{color:var(--color-accent);}
-  .copyright{border-top:1px solid rgba(255,255,255,0.15);margin-top:var(--space-6);padding-top:var(--space-3);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#9fb3c8;}
-
-  /* ---------- RESPONSIVE ---------- */
-  @media(max-width:900px){
-    .footer-grid{grid-template-columns:1fr 1fr;}
-    .person-card{flex-basis:calc((100% - var(--space-3)) / 2);}
-    .nav-burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:30px;height:30px;cursor:pointer;margin-left:auto;}
-    .nav-burger span{display:block;height:3px;width:100%;background:var(--color-white);transition:background .15s;}
-    .nav-burger:hover span{background:var(--color-accent);}
-  }
-  @media(max-width:560px){
-    .person-card{flex-basis:100%;}
-    .footer-grid{grid-template-columns:1fr;}
-    .leadership-controls{flex-direction:column;align-items:flex-start;}
-  }
+  .person{background:#fff;border:1px solid #ececec}
+  .person .frame{aspect-ratio:1/1;overflow:hidden;background:#eaeaea}
+  .person .frame img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .35s ease}
+  .person:hover .frame img{transform:scale(1.03)}
+  .person .name{display:block;padding:14px 16px 16px;font-family:'Oswald',sans-serif;font-weight:600;font-size:16px;letter-spacing:.10em;text-transform:uppercase;color:var(--ink);text-align:center;border-top:2px solid var(--gold)}
 </style>
 </head>
 <body>
 
-<!-- ============ NAV ============ -->
-<nav class="nav">
-  <div class="container nav-inner">
-    <a href="index.html" class="logo" style="text-decoration:none;">SEAN<span>OWN</span></a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
-    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
-    <div class="nav-links">
+<div class="top">
+  <div class="top-inner">
+    <a href="index.html" class="brand">SEAN<b>OWN</b></a>
+    <nav class="main">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="news.html">News</a>
-      <a href="portfolio.html" class="active">Work</a>
+      <a href="portfolio.html">Work</a>
       <a href="speaking.html">Speaking</a>
       <a href="contact.html">Contact</a>
-      <a href="index.html#subscribe" class="btn btn-accent">Subscribe</a>
-    </div>
+      <a href="contact.html" class="cta">Subscribe</a>
+    </nav>
   </div>
-</nav>
+</div>
 
-<!-- ============ HERO ============ -->
-<header class="hero">
-  <div class="container">
-    <a href="portfolio.html" class="back-link">← Back to Work &amp; Ventures</a>
-    <div class="eyebrow">Work &amp; Ventures · Portfolio</div>
-    <h1 class="display">GBA E-Commerce Association</h1>
-    <p class="gold-line">The people behind the Greater Bay Area's connective tissue.</p>
-  </div>
-</header>
-
-<!-- ============ LEADERSHIP CAROUSEL ============ -->
-<section class="section">
-  <div class="container">
-
-    <div class="leadership-controls">
-      <div class="leadership-jumps">
-        <button class="jump-btn" data-target="honorary">← Honorary</button>
-        <button class="jump-btn active" data-target="council">Council</button>
-        <button class="jump-btn" data-target="departments">Departments →</button>
-      </div>
-      <div class="arrow-btns">
-        <button class="arrow-btn" id="prevBtn" aria-label="Previous">‹</button>
-        <button class="arrow-btn" id="nextBtn" aria-label="Next">›</button>
-      </div>
-    </div>
-
-    <div class="leadership-viewport">
-      <div class="leadership-track" id="leadershipTrack">
-
-        <div class="track-section" data-section="honorary">
-          <div class="section-tag">Honorary Presidents &amp; Chairs</div>
-        </div>
-
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/cai-chunshi.jpg" alt="Cai Chunshi"></div>
-          <div class="name">Cai Chunshi</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/han-lian.jpg" alt="Han Lian"></div>
-          <div class="name">Han Lian</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/zeng-zengwei.jpg" alt="Zeng Zengwei"></div>
-          <div class="name">Zeng Zengwei</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/zhang-zongzhen.jpg" alt="Zhang Zongzhen"></div>
-          <div class="name">Zhang Zongzhen</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/chen-zhiling.jpg" alt="Chen Zhiling"></div>
-          <div class="name">Chen Zhiling</div>
-        </div>
-
-        <div class="track-section" data-section="council">
-          <div class="section-tag">Council · President, Deputy Director &amp; Supervisor</div>
-        </div>
-
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/shi-wenjun.jpg" alt="Simon Si"></div>
-          <div class="name">Simon Si</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/weng-zhenxuan.jpg" alt="Sean Own"></div>
-          <div class="name">Sean Own</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/shao-hanbin.jpg" alt="Shao Hanbin"></div>
-          <div class="name">Shao Hanbin</div>
-        </div>
-
-        <div class="track-section" data-section="departments">
-          <div class="section-tag">Departments &amp; Regional Heads</div>
-        </div>
-
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/wu-peihua.jpg" alt="Wu Peihua"></div>
-          <div class="name">Wu Peihua</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/jian-lizhe.jpg" alt="Jian Lizhe"></div>
-          <div class="name">Jian Lizhe</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/lin-xinze.jpg" alt="Lin Xinze"></div>
-          <div class="name">Lin Xinze</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/sun-zongxiao.jpg" alt="Bovi Sun"></div>
-          <div class="name">Bovi Sun</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/wen-linhui.jpg" alt="Wen Linhui"></div>
-          <div class="name">Wen Linhui</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/wen-zhongxiong.jpg" alt="Wen Zhongxiong"></div>
-          <div class="name">Wen Zhongxiong</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/zhong-yongyang.jpg" alt="Zhong Yongyang"></div>
-          <div class="name">Zhong Yongyang</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/shen-wenlong.jpg" alt="Shen Wenlong"></div>
-          <div class="name">Shen Wenlong</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/mai-jiabao.jpg" alt="Mai Jiabao"></div>
-          <div class="name">Mai Jiabao</div>
-        </div>
-        <div class="person-card">
-          <div class="photo"><img src="img/leadership/qiu-zongbo.jpg" alt="Qiu Zongbo"></div>
-          <div class="name">Qiu Zongbo</div>
-        </div>
-
-      </div>
-    </div>
-
+<section class="hero">
+  <div class="hero-inner">
+    <h1>GBA E-Commerce Association</h1>
+    <p>The people behind the Greater Bay Area's connective tissue.</p>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h4>About</h4>
-        <p>Sean Own (OWN ZHEN XUAN) is a Macau-based entrepreneur, investor, author, and curator — building China's digital services going-global and a global stage for Chinese culture. Let's build what outlasts beyond profit.</p>
-      </div>
-      <div>
-        <h4>Social</h4>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/sean-own-36b3108/">LinkedIn</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Go</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="speaking.html">Speaking</a></li>
-          <li><a href="news.html">News &amp; Writing</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="copyright">© 2026 Sean Own · Built Static · All Rights Reserved</div>
-  </div>
-</footer>
+<main>
+  <p class="lede">
+    Eighteen leaders connecting Macau, Hong Kong, and the Greater Bay Area through commerce, culture, and AI.
+  </p>
 
-<script>
-(function(){
-  var track = document.getElementById('leadershipTrack');
-  if(!track) return;
-  var jumps = document.querySelectorAll('.jump-btn');
-  var prev = document.getElementById('prevBtn');
-  var nxt  = document.getElementById('nextBtn');
+  <section class="people" aria-label="Association leadership">
 
-  function cardStep(){
-    var card = track.querySelector('.person-card');
-    if(!card) return track.clientWidth;
-    return card.getBoundingClientRect().width + 24;
-  }
+    <figure class="person"><div class="frame"><img src="img/leadership/cai-chunshi.jpg" alt="Cai Chunshi" loading="lazy"></div><figcaption class="name">Cai Chunshi</figcaption></figure>
+    <figure class="person"><div class="frame"><img src="img/leadership/han-lian.jpg" alt="Han Lian" loading="lazy"></div><figcaption class="name">Han Lian</figcaption></figure>
+    <figure class="person"><div class="frame"><img src="img/leadership/zeng-zengwei.jpg" alt="Zeng Zengwei" loading="lazy"></div><figcaption class="name">Zeng Zengwei</figcaption></figure>
 
-  function scrollByCards(n){
-    track.scrollBy({left: cardStep() * n, behavior:'smooth'});
-  }
+    <figure class="person"><div class="frame"><img src="img/leadership/zhang-zongzhen.jpg" alt="Zhang Zongzhen" loading="lazy"></div><figcaption class="name">Zhang Zongzhen</figcaption></figure>
+    <figure class="person"><div class="frame"><img src="img/leadership/chen-zhiling.jpg" alt="Chen Zhiling" loading="lazy"></div><figcaption class="name">Chen Zhiling</figcaption></figure>
+    <figure class="person"><div class="frame"><img src="img/leadership/shi-wenjun.jpg" alt="Simon Si" loading="lazy"></div><figcaption class="name">Simon Si</figcaption></figure>
 
-  function sectionStart(name){
-    var el = track.querySelector('.track-section[data-section="'+name+'"]');
-    if(!el) return 0;
-    return el.offsetLeft;
-  }
+    <figure class="person"><div class="frame"><img src="img/leadership/weng-zhenxuan.jpg" alt="Sean Own" loading="lazy"></div><figcaption class="name">Sean Own</figcaption></figure>
+    <figure class="person"><div class="frame"><img src="img/leadership/shao-hanbin.jpg" alt="Shao Hanbin" loading="lazy"></div><figcaption class="name">Shao Hanbin</figcaption></figure>
+    <figure class="person"><div class="frame"><img src="img/leadership/wu-peihua.jpg" alt="Wu Peihua" loading="lazy"></div><figcaption class="name">Wu Peihua</figcaption></figure>
 
-  function jumpTo(name){
-    track.scrollTo({left: sectionStart(name), behavior:'smooth'});
-  }
+    <figure class="person"><div class="frame"><img src="img/leadership/jian-lizhe.jpg" alt="Jian Lizhe" loading="lazy"></div><figcaption class="name">Jian Lizhe</figcaption></figure>
+    <figure class="person"><div class="frame"><img src="img/leadership/lin-xinze.jpg" alt="Lin Xinze" loading="lazy"></div><figcaption class="name">Lin Xinze</figcaption></figure>
+    <figure class="person"><div class="frame"><img src="img/leadership/sun-zongxiao.jpg" alt="Bovi Sun" loading="lazy"></div><figcaption class="name">Bovi Sun</figcaption></figure>
 
-  jumps.forEach(function(b){
-    b.addEventListener('click', function(){
-      jumps.forEach(function(x){x.classList.remove('active');});
-      b.classList.add('active');
-      jumpTo(b.getAttribute('data-target'));
-    });
-  });
+    <figure class="person"><div class="frame"><img src="img/leadership/wen-linhui.jpg" alt="Wen Linhui" loading="lazy"></div><figcaption class="name">Wen Linhui</figcaption></figure>
+    <figure class="person"><div class="frame"><img src="img/leadership/wen-zhongxiong.jpg" alt="Wen Zhongxiong" loading="lazy"></div><figcaption class="name">Wen Zhongxiong</figcaption></figure>
+    <figure class="person"><div class="frame"><img src="img/leadership/zhong-yongyang.jpg" alt="Zhong Yongyang" loading="lazy"></div><figcaption class="name">Zhong Yongyang</figcaption></figure>
 
-  prev.addEventListener('click', function(){ scrollByCards(-3); });
-  nxt.addEventListener('click',  function(){ scrollByCards( 3); });
+    <figure class="person"><div class="frame"><img src="img/leadership/shen-wenlong.jpg" alt="Shen Wenlong" loading="lazy"></div><figcaption class="name">Shen Wenlong</figcaption></figure>
+    <figure class="person"><div class="frame"><img src="img/leadership/mai-jiabao.jpg" alt="Mai Jiabao" loading="lazy"></div><figcaption class="name">Mai Jiabao</figcaption></figure>
+    <figure class="person"><div class="frame"><img src="img/leadership/qiu-zongbo.jpg" alt="Qiu Zongbo" loading="lazy"></div><figcaption class="name">Qiu Zongbo</figcaption></figure>
 
-  // On load: scroll to Council section (default per user spec)
-  window.addEventListener('load', function(){
-    track.scrollTo({left: sectionStart('council'), behavior:'auto'});
-  });
-})();
-</script>
+  </section>
+</main>
 
 </body>
 </html>
