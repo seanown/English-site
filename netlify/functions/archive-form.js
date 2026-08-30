@@ -5,11 +5,16 @@
 //   NOTION_TOKEN  = Notion internal integration secret (starts with ntn_)
 //
 // The target database ID is hardcoded below:
-//   ownsean.com — Form Leads  (c6db53ab-2199-459f-bdcb-016c42b25198)
+//   ownsean.com — Form Leads  (0aa48974-0a6c-4ac2-8e32-e37e38382c0f)
+//
+// IMPORTANT: this is the *database* ID, NOT the *data source* ID.
+// Notion's REST API /databases/{id} and /pages endpoints expect the
+// database page ID. The c6db53ab... collection ID only works with the
+// newer /data_sources/ endpoint, which is not what this function uses.
 //
 // No front-end JS is involved — this runs server-side on Netlify.
 
-const DATABASE_ID = 'c6db53ab-2199-459f-bdcb-016c42b25198';
+const DATABASE_ID = '0aa48974-0a6c-4ac2-8e32-e37e38382c0f';
 
 function rich(value) {
   const text = (value == null ? '' : String(value)).slice(0, 1900);
