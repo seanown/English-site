@@ -113,6 +113,8 @@
   .subscribe input:focus{outline:none;border-color:var(--color-accent);}
   .subscribe button{padding:14px 24px;font-family:var(--font-body);font-weight:800;text-transform:uppercase;letter-spacing:0.04em;border:none;border-radius:0;background:var(--color-accent);color:var(--color-primary);cursor:pointer;}
   .subscribe button:hover{background:var(--color-accent-hover);color:var(--color-blue-dark);}
+  .subscribed-ok{display:none;margin-bottom:var(--space-3);padding:14px 18px;background:var(--color-accent);color:var(--color-primary);font-family:var(--font-condensed);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;font-size:13px;border-left:6px solid var(--color-primary);}
+  .subscribed-ok:target{display:block;}
   .copyright{border-top:1px solid rgba(255,255,255,0.15);margin-top:var(--space-6);padding-top:var(--space-3);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#9fb3c8;}
 
   /* ---------- RESPONSIVE ---------- */
@@ -274,8 +276,10 @@
       <div>
         <h4>Subscribe</h4>
         <p>Get the latest essays, forum notes, and updates straight to your inbox.</p>
-        <form class="subscribe" onsubmit="return false;">
-          <input type="email" placeholder="your@email.com" aria-label="Email address">
+        <div id="subscribe-ok" class="subscribed-ok">✓ Subscribed — thanks! I&rsquo;ll be in touch soon.</div>
+        <form class="subscribe" name="subscribe" method="POST" data-netlify="true" action="/?subscribed=1#subscribe-ok">
+          <input type="hidden" name="form-name" value="subscribe">
+          <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required>
           <button type="submit">Subscribe</button>
         </form>
       </div>
