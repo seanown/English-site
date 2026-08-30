@@ -1,116 +1,297 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>GBA E-Commerce Association — Leadership</title>
-<meta name="description" content="The eighteen leaders connecting Macau, Hong Kong, and the Greater Bay Area through commerce, culture, and AI." />
-<link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GBA E-Commerce Association — Leadership — Sean Own</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="The people of the Guangdong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association — building Macau's digital-services-going-global bridge.">
+<meta property="og:title" content="GBA E-Commerce Association — Leadership">
+<meta property="og:description" content="The people building Macau's digital-services-going-global bridge across the Bay Area, the Strait and Portuguese-speaking markets.">
+<meta property="og:image" content="https://ownsean.com/img/leadership/manual/p01.jpeg">
+<meta property="og:url" content="https://ownsean.com/gba-leadership.html">
 <style>
   :root{
-    --navy:#003262;
-    --gold:#FDB515;
-    --ink:#0a0a0a;
-    --paper:#fafaf7;
-    --rule:#1a1a1a;
-    --muted:#5b5b5b;
+    --color-primary:#003262;--color-primary-hover:#001B3A;--color-accent:#FDB515;--color-accent-hover:#FC9313;
+    --color-white:#FFFFFF;--color-surface-alt:#F4F4F4;--color-gray-mid:#9A9A9A;--color-gray-deep:#2B2B2B;
+    --color-border:#E0E0E0;--color-ink:#0A0A0A;
+    --font-display:"Bebas Neue","Arial Narrow",Impact,sans-serif;
+    --font-body:"Inter","Helvetica Neue",Arial,sans-serif;
+    --font-condensed:"Oswald","Arial Narrow",sans-serif;
+    --space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--space-5:48px;--space-6:64px;--space-7:96px;
+    --container:1100px;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
-  img{display:block;max-width:100%;height:auto}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);color:var(--color-primary);background:var(--color-white);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{text-decoration:none;}
 
-  /* top bar (matches the rest of the site) */
-  .top{background:var(--navy);color:#fff;border-bottom:4px solid var(--gold)}
-  .top-inner{max-width:1180px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-  .brand{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:.12em;color:#fff}
-  .brand b{color:var(--gold)}
-  nav.main{display:flex;align-items:center;gap:28px;font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
-  nav.main a{padding:6px 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
-  nav.main a:hover{color:var(--gold);border-bottom-color:var(--gold)}
-  nav.main a.cta{background:var(--gold);color:var(--navy);padding:12px 22px;letter-spacing:.16em}
-  nav.main a.cta:hover{background:#fff;color:var(--navy);border-bottom-color:transparent}
+  /* NAV */
+  .nav{background:var(--color-primary);color:var(--color-white);position:sticky;top:0;z-index:100;}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:var(--container);margin:0 auto;padding:0 var(--space-3);}
+  .logo{font-family:var(--font-display);font-size:30px;color:var(--color-white);letter-spacing:0.04em;}
+  .logo span{color:var(--color-accent);}
+  .nav-links{display:flex;align-items:center;gap:var(--space-3);}
+  .nav-links a{color:var(--color-white);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;font-size:13px;transition:color .15s;}
+  .nav-links a:hover{color:var(--color-accent);}
+  .nav-links a.active{color:var(--color-accent);}
+  .nav-toggle{display:none;}
+  .nav-burger{display:none;}
+  .btn{display:inline-block;padding:14px 28px;font-family:var(--font-body);font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;border:2px solid transparent;cursor:pointer;border-radius:0;transition:background-color .15s,color .15s,border-color .15s;}
+  .btn-accent{background:var(--color-accent);color:var(--color-primary);border-color:var(--color-accent);}
+  .btn-accent:hover{background:var(--color-accent-hover);border-color:var(--color-accent-hover);color:var(--color-blue-dark);}
 
-  /* hero band */
-  .hero{background:var(--navy);color:#fff;border-bottom:4px solid var(--gold);padding:64px 32px 72px}
-  .hero-inner{max-width:1180px;margin:0 auto}
-  .hero h1{font-family:'Bebas Neue',sans-serif;font-size:64px;letter-spacing:.06em;line-height:1;text-transform:uppercase;color:#fff}
-  .hero p{margin-top:14px;font-family:'Oswald',sans-serif;font-weight:500;font-size:18px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  /* LIST */
+  .lead-wrap{max-width:var(--container);margin:0 auto;padding:var(--space-6) var(--space-3) var(--space-7);}
+  .lead-card{display:grid;grid-template-columns:200px 1fr;gap:var(--space-4);border-top:3px solid var(--color-accent);padding-top:var(--space-4);margin-bottom:var(--space-4);align-items:start;}
+  .lead-card .photo{width:200px;height:240px;object-fit:cover;background:var(--color-surface-alt);display:block;}
+  .lead-text{min-width:0;}
+  .pkicker{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--color-gold-dark,#C4820E);font-size:12px;margin-bottom:6px;}
+  .lead-name{font-family:var(--font-display);font-size:clamp(28px,4vw,40px);text-transform:uppercase;line-height:0.95;color:var(--color-primary);margin-bottom:var(--space-2);word-break:break-word;}
+  .lead-bio{color:var(--color-gray-deep);font-size:15px;}
+  .lead-bio p{margin-bottom:10px;}
 
-  /* content */
-  main{max-width:1180px;margin:0 auto;padding:56px 32px 96px}
-  .lede{font-size:18px;color:var(--ink);max-width:760px;margin-bottom:40px}
+  /* FOOTER */
+  .footer{background:var(--color-primary);color:var(--color-white);padding:var(--space-7) 0 var(--space-4);}
+  .footer-wrap{max-width:var(--container);margin:0 auto;padding:0 var(--space-3);}
+  .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1.4fr;gap:var(--space-5);}
+  .footer h4{font-family:var(--font-condensed);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:15px;color:var(--color-accent);margin-bottom:var(--space-3);}
+  .footer p,.footer li{color:#cfd9e6;font-size:14px;line-height:1.9;list-style:none;}
+  .footer a{color:#cfd9e6;}
+  .footer a:hover{color:var(--color-accent);}
+  .copyright{border-top:1px solid rgba(255,255,255,.15);margin-top:var(--space-6);padding-top:var(--space-3);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#9fb3c8;}
 
-  /* the grid — fully static, no JS, no controls */
-  .people{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 28px}
-  @media (max-width:880px){.people{grid-template-columns:repeat(2,1fr)}}
-  @media (max-width:520px){.people{grid-template-columns:1fr}}
-
-  .person{background:#fff;border:1px solid #ececec}
-  .person .frame{aspect-ratio:1/1;overflow:hidden;background:#eaeaea}
-  .person .frame img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .35s ease}
-  .person:hover .frame img{transform:scale(1.03)}
-  .person .name{display:block;padding:14px 16px 16px;font-family:'Oswald',sans-serif;font-weight:600;font-size:16px;letter-spacing:.10em;text-transform:uppercase;color:var(--ink);text-align:center;border-top:2px solid var(--gold)}
+  @media(max-width:640px){
+    .nav-links{display:none;}
+    .lead-card{grid-template-columns:1fr;gap:var(--space-2);}
+    .lead-card .photo{width:100%;height:auto;max-height:360px;}
+    .footer-grid{grid-template-columns:1fr;}
+  }
 </style>
 </head>
 <body>
 
-<div class="top">
-  <div class="top-inner">
-    <a href="index.html" class="brand">SEAN<b>OWN</b></a>
-    <nav class="main">
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" style="text-decoration:none;">SEAN<span>OWN</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="news.html">News</a>
-      <a href="portfolio.html">Work</a>
+      <a href="portfolio.html" class="active">Work</a>
       <a href="speaking.html">Speaking</a>
       <a href="contact.html">Contact</a>
-      <a href="contact.html" class="cta">Subscribe</a>
-    </nav>
+      <a href="index.html#subscribe" class="btn btn-accent">Subscribe</a>
+    </div>
   </div>
-</div>
+</nav>
 
-<section class="hero">
-  <div class="hero-inner">
-    <h1>GBA E-Commerce Association</h1>
-    <p>The people behind the Greater Bay Area's connective tissue.</p>
-  </div>
+<section class="lead-wrap">
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p01.jpeg" alt="翁振軒 Sean Own">
+      <div class="lead-text">
+        <h2 class="lead-name">翁振軒 Sean Own</h2>
+        <div class="lead-bio"><p>粵港澳大灣區電子商會會長</p><p>Guandong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association President</p><p>現任澳門龍遊集團董事總經理 、澳門網絡視聽協會電商專委會主任 、澳門台商聯誼會監事長 。</p><p>深耕數字科技 、中華文化出海與實體產業運營 。連續三年任“贏在廣州”暨大灣區創業大賽專 家評委；2021 年參與首屆亞洲青年領袖論壇（南沙） ，推動青年國際交流；主導在澳門舉 辦第 15 、16 屆亞洲電子論壇，匯聚亞洲產業領袖，促進澳門經濟多元化產業發展 。</p><p>長期整合灣區資源，拓展兩岸暨港澳及葡語國家經貿文化往來，推動數字經濟升級與推廣中 華文化國際傳媒基地跨境合作 。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p02.jpeg" alt="邵漢彬  Sio Hon Pan">
+      <div class="lead-text">
+        <h2 class="lead-name">邵漢彬  Sio Hon Pan</h2>
+        <div class="lead-bio"><p>粵港澳大灣區電子商會監事長</p><p>Guandong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association Supervisor General</p><p>現任澳門科學館館長 、澳門科學技術協進會副會長，擁有澳門大學資料科學博士學歷及政府 執業工程師資格 。深耕大型場館規劃與科技管理逾二十年，曾主導澳門東亞運動會體育館等 重大公共設施建設； 自 2012 年執掌澳門科學館以來，推動建立 「 澳門信息技術應用創新實 驗室 」 ，開發北斗衛星科普課程，其科研團隊榮獲 2024 年度澳門科學技術獎勵計劃科技進 步獎 。身為澳門科技界代表，多次參與國家級科技展與政策研討，致力於推動澳門融入國家 科技創新體系 。</p><p>身為商會監事長，他將重點監督商會推動「 科普資源產業化」與「 數位文化出海」雙向融合， 建立 「 科普+產業 」 合規服務體系，為會員企業提供科技內容出海的合規諮詢與跨境合作對  接，打造 「 科技傳播+產業出海 」 的澳門樣板 。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p03.jpeg" alt="施文俊SI MAN CHON / CHARLES">
+      <div class="lead-text">
+        <h2 class="lead-name">施文俊SI MAN CHON / CHARLES</h2>
+        <div class="lead-bio"><p>(62 發言嘉賓 1)</p><p>粵港澳大灣區電子商會理事長</p><p>Guandong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association Chairman</p><p>資深科技傳播與天文教育專家，現任澳門科學館天文館部主管，長期負責澳門科學館天文科 普內容策劃 、球幕影院技術升級與公眾科學活動策劃 。</p><p>施文俊先生在大型場館運營 、天文科普應用與科普教育領域具有豐富實踐經驗，曾參與澳門    科學館球幕投影系統技術優化項目 。多次代表澳門科學館出席粵港澳大灣區科普能力培訓會 、 深圳灣超總 B 塔天文文化專家研討會等專業論壇，推動區域天文科普資源整合與跨界合作 。  作為商會理事長，他致力於打通 「 數字服務出海 」 與 「 中華文化交流 」 的落地通道，推動數字服務與電子商務傳播融合發展 。</p><p>A senior expert in science communication and astronomy education, he currently serves as Supervisor of the Planetarium Department at the Macao Science Centre. He has long been responsible for planning astronomy popular science content, upgrading dome theatre technologies and organizing public science activities for the Centre.</p><p>Mr. Shi Wenjun boasts extensive practical experience in large-scale venue operation, application of astronomy popular science and science education. He has participated in the technical optimization project for the dome projection system of the Macao Science Centre. He has represented the Centre at numerous professional events including training workshops on popular science development across the Guangdong-Hong Kong-Macao Greater Bay Area and expert seminars on astronomical culture held at Tower B of Shenzhen Bay Super Headquarters Base. He has been committed to integrating regional astronomy popular science resources and promoting cross-industry collaboration.</p><p>As Director of the Chamber of Commerce, he strives to facilitate the implementation of digital services going global and Chinese cultural exchanges, and advance the integrated development of digital services and e-commerce communication.</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p04.jpeg" alt="張宗真 Zhang Zongzhen">
+      <div class="lead-text">
+        <h2 class="lead-name">張宗真 Zhang Zongzhen</h2>
+        <div class="lead-bio"><p>澳門中華文化發展促進會會長,Macao Association for the Promotion of Chinese Culture President</p><p>粵港澳大灣區電子商會榮譽會長</p><p>現任第十四屆全國政協常務委員 、全國工商聯副主席 、澳門中華文化發展促進會會長 、 橫琴兩岸青年文化交流中心創辦人 、永同昌集團董事局主席，致公黨黨員，博士學位 。兼任澳門 特區政府行政會委員 。長期深耕實業投資，同時以文化為橋樑，推動兩岸暨港澳青年交流與 文化傳承，積極參與粵澳深度合作區建設，知名僑界代表人士 。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p05.jpeg" alt="陳志玲 Linda Chen">
+      <div class="lead-text">
+        <div class="pkicker">(62 發言嘉賓 2)</div><h2 class="lead-name">陳志玲 Linda Chen</h2>
+        <div class="lead-bio"><p>横琴粤澳深度合作區濠江海峡两岸青年文化交流中心負責人</p><p>Director-General, Macao Association for the Promotion of Chinese Culture; Person-in-Charge, Haojiang Cross-Strait Youth Cultural Exchange Center, Hengqin Guangdong-Macao In-Depth Cooperation Zone</p><p>陳志玲女士現任澳門中華文化發展促進會理事長、永利澳門有限公司總裁、董事會副主席兼執行董事。多年來她秉承「弘揚中華優秀傳統文化、促進中外多元文明交流互鑑」的時代使命，通過創建「永利文化」品牌，組織大量深度交流活動，助力中華優秀傳統文化在港澳台地區以至海外廣泛傳播。同時憑借立足澳門「東亞文化之都」的獨特優勢，持續支持台灣青年學子赴大陸參訪交流，並向台灣同胞展現中華文化的深厚底蘊與博大內涵，持續為深化港澳台地區認同、推動區域融合發展貢獻力量。</p><p>中文 陳志玲女士現任永利澳門有限公司總裁、董事會副主席兼執行董事。多年來她秉承「弘揚中華優秀傳統文化、促進中外多元文明交流互鑑」的時代使命，透過打造「永利文化」品牌，舉辦各類深度交流活動，推動中華優秀傳統文化在港澳台地區及海外廣為傳播。同時，她依托澳門「東亞文化之都」的獨特優勢，積極支持台灣青年學子前往內地參訪交流，向台灣同胞展現中華文化的深厚底蘊與博大內涵，持續為增進港澳台民眾文化認同、促進區域融合發展貢獻力量。</p><p>Ms. Linda Chen currently serves as President, Vice Chairman of the Board and Executive Director of Wynn Macau, Limited. For many years, she has upheld the mission of &quot;promoting fine traditional Chinese culture and facilitating exchanges and mutual learning between diverse civilizations at home and abroad&quot;. By building the brand of &quot;Wynn Culture&quot; and organizing a wide range of in-depth exchange activities, she has helped spread fine traditional Chinese culture across Hong Kong, Macao, Taiwan and overseas regions.</p><p>Leveraging Macao’s unique status as a City of East Asian Culture, she actively supports young students from Taiwan to visit and engage in exchanges in the mainland. She showcases the profound heritage and breadth of Chinese culture to people in Taiwan, and keeps contributing to strengthening cultural identity among people in Hong Kong, Macao and Taiwan, as well as advancing regional integrated development.</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p06.jpeg" alt="蔡純絲 Cherrie Choi">
+      <div class="lead-text">
+        <h2 class="lead-name">蔡純絲 Cherrie Choi</h2>
+        <div class="lead-bio"><p>粵港澳大灣區電子商會名譽會長</p><p>粵港澳大灣區數字產業協會會長 President of the Guangdong-Hong Kong-Macao Greater Bay Area Digital Industry Association</p><p>山西省政協委員、澳門山西青年 會會長、澳門大聯合集團董事總經理。長期致力於晉澳兩地經貿、文化與青年交 流， 推動山西文旅數字化與澳門中葡平台融合發展。積極組織晉澳青年互訪、文 化展演等活動， 助力山西文化走向世界。履職盡責， 獲山西省政協 “優秀履職委 員 ”表彰， 是連接山西與澳門及葡語國家的重要橋梁使者。</p><p>She currently serves as President of the Guangdong-Hong Kong-Macao Greater Bay Area Digital Industry Association, Member of the Shanxi Provincial Committee of the Chinese People&#x27;s Political Consultative Conference (CPPCC), President of the Macao Shanxi Youth Association, and Managing Director of Macao Dalians United Group.</p><p>She has long been dedicated to boosting economic, trade, cultural and youth exchanges between Shanxi and Macao, and facilitating the integrated development of digital cultural tourism in Shanxi and Macao’s China-Portuguese cooperation platform. She actively organizes youth exchange visits, cultural performances and other activities between the two places, helping Shanxi culture go global.</p><p>Devoted to her duties, she has been honored as an Outstanding CPPCC Member by the Shanxi Provincial CPPCC. She is an important envoy bridging Shanxi, Macao and Portuguese-speaking countries.</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p07.jpeg" alt="韓莉安 Hon Lei On">
+      <div class="lead-text">
+        <h2 class="lead-name">韓莉安 Hon Lei On</h2>
+        <div class="lead-bio"><p>粵港澳大灣區電子商會名譽會長</p><p>現任上海本草利華醫藥研究發展有限公司副董事長。Vice Chair of Shanghai Bencaolihua Pharmaceutical R&amp;D Co., Ltd.</p><p>長年深耕中醫本草與大健康 產業， 為國家級紀錄片 《本草中國》 核心推動人員。</p><p>《本草中國》 第一季豆瓣高達8.7 高分， 榮獲金熊貓國際紀錄片大獎。影片經多  國語言改版發行， 陸續登入 YouTube、Discovery 各大海外平台。身為中醫藥文  化出海標誌性 IP， 向世界展現東方本草底蘊， 助力傳統中醫藥邁向國際化 。本  人秉持守正創新，專注藥研發與產業資源整合，持續推動大健康產業高質量發展。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p08.jpeg" alt="曾增偉">
+      <div class="lead-text">
+        <h2 class="lead-name">曾增偉</h2>
+        <div class="lead-bio"><p>粵港澳大灣區電子商會 名譽會長</p><p>現任澳門潮汕總商會理事長、粵澳工商聯交流中心主任。</p><p>長年紮根澳門， 深耕粵澳經貿商務領域， 長期活躍工商界與社會公益事務。充分 運用澳門獨特的對外窗口優勢， 串聯潮汕、大灣區以及海內外工商資源。</p><p>致力推動粵澳經貿往來、產業互通、文化交融， 凝聚鄉親僑界力量， 扶持青年創 業發展。積極參與各項灣區建設工作， 堅守愛國愛澳初心， 助力澳門經濟多元發 展， 持續搭建內地與澳門、跨區域工商合作交流橋樑。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p09.jpeg" alt="吳嬋華  |   SEKO WU 獨角獸智慧傳播創始人 Founder of Unicorn Wisdom Communication CO.., Ltd.">
+      <div class="lead-text">
+        <div class="pkicker">簽約嘉賓 1:澳門青年代表</div><h2 class="lead-name">吳嬋華  |   SEKO WU 獨角獸智慧傳播創始人 Founder of Unicorn Wisdom Communication CO.., Ltd.</h2>
+        <div class="lead-bio"><p>粵港澳大灣區電子商會 青年部部長</p><p>2024 年成立團隊以來，扎根澳門 、服務大灣區，專注於小紅書與抖音的商業化運營 。團隊 至今已協助超過 100 家中小企業打通線上與線下的流量轉化，用實效成果回饋在地商家 。近 年亦積極嘗試將 AI 技術融入青年 IP 開發 。憑藉一線的落地經驗，帶領團隊專注做好 「 數字 化營銷的鋪路人 」 ，用務實的策略陪伴澳門在地實體經濟共同成長 。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p10.jpeg" alt="簡立喆（Liza Chien）">
+      <div class="lead-text">
+        <h2 class="lead-name">簡立喆（Liza Chien）</h2>
+        <div class="lead-bio"><p>粵港澳大灣區電子商會 台灣會長</p><p>為台灣知名媒體人與內容創作者，被譽為台灣專訪過最多國際名人的雙語主持人，曾擔任洛  杉磯駐地記者主持人與好萊塢特派員，具豐富國際傳播與跨文化溝通經驗 。現為「 好選喆傳  媒科技 」 內容製作與行銷公司負責人，長期投入深度內容製作 、品牌傳播與華語文化交流 。</p><p>其自媒體品牌《電癮好選喆》 曾獲選台灣十大深度影評 YouTuber，並持續發展《賦能量喆學》 《大神幫幫忙》 等華語內容 IP，涵蓋影視 、財經 、健康 、教育與生活等領域，長期關注公共  溝通 、健康倡議與文化交流，致力以有溫度的內容促進理解與對話，推動華語世界的國際傳  播與跨域連結 。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p11.jpeg" alt="林芯澤">
+      <div class="lead-text">
+        <h2 class="lead-name">林芯澤</h2>
+        <div class="lead-bio"><p>粵港澳大灣區海外媒體部部長</p><p>現任亞太聯合國際傳媒集團執行長，業務版圖橫跨澳門 、香港 、台灣 、馬來西亞 、泰國 、新 加坡及美國等地 。同時擔任聯合國教科文組織世界非遺傳承人大會副秘書長 、澳門非物質文 化遺產傳承協會榮譽顧問 、粵港澳大灣區電子商會海外媒體部部長 、澳門中醫養生學會監事 長 、亞洲經濟報榮譽顧問等重要職務 。旗下集團合作夥伴遍及東南亞與大灣區，整合國際媒 體資源與在地社群影響力，致力推動文化傳承與跨界交流 。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p12.jpeg" alt="孫宗孝">
+      <div class="lead-text">
+        <h2 class="lead-name">孫宗孝</h2>
+        <div class="lead-bio"><p>粵港澳大灣區文娛演藝部部長</p><p>竹塹青年創辦人,  竹塹青年長期深耕新竹在地青年文化與公益行動，致力打造兼具娛樂 、運 動與社會影響力的品牌活動 。旗下舉辦籃球賽事，凝聚街頭籃球文化與青年熱血精神，提供 年輕人展現自我的舞台；主辦大型音樂祭，串聯台灣與國際藝人，為城市注入音樂與觀光能 量；同時持續推動公益捐血活動，號召民眾用行動回饋社會，傳遞生命價值；並發起淨灘行 動，長期守護海岸環境，實踐永續理念 。創辦人孫宗孝秉持 「 讓青年影響城市 」 的理念，結 合創意 、執行力與資源整合能力，持續打造具有社會意義與城市代表性的活動品牌 。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p13.jpeg" alt="溫林鑒">
+      <div class="lead-text">
+        <h2 class="lead-name">溫林鑒</h2>
+        <div class="lead-bio"><p>粵港澳大灣區電子商會青年部副部長</p><p>現任琴澳文旅體育產業有限公司董事總經理,</p><p>澳門學人發展協會理事長,</p><p>澳門研學交流學會理事長，澳門城市大學葡語國家研究院博士。深耕數字經濟與 青年創業領域，擔任橫琴合作區創業認定及體育事業發展專家評審， 同時為大灣 區數字經濟科技創新聯盟副主席、國家體育總局匹克球項目專家庫成員，長期推 動琴澳兩地青年創新創業與產業融合。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p14.jpeg" alt="林文玲">
+      <div class="lead-text">
+        <h2 class="lead-name">林文玲</h2>
+        <div class="lead-bio"><p>澳門漳州同鄉總會執行會長 、漳州市政協常委 、福建省澳區政協委員聯誼會副秘 書長；同時擔任澳門福建同鄉總會副會長 、澳門福建藝術協會創會會長 。實業領域為澳門嘉韻音樂藝術教育創始人 、澳門片仔癀國藥堂董事長 、橫琴片仔 癀博物館館長，獲評片仔癀全國十大行銷顧問 。深耕澳閩聯誼與文化交流，中醫藥文化，搭建閩澳交流橋樑 。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p15.jpeg" alt="文仲雄">
+      <div class="lead-text">
+        <h2 class="lead-name">文仲雄</h2>
+        <div class="lead-bio"><p>粵港澳大灣區電子商會教育部部長</p><p>現任澳門非物質文化遺產傳承協會會長。長期立足澳門及大灣區發展佈局，深耕 文化傳承與產教融合領域。堅持科創與文化雙軌並進，透過各類賽事與研學活動， 厚植文化認同感。</p><p>積極研發AI結合心理、體能的全新健康體系， 搭建健康預防監測完整體系。對 外以英國牛津作為國際戰略支點， 助推中國優質產業對外輸出。</p><p>用心打造產教融合示範平台，培育大灣區複合型新生代人才。始終恪守國家所需、 澳門所長、協會所能的初心， 全方位推動澳門深度融入國家整體發展格局</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p16.jpeg" alt="張得欣 Emily Cheung">
+      <div class="lead-text">
+        <h2 class="lead-name">張得欣 Emily Cheung</h2>
+        <div class="lead-bio"><p>賞游科技(香港)創辦人兼首席執行官，深耕 AI 文旅領域。帶團隊研發原創文化</p><p>語境 AI 模型與智慧文旅平台， 打通全球文旅資源， 連接數千家文化機構， 賦能 傳統 IP 商業化發展。</p><p>身為 G20 青年企業家聯盟中國代表、聯合國全球青年創業者， 屢獲國際科創賽 事榮譽， 企業入選香港數碼港重點孵化項目。專注搭建文化出海國際通道， 以數 位科技打破地域語言壁壘， 助力中華文化走向全球， 挖掘跨域文化經濟價值。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p17.jpeg" alt="鍾水陽">
+      <div class="lead-text">
+        <h2 class="lead-name">鍾水陽</h2>
+        <div class="lead-bio"><p>粵港澳大灣區電子商會數智健康部部長</p><p>擔任匯邦國際執行董事。深耕跨境產業協同與大健康領域多年，具政企資源整合、</p><p>跨境商務運營、AI 健康產業孵化實戰能力，深度對接橫琴粵澳合作區政策紅利。 立足大灣區電子資訊與數位產業根基， 融合 AI、大數據與大健康產業， 推動跨  境電商、數位醫療、智慧康養領域創新協同， 助力琴澳數智化產業集群與國際化  發展， 賦能 「健康中國」  「數字中國」 戰略落地。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p18.jpeg" alt="沈文龍">
+      <div class="lead-text">
+        <h2 class="lead-name">沈文龍</h2>
+        <div class="lead-bio"><p>粵港澳大灣區電子商會僑聯部部長</p><p>現任中華青創聯盟理事長、南京市僑界青年聯合會秘書長。</p><p>兼任建鄴區臺胞臺屬聯誼會會長、江蘇僑海科創發展有限公司總經理。出身臺屬 世家， 深耕僑務工作、兩岸文化交流與青年創新創業領域多年。長期統籌港澳、 兩岸暨港澳青年往來互動， 打造多元文創交流活動， 彙聚海內外青年資源， 助力 長三角科創產業與僑臺經貿文化融合發展。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p19.jpeg" alt="麥家寶">
+      <div class="lead-text">
+        <h2 class="lead-name">麥家寶</h2>
+        <div class="lead-bio"><p>粵港澳大灣區電子商會媒體公關部部長</p><p>現任中華書局澳門有限公司主管。長期任職澳門出版文化領域， 深耕圖書發行、 古籍文化、華語書刊推廣工作。</p><p>同時為澳門文教出版協會骨幹成員，長期參與大灣區文化共建、粵港澳出版交流 活動。歷年統籌澳門代表團參加各大兩岸暨港澳書展讀書活動，用心傳承中華傳 統文化。</p><p>積極投入澳門青年文化培育、兩岸文創往來事務， 長期擔任澳門文化溝通橋樑， 推動海內外華文文化互通共融</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p20.jpeg" alt="吳明宗｜">
+      <div class="lead-text">
+        <h2 class="lead-name">吳明宗｜</h2>
+        <div class="lead-bio"><p>現任邁睿資暨人生地圖創辦人</p><p>專精宗教數位轉型系統、透過金融服務整合， 打造線上點燈及祈福報名系統、線 下祈福牆及點燈系統、真人算命媒合與文創 IP 等多元服務， 累積百萬用戶。整 合信仰文化、科技應用與商業模式， 推動華人宗教文化數位化與年輕化。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p21.jpeg" alt="梁家恩">
+      <div class="lead-text">
+        <h2 class="lead-name">梁家恩</h2>
+        <div class="lead-bio"><p>S 聯盟集團執行董事</p><p>現任 S 聯盟集團執行董事，擔任中國教育創新事業部大灣區運營負責人， 同時执 掌中國教育研學綜合服務平台， 統籌粵港澳、台灣及海外業務發展。</p><p>集團控股橫琴融和智匯、融和青心， 旗下涵蓋藝術體育、成人職業培訓等機構， 建構教育、文化、健康一體化產業格局。</p><p>立足大灣區國家戰略， 以澳門作為國際樞紐， 串聯海內外資源。專注發展青少年 素養教育、身心健康服務與科創融合， 積極促進兩岸多地教育文化交流合作。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p22.jpeg" alt="李易修 （Thomas Lee）">
+      <div class="lead-text">
+        <h2 class="lead-name">李易修 （Thomas Lee）</h2>
+        <div class="lead-bio"><p>現任宏興事業有限公司董事， 人稱 「歷史哥」， 知名時事評論員、節目主持人與 YouTuber。畢業於臺灣師範大學歷史系， 以史學素養剖析兩岸議題與國際局勢。</p><p>現任中廣新聞網《歷史易起秀》主持人，東森、寰宇、中天電視固定評論員，YouTube 頻道 「歷史哥 HistoryBro」 創辦人。</p><p>長期以理性觀點弘揚中華文化， 堅持兩岸同根同源， 反對割裂歷史。作為頗具影 響力的民間意見領袖， 積極搭建兩岸民間溝通橋樑， 推動文化交流與民心相通，</p><p>促進青年往來互動， 助力兩岸穩定發展。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p23.jpeg" alt="邱宗博">
+      <div class="lead-text">
+        <h2 class="lead-name">邱宗博</h2>
+        <div class="lead-bio"><p>粵港澳大灣區電子商會媒體公關部副部長</p><p>現任環球新聞報副社長、副總編輯， 同時擔任環球新聞（國際）集團總經理、環 球傳媒 （澳門） 記者協會及青年協會理事長。</p><p>長年扎根澳門， 深耕國際新聞、工商社會財經議題與跨區域傳播領域， 具備深厚  媒體資源與國際視野。以澳門為平台搭建國際新聞交流橋樑，致力推動媒體合作、 青年交流與民心相通， 助力澳門多元文化與傳媒產業發展。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p24.jpeg" alt="康普貿易總經理暨「新視界」資訊總監">
+      <div class="lead-text">
+        <h2 class="lead-name">康普貿易總經理暨「新視界」資訊總監</h2>
+        <div class="lead-bio"><p>專精數位授權與串流技術。主持一站式雲端公播平台，專注高質量、合法垂直領域，首創影音結合AI大模型教學應用。整合好萊塢與兩岸央視授權紀錄片，透過領先串流與防拷技術服務學術及商用場域，推動跨境影音共享。</p></div>
+      </div>
+    </article>
+    <article class="lead-card">
+      <img class="photo" src="img/leadership/manual/p25.jpeg" alt="李豔梅">
+      <div class="lead-text">
+        <h2 class="lead-name">李豔梅</h2>
+        <div class="lead-bio"><p>澳門中醫養生學會會長</p><p>粵港澳中醫藥聯盟單位</p><p>珠海文修智慧心理諮詢有限公司負責人</p></div>
+      </div>
+    </article>
 </section>
 
-<main>
-  <p class="lede">
-    Eighteen leaders connecting Macau, Hong Kong, and the Greater Bay Area through commerce, culture, and AI.
-  </p>
-
-  <section class="people" aria-label="Association leadership">
-
-    <figure class="person"><div class="frame"><img src="img/leadership/cai-chunshi.jpg" alt="Cai Chunshi" loading="lazy"></div><figcaption class="name">Cai Chunshi</figcaption></figure>
-    <figure class="person"><div class="frame"><img src="img/leadership/han-lian.jpg" alt="Han Lian" loading="lazy"></div><figcaption class="name">Han Lian</figcaption></figure>
-    <figure class="person"><div class="frame"><img src="img/leadership/zeng-zengwei.jpg" alt="Zeng Zengwei" loading="lazy"></div><figcaption class="name">Zeng Zengwei</figcaption></figure>
-
-    <figure class="person"><div class="frame"><img src="img/leadership/zhang-zongzhen.jpg" alt="Zhang Zongzhen" loading="lazy"></div><figcaption class="name">Zhang Zongzhen</figcaption></figure>
-    <figure class="person"><div class="frame"><img src="img/leadership/chen-zhiling.jpg" alt="Chen Zhiling" loading="lazy"></div><figcaption class="name">Chen Zhiling</figcaption></figure>
-    <figure class="person"><div class="frame"><img src="img/leadership/shi-wenjun.jpg" alt="Simon Si" loading="lazy"></div><figcaption class="name">Simon Si</figcaption></figure>
-
-    <figure class="person"><div class="frame"><img src="img/leadership/weng-zhenxuan.jpg" alt="Sean Own" loading="lazy"></div><figcaption class="name">Sean Own</figcaption></figure>
-    <figure class="person"><div class="frame"><img src="img/leadership/shao-hanbin.jpg" alt="Shao Hanbin" loading="lazy"></div><figcaption class="name">Shao Hanbin</figcaption></figure>
-    <figure class="person"><div class="frame"><img src="img/leadership/wu-peihua.jpg" alt="Wu Peihua" loading="lazy"></div><figcaption class="name">Wu Peihua</figcaption></figure>
-
-    <figure class="person"><div class="frame"><img src="img/leadership/jian-lizhe.jpg" alt="Jian Lizhe" loading="lazy"></div><figcaption class="name">Jian Lizhe</figcaption></figure>
-    <figure class="person"><div class="frame"><img src="img/leadership/lin-xinze.jpg" alt="Lin Xinze" loading="lazy"></div><figcaption class="name">Lin Xinze</figcaption></figure>
-    <figure class="person"><div class="frame"><img src="img/leadership/sun-zongxiao.jpg" alt="Bovi Sun" loading="lazy"></div><figcaption class="name">Bovi Sun</figcaption></figure>
-
-    <figure class="person"><div class="frame"><img src="img/leadership/wen-linhui.jpg" alt="Wen Linhui" loading="lazy"></div><figcaption class="name">Wen Linhui</figcaption></figure>
-    <figure class="person"><div class="frame"><img src="img/leadership/wen-zhongxiong.jpg" alt="Wen Zhongxiong" loading="lazy"></div><figcaption class="name">Wen Zhongxiong</figcaption></figure>
-    <figure class="person"><div class="frame"><img src="img/leadership/zhong-yongyang.jpg" alt="Zhong Yongyang" loading="lazy"></div><figcaption class="name">Zhong Yongyang</figcaption></figure>
-
-    <figure class="person"><div class="frame"><img src="img/leadership/shen-wenlong.jpg" alt="Shen Wenlong" loading="lazy"></div><figcaption class="name">Shen Wenlong</figcaption></figure>
-    <figure class="person"><div class="frame"><img src="img/leadership/mai-jiabao.jpg" alt="Mai Jiabao" loading="lazy"></div><figcaption class="name">Mai Jiabao</figcaption></figure>
-    <figure class="person"><div class="frame"><img src="img/leadership/qiu-zongbo.jpg" alt="Qiu Zongbo" loading="lazy"></div><figcaption class="name">Qiu Zongbo</figcaption></figure>
-
-  </section>
-</main>
+<footer class="footer">
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>Sean Own (OWN ZHEN XUAN) is a Macau-based entrepreneur, investor, author, and curator — building China's digital services going-global and a global stage for Chinese culture.</p>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <ul><li><a href="https://www.linkedin.com/in/sean-own-36b3108/">LinkedIn</a></li></ul>
+      </div>
+      <div>
+        <h4>Go</h4>
+        <ul>
+          <li><a href="portfolio.html">Work &amp; Ventures</a></li>
+          <li><a href="speaking.html">Speaking</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Sean Own · Built Static · All Rights Reserved</div>
+  </div>
+</footer>
 
 </body>
 </html>
