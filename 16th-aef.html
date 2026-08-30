@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Macau Should Be The Free Port — Sean Own</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="Why Macau should be the free port for China's digital services — Sean Own on the 16th Asian Electronics Forum and the Longyou dual-computing architecture.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sean Own">
+<meta property="og:title" content="Why Macau Should Be The Free Port — Sean Own">
+<meta property="og:description" content="Why Macau should be the free port for China's digital services — Sean Own on the 16th Asian Electronics Forum and the Longyou dual-computing architecture.">
+<meta property="og:image" content="https://ownsean.com/avatar.png">
+<meta property="og:url" content="https://ownsean.com/article.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Macau Should Be The Free Port — Sean Own">
+<meta name="twitter:description" content="Why Macau should be the free port for China's digital services — Sean Own on the 16th Asian Electronics Forum and the Longyou dual-computing architecture.">
+<meta name="twitter:image" content="https://ownsean.com/avatar.png">
+
+<style>
+  :root{
+    --color-primary:#003262;
+    --color-primary-hover:#001B3A;
+    --color-accent:#FDB515;
+    --color-accent-hover:#FC9313;
+    --color-blue-dark:#010133;
+    --color-blue-medium:#004AAE;
+    --color-gold-dark:#C4820E;
+    --color-founders:#3B7EA1;
+    --color-white:#FFFFFF;
+    --color-surface-alt:#F4F4F4;
+    --color-gray-mid:#9A9A9A;
+    --color-gray-deep:#2B2B2B;
+    --color-border:#E0E0E0;
+    --color-ink:#0A0A0A;
+    --shadow-color-sm:rgba(1,27,58,0.08);
+    --shadow-color-md:rgba(1,27,58,0.12);
+    --shadow-color-lg:rgba(1,27,58,0.18);
+    --font-display:"Bebas Neue","Arial Narrow",Impact,sans-serif;
+    --font-body:"Inter","Helvetica Neue",Arial,sans-serif;
+    --font-alt:"Open Sans","Helvetica Neue",Arial,sans-serif;
+    --font-condensed:"Oswald","Arial Narrow",sans-serif;
+    --space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--space-5:48px;--space-6:64px;--space-7:96px;--space-8:128px;
+    --container:1200px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);color:var(--color-primary);background:var(--color-white);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .container{max-width:var(--container);margin:0 auto;padding:0 var(--space-3);}
+  .display{font-family:var(--font-display);text-transform:uppercase;line-height:0.92;letter-spacing:0.01em;font-weight:400;}
+  a{text-decoration:none;}
+
+  /* ---------- NAV ---------- */
+  .nav{background:var(--color-primary);color:var(--color-white);position:sticky;top:0;z-index:100;}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo{font-family:var(--font-display);font-size:30px;color:var(--color-white);letter-spacing:0.04em;}
+  .logo span{color:var(--color-accent);}
+  .nav-links{display:flex;align-items:center;gap:var(--space-3);}
+  .nav-links a{color:var(--color-white);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;font-size:13px;transition:color .15s;}
+  .nav-links a:hover{color:var(--color-accent);}
+  .nav-links a.active{color:var(--color-accent);}
+  .nav-toggle{display:none;}
+  .nav-burger{display:none;}
+  .btn{display:inline-block;padding:14px 28px;font-family:var(--font-body);font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;border:2px solid transparent;cursor:pointer;border-radius:0;transition:background-color .15s,color .15s,border-color .15s;}
+  .btn-accent{background:var(--color-accent);color:var(--color-primary);border-color:var(--color-accent);}
+  .btn-accent:hover{background:var(--color-accent-hover);border-color:var(--color-accent-hover);color:var(--color-blue-dark);}
+  .btn-primary{background:var(--color-primary);color:var(--color-white);border-color:var(--color-primary);}
+  .btn-primary:hover{background:var(--color-primary-hover);border-color:var(--color-primary-hover);}
+  .btn-ghost{background:none;border:none;color:var(--color-white);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;padding:14px 12px;}
+  .btn-ghost:hover{color:var(--color-accent);}
+
+  /* ---------- ARTICLE HERO ---------- */
+  .article-hero{background:var(--color-primary);color:var(--color-white);padding:var(--space-7) 0 var(--space-6);}
+  .article-hero .container{max-width:860px;}
+  .eyebrow{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-accent);font-size:14px;margin-bottom:var(--space-2);}
+  .article-hero h1{font-size:clamp(44px,7vw,88px);line-height:0.95;margin-bottom:var(--space-3);}
+  .byline{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;font-size:14px;color:#cfd9e6;}
+  .byline b{color:var(--color-accent);}
+  .cover-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2);margin-top:var(--space-5);}
+  .cover-img{width:100%;height:340px;object-fit:cover;display:block;}
+  .source-link{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:14px;color:var(--color-gold-dark);border-top:1px solid var(--color-border);padding-top:var(--space-3);margin-top:var(--space-5);}
+  .source-link a{color:var(--color-gold-dark);text-decoration:underline;text-underline-offset:3px;}
+  .source-link a:hover{color:var(--color-accent);}
+  /* ---------- COMPANION PAPER ---------- */
+  .companion-paper{margin-top:var(--space-6);border:1px solid var(--color-border);border-left:6px solid var(--color-accent);padding:0;background:var(--color-surface-alt);overflow:hidden;}
+  .companion-paper .cp-cover{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;}
+  .companion-paper .cp-body{padding:var(--space-4);}
+  .companion-paper .cp-kicker{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-gold-dark);font-size:12px;margin-bottom:var(--space-1);}
+  .companion-paper h3{font-family:var(--font-display);font-size:32px;text-transform:uppercase;line-height:0.98;margin-bottom:var(--space-2);color:var(--color-primary);}
+  .companion-paper p{color:var(--color-gray-deep);font-size:15px;margin-bottom:var(--space-3);max-width:640px;}
+  .companion-paper .cp-actions{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;}
+  .companion-paper .cp-actions .cp-meta{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:12px;color:var(--color-gray-mid);}
+  @media (max-width:700px){.companion-paper h3{font-size:24px;}}
+
+  /* ---------- PHOTO GALLERY ---------- */
+  .photo-gallery{background:var(--color-surface-alt);padding:var(--space-6) 0;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);}
+  .photo-gallery .pg-head{max-width:var(--container);margin:0 auto var(--space-3);padding:0 var(--space-3);display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-3);}
+  .photo-gallery .pg-head .kicker{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-gold-dark);font-size:13px;}
+  .photo-gallery .pg-head .hint{font-family:var(--font-condensed);font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-gray-mid);}
+  .gallery-strip{display:flex;gap:var(--space-2);overflow-x:auto;overflow-y:hidden;padding:var(--space-2) var(--space-3) var(--space-3);max-width:var(--container);margin:0 auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-color:var(--color-accent) var(--color-primary);scrollbar-width:thin;}
+  .gallery-strip::-webkit-scrollbar{height:8px;}
+  .gallery-strip::-webkit-scrollbar-track{background:transparent;}
+  .gallery-strip::-webkit-scrollbar-thumb{background:var(--color-accent);border-radius:0;}
+  .gallery-item{flex:0 0 260px;height:260px;position:relative;background:var(--color-primary);overflow:hidden;cursor:zoom-in;scroll-snap-align:start;display:block;border:0;padding:0;text-decoration:none;transition:transform .2s,box-shadow .2s;}
+  .gallery-item:hover{transform:translateY(-3px);box-shadow:0 8px 24px var(--shadow-color-lg);}
+  .gallery-item img{width:100%;height:100%;object-fit:cover;display:block;}
+  .gallery-item .gi-num{position:absolute;top:8px;left:8px;background:var(--color-primary);color:var(--color-accent);font-family:var(--font-condensed);font-weight:700;font-size:12px;padding:4px 8px;letter-spacing:0.08em;}
+  .gallery-item .gi-zoom{position:absolute;bottom:8px;right:8px;background:var(--color-accent);color:var(--color-primary);width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;}
+  /* Lightbox (CSS only via :target) */
+  .lightbox{position:fixed;inset:0;background:rgba(0,15,40,0.94);display:none;align-items:center;justify-content:center;z-index:999;padding:var(--space-3);flex-direction:column;}
+  .lightbox:target{display:flex;}
+  .lightbox-img{max-width:96vw;max-height:88vh;object-fit:contain;background:#000;box-shadow:0 12px 48px rgba(0,0,0,0.6);}
+  .lightbox-cap{margin-top:var(--space-2);color:#cfd9e6;font-family:var(--font-condensed);font-size:14px;text-transform:uppercase;letter-spacing:0.1em;text-align:center;}
+  .lightbox-nav{display:flex;gap:var(--space-3);margin-top:var(--space-3);align-items:center;}
+  .lightbox-nav .lb-close,.lightbox-nav .lb-prev,.lightbox-nav .lb-next{color:var(--color-accent);font-family:var(--font-condensed);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;font-size:14px;padding:8px 14px;border:1px solid var(--color-accent);background:transparent;cursor:pointer;text-decoration:none;}
+  .lightbox-nav .lb-close:hover,.lightbox-nav .lb-prev:hover,.lightbox-nav .lb-next:hover{background:var(--color-accent);color:var(--color-primary);}
+  @media(max-width:560px){.gallery-item{flex:0 0 200px;height:200px;}}
+
+  /* ---------- ARTICLE BODY ---------- */
+  .article-body{max-width:760px;margin:0 auto;padding:var(--space-6) var(--space-3);}
+  .article-body p{color:var(--color-gray-deep);font-size:18px;margin-bottom:var(--space-3);}
+  .article-body p .hl{color:var(--color-primary);font-weight:800;}
+  .article-body h2{font-family:var(--font-display);font-size:clamp(32px,5vw,52px);text-transform:uppercase;line-height:0.98;margin:var(--space-5) 0 var(--space-2);color:var(--color-primary);}
+  .pull{font-family:var(--font-display);font-size:clamp(30px,5vw,56px);text-transform:uppercase;line-height:0.95;color:var(--color-accent);border-left:6px solid var(--color-accent);padding-left:var(--space-3);margin:var(--space-5) 0;}
+
+  /* ---------- RELATED ---------- */
+  .related{background:var(--color-surface-alt);padding:var(--space-7) 0;}
+  .related .section-head{margin-bottom:var(--space-5);}
+  .section-head .kicker{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-accent);font-size:13px;}
+  .section-head h2{font-family:var(--font-display);font-size:clamp(40px,6vw,72px);text-transform:uppercase;line-height:0.95;margin-top:var(--space-1);}
+  .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);}
+  .rel-card{background:var(--color-white);border:1px solid var(--color-border);box-shadow:0 1px 3px var(--shadow-color-sm);transition:box-shadow .15s;}
+  .rel-card:hover{box-shadow:0 4px 12px var(--shadow-color-md);}
+  .rel-card .thumb{width:100%;height:150px;display:block;background:var(--color-primary);}
+  .rel-card .body{padding:var(--space-3);}
+  .rel-card .body h3{font-family:var(--font-display);font-size:24px;text-transform:uppercase;line-height:0.98;margin-bottom:var(--space-2);color:var(--color-primary);}
+  .rel-card .body .read{color:var(--color-gold-dark);font-weight:800;text-transform:uppercase;letter-spacing:0.04em;font-size:13px;}
+  .rel-card .body .read:hover{color:var(--color-accent);}
+
+  /* ---------- CTA + FOOTER ---------- */
+  .cta{background:var(--color-accent);color:var(--color-primary);padding:var(--space-8) 0;text-align:center;}
+  .cta blockquote{font-family:var(--font-display);font-size:clamp(40px,7vw,96px);text-transform:uppercase;line-height:0.92;max-width:900px;margin:0 auto var(--space-5);}
+  .cta .btn-primary{background:var(--color-primary);color:var(--color-white);border-color:var(--color-primary);}
+  .cta .btn-primary:hover{background:var(--color-blue-dark);border-color:var(--color-blue-dark);}
+  .footer{background:var(--color-primary);color:var(--color-white);padding:var(--space-7) 0 var(--space-4);}
+  .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1.4fr;gap:var(--space-5);}
+  .footer h4{font-family:var(--font-condensed);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:15px;color:var(--color-accent);margin-bottom:var(--space-3);}
+  .footer p,.footer li{color:#cfd9e6;font-size:14px;line-height:1.9;list-style:none;}
+  .footer a{color:#cfd9e6;}
+  .footer a:hover{color:var(--color-accent);}
+  .copyright{border-top:1px solid rgba(255,255,255,0.15);margin-top:var(--space-6);padding-top:var(--space-3);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#9fb3c8;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:900px){
+    .rel-grid{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){
+    .nav-toggle{position:absolute;opacity:0;width:1px;height:1px;}
+    .nav-burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:30px;height:30px;cursor:pointer;margin-left:auto;}
+    .nav-burger span{display:block;height:3px;width:100%;background:var(--color-white);transition:background .15s;}
+    .nav-burger:hover span{background:var(--color-accent);}
+    .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--color-primary);padding:var(--space-2) var(--space-3);gap:0;box-shadow:0 8px 24px var(--shadow-color-lg);}
+    .nav-links a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:15px;}
+    .nav-links a.active{border-bottom:1px solid rgba(255,255,255,.15);}
+    .nav-links a.btn{margin-top:var(--space-2);text-align:center;border-bottom:none;}
+    .nav-toggle:checked ~ .nav-links{display:flex;}
+    .rel-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" style="text-decoration:none;">SEAN<span>OWN</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="news.html" class="active">News</a>
+      <a href="portfolio.html">Work</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html#subscribe" class="btn btn-accent">Subscribe</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ ARTICLE HERO ============ -->
+<header class="article-hero">
+  <div class="container">
+    <div class="eyebrow">Essay · Going Global</div>
+    <h1 class="display">Why Macau Should Be The Free Port</h1>
+    <div class="byline">By <b>Sean Own</b> · Dec 7, 2025 · 5 min read</div>
+    <div class="cover-grid">
+      <img class="cover-img" src="img/asia-electronics-forum-1.jpg" alt="Wang Ning, President of the China Electronic Chamber of Commerce, addressing the 16th Asian Electronics Forum">
+      <img class="cover-img" src="img/asia-electronics-forum-2.jpg" alt="Delegates in the audience at the 16th Asian Electronics Forum in Macau">
+    </div>
+  </div>
+</header>
+
+<!-- ============ PHOTO GALLERY ============ -->
+<section class="photo-gallery" id="aef-gallery" aria-label="Forum photo gallery">
+  <div class="pg-head">
+    <span class="kicker">Forum Gallery · 8 Photos</span>
+    <span class="hint">← Scroll · Click any thumbnail to enlarge →</span>
+  </div>
+  <div class="gallery-strip">
+    <a class="gallery-item" href="#aef16-1" aria-label="Open photo 1: Full hall — Wang Ning on stage"><span class="gi-num">01</span><img src="img/aef16-gallery-1-thumb.jpg" alt="Full hall during opening of the 16th Asian Electronics Forum"><span class="gi-zoom">+</span></a>
+    <a class="gallery-item" href="#aef16-2" aria-label="Open photo 2: Wang Ning taking the stage"><span class="gi-num">02</span><img src="img/aef16-gallery-2-thumb.jpg" alt="Wang Ning, President of China Electronic Chamber of Commerce, walking on stage"><span class="gi-zoom">+</span></a>
+    <a class="gallery-item" href="#aef16-3" aria-label="Open photo 3: Forum backdrop with all organizers listed"><span class="gi-num">03</span><img src="img/aef16-gallery-3-thumb.jpg" alt="Wide shot of the 2025 forum stage and audience"><span class="gi-zoom">+</span></a>
+    <a class="gallery-item" href="#aef16-4" aria-label="Open photo 4: Sean Own's opening-remarks slide on screen"><span class="gi-num">04</span><img src="img/aef16-gallery-4-thumb.jpg" alt="Opening-remarks slide introducing Sean Own as President of GBA E-Commerce Association"><span class="gi-zoom">+</span></a>
+    <a class="gallery-item" href="#aef16-5" aria-label="Open photo 5: Sean Own speaking from the podium"><span class="gi-num">05</span><img src="img/aef16-gallery-5-thumb.jpg" alt="Sean Own delivering opening remarks at the forum podium"><span class="gi-zoom">+</span></a>
+    <a class="gallery-item" href="#aef16-6" aria-label="Open photo 6: Chandelier + full stage"><span class="gi-num">06</span><img src="img/aef16-gallery-6-thumb.jpg" alt="Crystal chandelier overhead with the full 2025 forum stage below"><span class="gi-zoom">+</span></a>
+    <a class="gallery-item" href="#aef16-7" aria-label="Open photo 7: Sean Own presenting — wide angle"><span class="gi-num">07</span><img src="img/aef16-gallery-7-thumb.jpg" alt="Wide perspective of Sean Own presenting at the forum"><span class="gi-zoom">+</span></a>
+    <a class="gallery-item" href="#aef16-8" aria-label="Open photo 8: Delegates capturing the talk on phones"><span class="gi-num">08</span><img src="img/aef16-gallery-8-thumb.jpg" alt="Delegates holding up phones to capture Sean Own speaking"><span class="gi-zoom">+</span></a>
+  </div>
+</section>
+
+<!-- ============ LIGHTBOX OVERLAYS (CSS :target) ============ -->
+<div class="lightbox" id="aef16-1" role="dialog" aria-modal="true">
+  <img class="lightbox-img" src="img/aef16-gallery-1-full.jpg" alt="Full hall during opening of the 16th Asian Electronics Forum">
+  <div class="lightbox-cap">01 · Full hall — opening of the 16th Asian Electronics Forum</div>
+  <div class="lightbox-nav">
+    <a class="lb-close" href="#aef-gallery">Close ✕</a>
+    <a class="lb-next" href="#aef16-2">Next →</a>
+  </div>
+</div>
+<div class="lightbox" id="aef16-2" role="dialog" aria-modal="true">
+  <img class="lightbox-img" src="img/aef16-gallery-2-full.jpg" alt="Wang Ning taking the stage">
+  <div class="lightbox-cap">02 · Wang Ning, President of China Electronic Chamber of Commerce</div>
+  <div class="lightbox-nav">
+    <a class="lb-prev" href="#aef16-1">← Prev</a>
+    <a class="lb-close" href="#aef-gallery">Close ✕</a>
+    <a class="lb-next" href="#aef16-3">Next →</a>
+  </div>
+</div>
+<div class="lightbox" id="aef16-3" role="dialog" aria-modal="true">
+  <img class="lightbox-img" src="img/aef16-gallery-3-full.jpg" alt="Wide shot of the 2025 forum stage and audience">
+  <div class="lightbox-cap">03 · Forum backdrop — all listed organizers</div>
+  <div class="lightbox-nav">
+    <a class="lb-prev" href="#aef16-2">← Prev</a>
+    <a class="lb-close" href="#aef-gallery">Close ✕</a>
+    <a class="lb-next" href="#aef16-4">Next →</a>
+  </div>
+</div>
+<div class="lightbox" id="aef16-4" role="dialog" aria-modal="true">
+  <img class="lightbox-img" src="img/aef16-gallery-4-full.jpg" alt="Sean Own opening-remarks slide">
+  <div class="lightbox-cap">04 · Opening-remarks slide — Sean Own, President of GBA E-Commerce Association</div>
+  <div class="lightbox-nav">
+    <a class="lb-prev" href="#aef16-3">← Prev</a>
+    <a class="lb-close" href="#aef-gallery">Close ✕</a>
+    <a class="lb-next" href="#aef16-5">Next →</a>
+  </div>
+</div>
+<div class="lightbox" id="aef16-5" role="dialog" aria-modal="true">
+  <img class="lightbox-img" src="img/aef16-gallery-5-full.jpg" alt="Sean Own delivering opening remarks">
+  <div class="lightbox-cap">05 · Sean Own delivering opening remarks</div>
+  <div class="lightbox-nav">
+    <a class="lb-prev" href="#aef16-4">← Prev</a>
+    <a class="lb-close" href="#aef-gallery">Close ✕</a>
+    <a class="lb-next" href="#aef16-6">Next →</a>
+  </div>
+</div>
+<div class="lightbox" id="aef16-6" role="dialog" aria-modal="true">
+  <img class="lightbox-img" src="img/aef16-gallery-6-full.jpg" alt="Wide hall with chandelier and stage">
+  <div class="lightbox-cap">06 · Wide hall — crystal chandelier + full stage</div>
+  <div class="lightbox-nav">
+    <a class="lb-prev" href="#aef16-5">← Prev</a>
+    <a class="lb-close" href="#aef-gallery">Close ✕</a>
+    <a class="lb-next" href="#aef16-7">Next →</a>
+  </div>
+</div>
+<div class="lightbox" id="aef16-7" role="dialog" aria-modal="true">
+  <img class="lightbox-img" src="img/aef16-gallery-7-full.jpg" alt="Sean Own presenting — wide perspective">
+  <div class="lightbox-cap">07 · Sean Own presenting — wide perspective</div>
+  <div class="lightbox-nav">
+    <a class="lb-prev" href="#aef16-6">← Prev</a>
+    <a class="lb-close" href="#aef-gallery">Close ✕</a>
+    <a class="lb-next" href="#aef16-8">Next →</a>
+  </div>
+</div>
+<div class="lightbox" id="aef16-8" role="dialog" aria-modal="true">
+  <img class="lightbox-img" src="img/aef16-gallery-8-full.jpg" alt="Delegates holding up phones to capture the talk">
+  <div class="lightbox-cap">08 · Delegates capturing Sean Own's talk</div>
+  <div class="lightbox-nav">
+    <a class="lb-prev" href="#aef16-7">← Prev</a>
+    <a class="lb-close" href="#aef-gallery">Close ✕</a>
+  </div>
+</div>
+
+<!-- ============ ARTICLE BODY ============ -->
+<article class="article-body">
+  <p>Every operator knows the feeling. You see a land-grab before the crowd does, and the only question is whether you move. For Chinese enterprises trying to go global, the land-grab is happening right now — and the port they should sail out of is <span class="hl">Macau</span>.</p>
+
+  <p>People sleep on Macau. They see casinos and nothing else. I see a free port with two computing centers, a bridge to the Greater Bay Area, and a cultural fluency with the West that the mainland can't fake. That is leverage. That is the kind of underpriced attention I have spent my whole career hunting for.</p>
+
+  <h2 class="display">The Dual-Computing Play</h2>
+  <p>With twin computing centers in Macau and Taiwan, we open a compliant, efficient AI pathway for Chinese enterprises to reach the world. Not a workaround. A real, defensible architecture. I introduced the Longyou dual-computing model at the 16th Asian Electronics Forum, and the room got it immediately — Wang Ning, President of the China Electronic Chamber of Commerce, included.</p>
+
+  <div class="pull display">"Legacy is greater than currency. Build the port, and the ships will come."</div>
+
+  <p>Here is the part most people miss: going global is not a marketing campaign. It is infrastructure. You need the compliance, you need the compute, you need the associations that shake hands on both sides of the strait. I chair the GBA E-Commerce Association and I run the Longyou AI going-global platform because that is the only way this actually ships.</p>
+
+  <h2 class="display">Culture Is The Product</h2>
+  <p>The West does not just want Chinese goods. It wants Chinese culture — and it has no idea how to reach it. That is why I built the Macao Silk Culture &amp; Art Center and the Macao Culture IP Copyright Center. We take heritage, protect it, and turn it into living, commercial IP. Heritage that sits in a vault creates no legacy. Heritage that travels does.</p>
+
+  <p>So here is my thesis, and I will say it the way I say everything: <span class="hl">wealth grows from the right way, and profit comes through what is just.</span> Macau is the free port. The question is not whether — it is who moves first.</p>
+
+  <p class="source-link">Source: <a href="https://www.macaodaily.com/html/2025-12/07/content_1875259.htm" target="_blank" rel="noopener">Macau Daily — 16th Asian Electronics Forum coverage (Dec 7, 2025)</a></p>
+
+  <aside class="companion-paper">
+    <img class="cp-cover" src="img/longyou-ai-cover.jpg" alt="Longyou AI: The Core Differentiation in Digital Services Going-Global">
+    <div class="cp-body">
+      <div class="cp-kicker">Companion Paper</div>
+      <h3 class="display">Longyou AI: The Core Differentiation in Digital Services Going-Global</h3>
+      <p>The full white paper behind this essay. Read it if you want the architecture, the case studies, and the operating playbook in detail — including the dual-computing model, the GBA policy stack, and the cross-border go-to-market sequence we are running.</p>
+      <div class="cp-actions">
+        <a href="docs/longyou-ai-going-global-differentiation.pdf" download class="btn btn-accent">Download PDF ↓</a>
+        <span class="cp-meta">PDF · 13.2 MB · 2026</span>
+      </div>
+    </div>
+  </aside>
+</article>
+
+<!-- ============ RELATED ============ -->
+<section class="related">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Keep Reading</div>
+      <h2 class="display">Related Writing</h2>
+    </div>
+    <div class="rel-grid">
+      <a class="rel-card" href="news.html">
+        <svg class="thumb" viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice"><rect width="400" height="150" fill="#003262"/><circle cx="200" cy="75" r="44" fill="#FDB515"/></svg>
+        <div class="body"><h3 class="display">The Teach-The-Taught Playbook</h3><span class="read">Read This →</span></div>
+      </a>
+      <a class="rel-card" href="news.html">
+        <svg class="thumb" viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice"><rect width="400" height="150" fill="#FDB515"/><rect x="60" y="30" width="280" height="90" fill="#003262"/></svg>
+        <div class="body"><h3 class="display">IP Is The New Factory</h3><span class="read">Read This →</span></div>
+      </a>
+      <a class="rel-card" href="news.html">
+        <svg class="thumb" viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice"><rect width="400" height="150" fill="#003262"/><path d="M200 25 L222 75 L200 125 L178 75 Z" fill="#FDB515"/></svg>
+        <div class="body"><h3 class="display">Youth Bridges The Strait</h3><span class="read">Read This →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="container">
+    <blockquote class="display">"Attention is the only currency that matters."</blockquote>
+    <a href="index.html#subscribe" class="btn btn-primary">Join the Newsletter</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>Sean Own (OWN ZHEN XUAN) is a Macau-based entrepreneur, investor, author, and curator — building China's digital services going-global and a global stage for Chinese culture. Let's build what outlasts beyond profit.</p>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/sean-own-36b3108/">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Go</h4>
+        <ul>
+          <li><a href="portfolio.html">Work &amp; Ventures</a></li>
+          <li><a href="speaking.html">Speaking</a></li>
+          <li><a href="news.html">News &amp; Writing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Sean Own · Built Static · All Rights Reserved</div>
+  </div>
+</footer>
+
+</body>
+</html>
