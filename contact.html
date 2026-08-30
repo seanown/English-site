@@ -81,6 +81,12 @@
   .field input:focus,.field textarea:focus{outline:none;border-color:var(--color-accent);}
   .field textarea{resize:vertical;min-height:140px;}
 
+  /* ---------- FORM SUCCESS BANNER (pure CSS :target, no JS) ---------- */
+  .form-ok{display:none;margin-bottom:var(--space-3);padding:18px 22px;border:2px solid var(--color-accent);background:rgba(253,181,21,0.12);color:var(--color-primary);font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;font-size:15px;}
+  .form-ok:target{display:block;}
+  .form-ok .ok-mark{display:inline-block;background:var(--color-accent);color:var(--color-primary);width:30px;height:30px;line-height:30px;text-align:center;font-size:18px;margin-right:10px;vertical-align:middle;}
+  .form-ok .ok-link{display:block;margin-top:8px;font-family:var(--font-body);font-weight:400;text-transform:none;letter-spacing:0;font-size:14px;color:var(--color-primary);}
+
   /* ---------- CTA + FOOTER ---------- */
   .cta{background:var(--color-accent);color:var(--color-primary);padding:var(--space-8) 0;text-align:center;}
   .cta blockquote{font-family:var(--font-display);font-size:clamp(40px,7vw,96px);text-transform:uppercase;line-height:0.92;max-width:900px;margin:0 auto var(--space-5);}
@@ -143,11 +149,14 @@
         <div class="info-row"><span class="k">Based In</span><span class="v">Macau · GBA</span></div>
         <div class="info-row"><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/sean-own-36b3108/">Sean Own</a></span></div>
       </aside>
-      <form class="contact-form" onsubmit="return false;">
-        <div class="field"><label for="name">Name</label><input id="name" type="text" placeholder="Your name"></div>
-        <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="you@email.com"></div>
-        <div class="field"><label for="subject">Subject</label><input id="subject" type="text" placeholder="What's this about?"></div>
-        <div class="field"><label for="msg">Message</label><textarea id="msg" placeholder="Tell me what you're building."></textarea></div>
+      <div id="contact-sent" class="form-ok"><span class="ok-mark">✓</span>Message Sent — thanks! I'll get back to you soon.<span class="ok-link">Send another from <a href="contact.html">Contact</a>, or back to the <a href="index.html">Home</a> page.</span></div>
+      <form class="contact-form" name="contact" method="POST" action="?sent=1#contact-sent" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none;"><label>Don't fill this: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="field"><label for="name">Name (required)</label><input id="name" name="name" type="text" placeholder="Your name" required autocomplete="name"></div>
+        <div class="field"><label for="email">Email (required)</label><input id="email" name="email" type="email" placeholder="you@email.com" required autocomplete="email"></div>
+        <div class="field"><label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="What's this about?"></div>
+        <div class="field"><label for="msg">Message (required)</label><textarea id="msg" name="message" placeholder="Tell me what you're building." required></textarea></div>
         <button type="submit" class="btn btn-accent">Send Message</button>
       </form>
     </div>
