@@ -36,8 +36,9 @@
   .grid{max-width:1280px;margin:32px auto 0;padding:0 28px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .tile{position:relative;background:var(--tile);overflow:hidden}
   .tile img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top}
-  .tile .name{position:absolute;top:14px;left:14px;right:14px;font-family:'Inter','Open Sans',sans-serif;font-weight:700;color:var(--ink);line-height:1.08;font-size:24px;letter-spacing:-0.2px;text-shadow:0 1px 0 rgba(255,255,255,0.55)}
-  .tile .zh{display:block;font-family:'Inter','Open Sans',sans-serif;font-weight:600;font-size:13px;letter-spacing:1.2px;color:#222;margin-top:4px;text-transform:none;text-shadow:0 1px 0 rgba(255,255,255,0.55)}
+  .tile .name{position:absolute;top:14px;left:14px;right:14px;font-family:'Inter','Open Sans',sans-serif;font-weight:700;color:var(--blue);line-height:1.08;font-size:24px;letter-spacing:-0.2px}
+  .tile .name.on-dark{color:var(--gold)}
+  .tile .zh{display:block;font-family:'Inter','Open Sans',sans-serif;font-weight:600;font-size:13px;letter-spacing:1.2px;color:inherit;margin-top:4px;text-transform:none}
 
   /* responsive */
   @media (max-width:900px){
@@ -73,86 +74,86 @@
 <section class="grid">
 
   <div class="tile"><img src="img/leadership/manual/p01.jpeg" alt="Weng Zhenxuan">
-    <div class="name">Sean Own<span class="zh">翁振軒</span></div>
+    <div class="name on-light">Sean Own<span class="zh">翁振軒</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p02.jpeg" alt="Shao Hanbin">
-    <div class="name">Sio Hon Pan<span class="zh">邵漢彬</span></div>
+    <div class="name on-dark">Sio Hon Pan<span class="zh">邵漢彬</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p03.jpeg" alt="Shi Wenjun">
-    <div class="name">Si Man Chon<span class="zh">施文俊</span></div>
+    <div class="name on-light">Si Man Chon<span class="zh">施文俊</span></div>
   </div>
 
 
 
   <div class="tile"><img src="img/leadership/manual/p06.jpeg" alt="Cherrie Choi">
-    <div class="name">Cherrie Choi<span class="zh">蔡純絲</span></div>
+    <div class="name on-light">Cherrie Choi<span class="zh">蔡純絲</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p07.jpeg" alt="Han Li'an">
-    <div class="name">Hon Lei On<span class="zh">韓莉安</span></div>
+    <div class="name on-light">Hon Lei On<span class="zh">韓莉安</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p08.jpeg" alt="Zeng Zengwei">
-    <div class="name">Zeng Zengwei<span class="zh">曾增偉</span></div>
+    <div class="name on-light">Zeng Zengwei<span class="zh">曾增偉</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p09.jpeg" alt="Seko Wu">
-    <div class="name">Seko Wu<span class="zh">吳嬋華</span></div>
+    <div class="name on-dark">Seko Wu<span class="zh">吳嬋華</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p10.jpeg" alt="Liza Chien">
-    <div class="name">Liza Chien<span class="zh">簡立喆</span></div>
+    <div class="name on-light">Liza Chien<span class="zh">簡立喆</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p11.jpeg" alt="Lin Xinze">
-    <div class="name">Lin Xinze<span class="zh">林芯澤</span></div>
+    <div class="name on-light">Lin Xinze<span class="zh">林芯澤</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p12.jpeg" alt="Sun Zongxiao">
-    <div class="name">Sun Zongxiao<span class="zh">孫宗孝</span></div>
+    <div class="name on-light">Sun Zongxiao<span class="zh">孫宗孝</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p13.jpeg" alt="Wen Linjian">
-    <div class="name">Wen Linjian<span class="zh">溫林鑒</span></div>
+    <div class="name on-dark">Wen Linjian<span class="zh">溫林鑒</span></div>
   </div>
 
 
   <div class="tile"><img src="img/leadership/manual/p15.jpeg" alt="Wen Zhongxiong">
-    <div class="name">Wen Zhongxiong<span class="zh">文仲雄</span></div>
+    <div class="name on-dark">Wen Zhongxiong<span class="zh">文仲雄</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p16.jpeg" alt="Emily Cheung">
-    <div class="name">Emily Cheung<span class="zh">張得欣</span></div>
+    <div class="name on-dark">Emily Cheung<span class="zh">張得欣</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p17.jpeg" alt="Zhong Shuiyang">
-    <div class="name">Zhong Shuiyang<span class="zh">鍾水陽</span></div>
+    <div class="name on-light">Zhong Shuiyang<span class="zh">鍾水陽</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p18.jpeg" alt="Shen Wenlong">
-    <div class="name">Shen Wenlong<span class="zh">沈文龍</span></div>
+    <div class="name on-light">Shen Wenlong<span class="zh">沈文龍</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p19.jpeg" alt="Mai Jiabao">
-    <div class="name">Mai Jiabao<span class="zh">麥家寶</span></div>
+    <div class="name on-light">Mai Jiabao<span class="zh">麥家寶</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p20.jpeg" alt="Wu Mingzong">
-    <div class="name">Wu Mingzong<span class="zh">吳明宗</span></div>
+    <div class="name on-dark">Wu Mingzong<span class="zh">吳明宗</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p21.jpeg" alt="Liang Jia'en">
-    <div class="name">Liang Jiaen<span class="zh">梁家恩</span></div>
+    <div class="name on-light">Liang Jiaen<span class="zh">梁家恩</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p22.jpeg" alt="Thomas Lee">
-    <div class="name">Thomas Lee<span class="zh">李易修</span></div>
+    <div class="name on-light">Thomas Lee<span class="zh">李易修</span></div>
   </div>
 
   <div class="tile"><img src="img/leadership/manual/p23.jpeg" alt="Qiu Zongbo">
-    <div class="name">Qiu Zongbo<span class="zh">邱宗博</span></div>
+    <div class="name on-light">Qiu Zongbo<span class="zh">邱宗博</span></div>
   </div>
 
 
