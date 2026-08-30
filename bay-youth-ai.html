@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bay Youth AI Connects The World — Sean Own</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="On 2 June 2026, the Macao Science Centre hosted a parallel session of the International Network Audio-Visual Festival — five strategic partnerships signed; two flagship IP launches; one new Macau hub for Chinese culture going global.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sean Own">
+<meta property="og:title" content="Bay Youth AI Connects The World — Sean Own">
+<meta property="og:description" content="Five strategic partnerships. Two flagship IP rights. One Macau hub for Chinese culture going global.">
+<meta property="og:image" content="https://ownsean.com/img/bay-youth-hero.jpg">
+<meta property="og:url" content="https://ownsean.com/bay-youth-ai.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bay Youth AI Connects The World — Sean Own">
+<meta name="twitter:description" content="Five strategic partnerships. Two flagship IP rights. One Macau hub for Chinese culture going global.">
+<meta name="twitter:image" content="https://ownsean.com/img/bay-youth-hero.jpg">
+
+<style>
+  :root{
+    --color-primary:#003262;
+    --color-primary-hover:#001B3A;
+    --color-accent:#FDB515;
+    --color-accent-hover:#FC9313;
+    --color-blue-dark:#010133;
+    --color-blue-medium:#004AAE;
+    --color-gold-dark:#C4820E;
+    --color-founders:#3B7EA1;
+    --color-white:#FFFFFF;
+    --color-surface-alt:#F4F4F4;
+    --color-gray-mid:#9A9A9A;
+    --color-gray-deep:#2B2B2B;
+    --color-border:#E0E0E0;
+    --color-ink:#0A0A0A;
+    --shadow-color-sm:rgba(1,27,58,0.08);
+    --shadow-color-md:rgba(1,27,58,0.12);
+    --shadow-color-lg:rgba(1,27,58,0.18);
+    --font-display:"Bebas Neue","Arial Narrow",Impact,sans-serif;
+    --font-body:"Inter","Helvetica Neue",Arial,sans-serif;
+    --font-alt:"Open Sans","Helvetica Neue",Arial,sans-serif;
+    --font-condensed:"Oswald","Arial Narrow",sans-serif;
+    --space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--space-5:48px;--space-6:64px;--space-7:96px;--space-8:128px;
+    --container:1200px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);color:var(--color-primary);background:var(--color-white);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .container{max-width:var(--container);margin:0 auto;padding:0 var(--space-3);}
+  .display{font-family:var(--font-display);text-transform:uppercase;line-height:0.92;letter-spacing:0.01em;font-weight:400;}
+  a{text-decoration:none;}
+
+  /* ---------- NAV ---------- */
+  .nav{background:var(--color-primary);color:var(--color-white);position:sticky;top:0;z-index:100;}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo{font-family:var(--font-display);font-size:30px;color:var(--color-white);letter-spacing:0.04em;}
+  .logo span{color:var(--color-accent);}
+  .nav-links{display:flex;align-items:center;gap:var(--space-3);}
+  .nav-links a{color:var(--color-white);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;font-size:13px;transition:color .15s;}
+  .nav-links a:hover{color:var(--color-accent);}
+  .nav-links a.active{color:var(--color-accent);}
+  .nav-toggle{display:none;}
+  .nav-burger{display:none;}
+  .btn{display:inline-block;padding:14px 28px;font-family:var(--font-body);font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;border:2px solid transparent;cursor:pointer;border-radius:0;transition:background-color .15s,color .15s,border-color .15s;}
+  .btn-accent{background:var(--color-accent);color:var(--color-primary);border-color:var(--color-accent);}
+  .btn-accent:hover{background:var(--color-accent-hover);border-color:var(--color-accent-hover);color:var(--color-blue-dark);}
+  .btn-primary{background:var(--color-primary);color:var(--color-white);border-color:var(--color-primary);}
+  .btn-primary:hover{background:var(--color-primary-hover);border-color:var(--color-primary-hover);}
+  .btn-ghost{background:none;border:none;color:var(--color-white);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;padding:14px 12px;}
+  .btn-ghost:hover{color:var(--color-accent);}
+
+  /* ---------- ARTICLE HERO ---------- */
+  .article-hero{background:var(--color-primary);color:var(--color-white);padding:var(--space-7) 0 var(--space-6);}
+  .article-hero .container{max-width:860px;}
+  .eyebrow{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-accent);font-size:14px;margin-bottom:var(--space-2);}
+  .article-hero h1{font-size:clamp(40px,6vw,80px);line-height:0.95;margin-bottom:var(--space-3);}
+  .gold-lead{font-family:var(--font-condensed);font-weight:600;font-size:clamp(18px,2vw,24px);text-transform:uppercase;letter-spacing:0.04em;color:var(--color-accent);max-width:760px;line-height:1.35;}
+  .byline{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;font-size:14px;color:#cfd9e6;margin-top:var(--space-3);}
+  .byline b{color:var(--color-accent);}
+  .hero-img{width:100%;height:auto;display:block;margin-top:var(--space-5);border:1px solid rgba(255,255,255,.15);}
+  .hero-cap{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:12px;color:#cfd9e6;margin-top:var(--space-2);text-align:center;}
+  .source-link{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:14px;color:var(--color-gold-dark);border-top:1px solid var(--color-border);padding-top:var(--space-3);margin-top:var(--space-5);}
+  .source-link a{color:var(--color-gold-dark);text-decoration:underline;text-underline-offset:3px;}
+  .source-link a:hover{color:var(--color-accent);}
+
+  /* ---------- ARTICLE BODY ---------- */
+  .article-body{max-width:760px;margin:0 auto;padding:var(--space-6) var(--space-3);}
+  .article-body p{color:var(--color-gray-deep);font-size:18px;margin-bottom:var(--space-3);}
+  .article-body p .hl{color:var(--color-primary);font-weight:800;}
+  .article-body h2{font-family:var(--font-display);font-size:clamp(32px,5vw,52px);text-transform:uppercase;line-height:0.98;margin:var(--space-5) 0 var(--space-2);color:var(--color-primary);}
+  .pull{font-family:var(--font-display);font-size:clamp(28px,4vw,52px);text-transform:uppercase;line-height:0.95;color:var(--color-accent);border-left:6px solid var(--color-accent);padding-left:var(--space-3);margin:var(--space-5) 0;}
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-2);margin:var(--space-4) 0;}
+  .stat-card{background:var(--color-surface-alt);border:1px solid var(--color-border);border-bottom:3px solid var(--color-accent);padding:var(--space-3);text-align:center;}
+  .stat-card .stat-num{font-family:var(--font-display);font-size:36px;color:var(--color-primary);line-height:1;letter-spacing:0.02em;}
+  .stat-card .stat-label{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;font-size:12px;color:var(--color-gray-deep);margin-top:var(--space-1);}
+  @media(max-width:560px){.stat-grid{grid-template-columns:1fr;}}
+
+  /* ---------- PARTNERSHIP CARDS ---------- */
+  .pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3);margin:var(--space-4) 0;}
+  .pcard{border:1px solid var(--color-border);border-top:4px solid var(--color-accent);padding:var(--space-4);background:var(--color-white);}
+  .pcard .pkicker{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-gold-dark);font-size:12px;margin-bottom:var(--space-1);}
+  .pcard h3{font-family:var(--font-display);font-size:26px;text-transform:uppercase;line-height:0.98;margin-bottom:var(--space-2);color:var(--color-primary);}
+  .pcard .pcard-sub{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;font-size:13px;color:var(--color-blue-medium);margin-bottom:var(--space-2);}
+  .pcard p{color:var(--color-gray-deep);font-size:15px;}
+  .pcard ul{list-style:none;padding:0;margin:var(--space-2) 0 0;}
+  .pcard ul li{font-family:var(--font-condensed);font-size:13px;color:var(--color-gray-deep);padding:4px 0;border-top:1px dashed var(--color-border);}
+  .pcard ul li:first-child{border-top:0;}
+  @media(max-width:700px){.pgrid{grid-template-columns:1fr;}}
+
+  /* ---------- IP FEATURE BLOCK ---------- */
+  .ip-feat{background:var(--color-surface-alt);border-left:6px solid var(--color-accent);padding:var(--space-4);margin:var(--space-4) 0;}
+  .ip-feat .ipk{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-gold-dark);font-size:12px;margin-bottom:var(--space-1);}
+  .ip-feat h3{font-family:var(--font-display);font-size:30px;text-transform:uppercase;line-height:0.98;margin-bottom:var(--space-2);color:var(--color-primary);}
+  .ip-feat .ipzh{color:var(--color-blue-medium);font-family:var(--font-condensed);font-weight:500;font-size:14px;margin-bottom:var(--space-2);}
+  .ip-feat p{color:var(--color-gray-deep);font-size:15px;margin-bottom:var(--space-2);}
+
+  /* ---------- CHAIRMAN QUOTE ---------- */
+  .chairman{margin:var(--space-5) 0;padding:var(--space-5) var(--space-4);background:var(--color-primary);color:var(--color-white);}
+  .chairman .ckicker{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-accent);font-size:12px;margin-bottom:var(--space-2);}
+  .chairman blockquote{font-family:var(--font-display);font-size:clamp(28px,4vw,44px);text-transform:uppercase;line-height:1.05;letter-spacing:0.01em;color:var(--color-white);margin-bottom:var(--space-3);}
+  .chairman blockquote em{color:var(--color-accent);font-style:normal;}
+  .chairman cite{font-style:normal;font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:13px;color:#cfd9e6;display:block;}
+  .chairman cite b{color:var(--color-accent);font-weight:700;}
+
+  /* ---------- RELATED ---------- */
+  .related{background:var(--color-surface-alt);padding:var(--space-7) 0;}
+  .related .section-head{margin-bottom:var(--space-5);max-width:var(--container);margin-left:auto;margin-right:auto;padding:0 var(--space-3);}
+  .section-head .kicker{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-accent);font-size:13px;}
+  .section-head h2{font-family:var(--font-display);font-size:clamp(40px,6vw,72px);text-transform:uppercase;line-height:0.95;margin-top:var(--space-1);}
+  .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);max-width:var(--container);margin:0 auto;padding:0 var(--space-3);}
+  .rel-card{background:var(--color-white);border:1px solid var(--color-border);box-shadow:0 1px 3px var(--shadow-color-sm);transition:box-shadow .15s;}
+  .rel-card:hover{box-shadow:0 4px 12px var(--shadow-color-md);}
+  .rel-card .thumb{width:100%;height:150px;display:block;background:var(--color-primary);object-fit:cover;}
+  .rel-card .body{padding:var(--space-3);}
+  .rel-card .body h3{font-family:var(--font-display);font-size:24px;text-transform:uppercase;line-height:0.98;margin-bottom:var(--space-2);color:var(--color-primary);}
+  .rel-card .body .read{color:var(--color-gold-dark);font-weight:800;text-transform:uppercase;letter-spacing:0.04em;font-size:13px;}
+  .rel-card .body .read:hover{color:var(--color-accent);}
+
+  /* ---------- CTA + FOOTER ---------- */
+  .cta{background:var(--color-accent);color:var(--color-primary);padding:var(--space-8) 0;text-align:center;}
+  .cta blockquote{font-family:var(--font-display);font-size:clamp(40px,7vw,96px);text-transform:uppercase;line-height:0.92;max-width:900px;margin:0 auto var(--space-5);}
+  .cta .btn-primary{background:var(--color-primary);color:var(--color-white);border-color:var(--color-primary);}
+  .cta .btn-primary:hover{background:var(--color-blue-dark);border-color:var(--color-blue-dark);}
+  .footer{background:var(--color-primary);color:var(--color-white);padding:var(--space-7) 0 var(--space-4);}
+  .footer-wrap{max-width:var(--container);margin:0 auto;padding:0 var(--space-3);}
+  .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1.4fr;gap:var(--space-5);}
+  .footer h4{font-family:var(--font-condensed);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:15px;color:var(--color-accent);margin-bottom:var(--space-3);}
+  .footer p,.footer li{color:#cfd9e6;font-size:14px;line-height:1.9;list-style:none;}
+  .footer a{color:#cfd9e6;}
+  .footer a:hover{color:var(--color-accent);}
+  .copyright{border-top:1px solid rgba(255,255,255,.15);margin-top:var(--space-6);padding-top:var(--space-3);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#9fb3c8;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:900px){
+    .rel-grid{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){
+    .nav-toggle{position:absolute;opacity:0;width:1px;height:1px;}
+    .nav-burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:30px;height:30px;cursor:pointer;margin-left:auto;}
+    .nav-burger span{display:block;height:3px;width:100%;background:var(--color-white);transition:background .15s;}
+    .nav-burger:hover span{background:var(--color-accent);}
+    .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--color-primary);padding:var(--space-2) var(--space-3);gap:0;box-shadow:0 8px 24px var(--shadow-color-lg);}
+    .nav-links a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:15px;}
+    .nav-links a.active{border-bottom:1px solid rgba(255,255,255,.15);}
+    .nav-links a.btn{margin-top:var(--space-2);text-align:center;border-bottom:none;}
+    .nav-toggle:checked ~ .nav-links{display:flex;}
+    .rel-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" style="text-decoration:none;">SEAN<span>OWN</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="news.html" class="active">News</a>
+      <a href="portfolio.html">Work</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html#subscribe" class="btn btn-accent">Subscribe</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ ARTICLE HERO ============ -->
+<header class="article-hero">
+  <div class="container">
+    <div class="eyebrow">Project · Macau · June 2026</div>
+    <h1 class="display">Bay Youth AI Connects The World</h1>
+    <p class="gold-lead">Five strategic partnerships. Two flagship IP rights. One new Macau hub for Chinese culture going global.</p>
+    <div class="byline">Conference Chairman: <b>Sean Own</b> · President, GBA Electronic Commerce Association · Macao Science Centre</div>
+    <img class="hero-img" src="img/bay-youth-hero.jpg" alt="Bay Youth AI Connects The World — GBA Electronic Commerce Association council and committee heads at the Macao Science Centre on 2 June 2026">
+    <p class="hero-cap">The GBA Electronic Commerce Association council and committee heads gathered at the Macao Science Centre on 2 June 2026.</p>
+  </div>
+</header>
+
+<!-- ============ ARTICLE BODY ============ -->
+<article class="article-body">
+
+  <h2>The day a roomful of Macau's youth bridge-builders signed five deals in one afternoon.</h2>
+
+  <p>On <span class="hl">2 June 2026</span>, the Macao Science Centre hosted the <span class="hl">"Bay Youth AI Connects The World"</span> parallel session of the International Network Audio-Visual Festival. In one afternoon, a roomful of industry leaders from Macao, Hong Kong, Taiwan and the Mainland signed <span class="hl">five strategic partnerships</span> and locked down <span class="hl">two flagship IP rights</span> — turning Macao into a working hub for Chinese culture going global.</p>
+
+  <p>Sean Own (<b>Weng Zhenxuan 翁振軒</b>), President of the <b>Guangdong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association</b>, served as <span class="hl">Conference Chairman</span> of the session. The Association's Macao Network Audio-Visual e-Commerce Committee — which Own chairs — co-organised the event with the Macao Network Audio-Visual Association.</p>
+
+  <p class="pull">Two things the day built: <em>Bay Youth AI Connects The World</em> and the <em>Chinese Culture International Communication Hub</em>.</p>
+
+  <!-- ============ THE FIVE PARTNERSHIPS ============ -->
+  <h2>The five deals signed on 2 June 2026</h2>
+
+  <div class="pgrid">
+    <div class="pcard">
+      <div class="pkicker">01 · AI Media</div>
+      <h3>Bay Area Youth AI Media Hub</h3>
+      <div class="pcard-sub">Inaugurated</div>
+      <p>The new cross-strait media engine — covering publishing, short-video operations, AI cultural-tourism tech and overseas broadcasting — was inaugurated with seven founding committee heads in one signing block.</p>
+      <ul>
+        <li>Mak Ka Pou (Marbol Mak) — Publishing &amp; Cultural Media Committee</li>
+        <li>Qiu Zongbo — International PR &amp; News</li>
+        <li>Wu Sim Wa (Ng Sim Wa) — Short-video Operations &amp; Digital Marketing</li>
+        <li>Liza Chien (Chien Li-Che) — Cross-Strait Film &amp; Content</li>
+        <li>Chen Yu-Ting — Streaming &amp; Digital Rights</li>
+        <li>Emily Cheung (Cheung Tak-Yan) — AI Cultural-Tourism Tech</li>
+        <li>Eva Lin (Lin Xin-Ze) — Overseas Media</li>
+      </ul>
+    </div>
+
+    <div class="pcard">
+      <div class="pkicker">02 · Education</div>
+      <h3>Greater Bay Area Youth Cultural-Study Base</h3>
+      <div class="pcard-sub">Launched</div>
+      <p>Wen LinJian (Heng-qing Macao Culture, Tourism &amp; Sports Industry), Thomas Lee ("History Bro") and Chen Yu-Ting launched a Greater Bay Area youth cultural-study base — AI-augmented teaching, cloud-cinema content already licenced to over <span class="hl">100 universities</span> across Hong Kong, Macao and Taiwan.</p>
+    </div>
+
+    <div class="pcard">
+      <div class="pkicker">03 · Production–Education</div>
+      <h3>Five-in-One Health-School System</h3>
+      <div class="pcard-sub">Signed</div>
+      <p>Education Committee Chair <b>Wen Zhong-Xiong</b> (Wen Zhongxiong) signed with <b>S Alliance Group</b> (Liang Jia-En, Executive Director) for a national-grade five-in-one health-school system. Witnessed by Wang Gang, Wang Shou-Ge and Li Tian-Yu.</p>
+    </div>
+
+    <div class="pcard">
+      <div class="pkicker">04 · Music &amp; Youth IP</div>
+      <h3>Feng Shen Music Festival — GBA Exclusive</h3>
+      <div class="pcard-sub">Licensed</div>
+      <p>The Association secured exclusive GBA operating rights for Taiwan's flagship youth-music IP <b>Wind God Music Festival 風神音樂祭</b>. <b>Bovi Sun 孫宗孝</b> was appointed to run GBA operations. The Greater Bay Area Youth Entrepreneur-Merchant Alliance was also stood up at the same time.</p>
+    </div>
+
+    <div class="pcard" style="grid-column:1/-1;">
+      <div class="pkicker">05 · TCM Going Global</div>
+      <h3>Ben Cao Zhong Guo TCM IP — Five-Way Alliance</h3>
+      <div class="pcard-sub">Signed</div>
+      <p>The closing block: a five-way alliance to take the national-grade traditional-Chinese-medicine documentary IP <b>本草中國 (Ben Cao Zhong Guo)</b> global. Combining Macau's Lusophone-platform reach, Hengqin's Pien Tze Huang museum, Shanghai's pharmaceutical R&amp;D, Taiwan's international-media muscle and the Association's digital-health committee.</p>
+      <ul>
+        <li>Hon Lei On (Han Li-An) — Shanghai Ben Cao Li Hua Pharmaceutical R&amp;D (Vice Chair)</li>
+        <li>Lin Wen-Ling — Hengqin Pien Tze Huang Museum (Chair) &amp; Pien Tze Huang Pharmacy (Macau)</li>
+        <li>Liza Chien — Haoxuanzhe Health Tech (International media)</li>
+        <li>Li Yan-Mei — Macau TCM &amp; Health Preservation Association (President)</li>
+        <li>Roy Zhong (Zhong Shui-Yang) — Huibang International &amp; Association Digital-Health Committee</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ THE TWO IP LAUNCHES ============ -->
+  <h2>The two IP launches — what the room actually signed over.</h2>
+
+  <div class="ip-feat">
+    <div class="ipk">Music IP · Taiwan → Greater Bay Area</div>
+    <h3>Wind God Music Festival 風神音樂祭</h3>
+    <div class="ipzh">Fēngshén Yīnyuèjì · Taiwan's flagship youth-music IP · GBA Exclusive Operating Rights</div>
+    <p>A Hsinchu-born, Taiwan-wide youth-music and street-culture brand that has become <b>Taiwan's largest youth-pop-culture benchmark</b> — running annually with top-tier domestic and international line-ups. The <b>Greater Bay Area Electronic Commerce Association</b> locked down <span class="hl">full regional operating rights across the GBA</span>, with Bovi Sun (竹塹青年 founder) appointed to run the operation and a long-term programme that fans out from Macau into Hengqin and the rest of the nine-city region.</p>
+  </div>
+
+  <div class="ip-feat">
+    <div class="ipk">Cultural IP · National TCM → Global</div>
+    <h3>Ben Cao Zhong Guo 本草中國</h3>
+    <div class="ipzh">Běncǎo Zhōngguó · China's national-grade TCM documentary IP · Five-Way Going-Global Alliance</div>
+    <p>The flagship documentary series of China's TCM cultural-export programme — backed by the Central Propaganda Department, National Health Commission, National Administration of TCM and the National Radio &amp; TV Administration. <b>Season One holds an 8.7 Douban rating</b>, won the Golden Panda International Documentary Award, and has been officially multi-language distributed onto <b>YouTube</b> and <b>Discovery</b>. The five-way alliance turns this state-grade IP into a structured GBA-to-global pipeline with Macau as the international window.</p>
+  </div>
+
+  <!-- ============ CHAIRMAN QUOTE ============ -->
+  <div class="chairman">
+    <div class="ckicker">Conference Chairman · In his own words</div>
+    <blockquote>"Macau sits at the only intersection where <em>Mainland China</em>, the <em>Greater Bay Area</em>, <em>Taiwan</em>, <em>Hong Kong</em> and the <em>Lusophone world</em> meet at once. That is why we built this hub here — and that is why <em>Chinese culture going global</em> has to run through Macau first."</blockquote>
+    <cite><b>Sean Own (Weng Zhenxuan)</b> · Conference Chairman, Bay Youth AI Connects The World · President, GBA Electronic Commerce Association</cite>
+  </div>
+
+  <!-- ============ NUMBERS ============ -->
+  <h2>What the afternoon actually looked like.</h2>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Strategic partnerships signed in one session</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">2</div>
+      <div class="stat-label">Flagship IP rights locked down</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">7</div>
+      <div class="stat-label">Founding committee heads in the new Media Hub</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">100+</div>
+      <div class="stat-label">Universities on the new cloud-cinema programme</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">700+</div>
+      <div class="stat-label">Cross-strait stores in the Youth Entrepreneur Alliance</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Markets bridged: Macao · HK · Taiwan · Mainland</div>
+    </div>
+  </div>
+
+  <!-- ============ SOURCES ============ -->
+  <div class="source-link">
+    Sources:
+    <a href="https://www.macaodaily.com/html/2026-06/03/content_1912209.htm" target="_blank" rel="noopener">Macao Daily →</a> &nbsp;
+    <a href="https://www.houkongdailynews.com/instantNews/151161" target="_blank" rel="noopener">Hou Kong Daily →</a> &nbsp;
+    <a href="http://www.hqxwtoutiao.com/?p=72334" target="_blank" rel="noopener">Haixia Toutiao →</a> &nbsp;
+    <a href="https://www.macaodaily.com/html/2026-06/03/content_1912208.htm" target="_blank" rel="noopener">Macao Daily (2) →</a> &nbsp;
+    <a href="https://big5.zlb.gov.cn/gate/big5/www.zlb.gov.cn/20260603/08ba1dcf7e4f472d9b3a73d7c2c0b53e/c.html" target="_blank" rel="noopener">Liaison Office of the Central People's Government in the Macao SAR →</a>
+  </div>
+</article>
+
+<!-- ============ RELATED ============ -->
+<section class="related">
+  <div class="section-head">
+    <div class="kicker">Related</div>
+    <h2 class="display">More from the same season</h2>
+  </div>
+  <div class="rel-grid">
+    <a href="16th-aef.html" class="rel-card">
+      <img class="thumb" src="img/aef16-cover.jpg" alt="16th Asian Electronics Forum — Wang Ning on stage">
+      <div class="body">
+        <h3 class="display">16th Asian Electronics Forum</h3>
+        <div class="read">Read This →</div>
+      </div>
+    </a>
+    <a href="article.html" class="rel-card">
+      <img class="thumb" src="img/eci/card-cover.jpg" alt="ECI Macau AI Forum — group photo">
+      <div class="body">
+        <h3 class="display">ECI Macau AI Forum</h3>
+        <div class="read">Read This →</div>
+      </div>
+    </a>
+    <a href="portfolio.html" class="rel-card">
+      <div class="thumb" style="background:var(--color-primary);display:flex;align-items:center;justify-content:center;color:var(--color-accent);font-family:var(--font-display);font-size:48px;text-transform:uppercase;">All Work</div>
+      <div class="body">
+        <h3 class="display">All Work &amp; Ventures</h3>
+        <div class="read">See The Map →</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="container">
+    <blockquote class="display">"Youth Bridges The Strait."</blockquote>
+    <a href="index.html#subscribe" class="btn btn-primary">Join The Newsletter</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>Sean Own (OWN ZHEN XUAN) is a Macau-based entrepreneur, investor, author, and curator — building China's digital services going-global and a global stage for Chinese culture. Let's build what outlasts beyond profit.</p>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/sean-own-36b3108/">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Go</h4>
+        <ul>
+          <li><a href="portfolio.html">Work &amp; Ventures</a></li>
+          <li><a href="speaking.html">Speaking</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Sean Own · Built Static · All Rights Reserved</div>
+  </div>
+</footer>
+
+</body>
+</html>
