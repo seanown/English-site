@@ -28,6 +28,7 @@
 
   /* ===== page intro ===== */
   .intro{max-width:1280px;margin:0 auto;padding:48px 28px 16px}
+  .intro .logo{display:block;width:84px;height:auto;margin-bottom:18px}
   .intro .kicker{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:12px;color:var(--gold);font-weight:600}
   .intro h1{font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--blue);margin:6px 0 8px;letter-spacing:1px}
   .intro p{color:#3a3a3a;max-width:760px;line-height:1.6;font-size:14px}
@@ -40,15 +41,30 @@
   .tile .name.on-dark{color:var(--gold)}
   .tile .zh{display:block;font-family:'Inter','Open Sans',sans-serif;font-weight:600;font-size:13px;letter-spacing:1.2px;color:inherit;margin-top:4px;text-transform:none}
 
+  /* ===== event gallery (below grid) ===== */
+  .events{max-width:1280px;margin:80px auto 0;padding:0 28px}
+  .events .kicker{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:12px;color:var(--gold);font-weight:600}
+  .events h2{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--blue);margin:6px 0 8px;letter-spacing:1px}
+  .events .sub{color:#3a3a3a;max-width:760px;line-height:1.6;font-size:14px;margin-bottom:24px}
+  .events .row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .events figure{margin:0;background:#000}
+  .events figure img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+  .events figure.long img{aspect-ratio:3/2;object-fit:cover;object-position:center 30%}
+  .events figcaption{font-family:'Inter','Open Sans',sans-serif;font-size:12px;color:#666;padding:10px 4px 0;letter-spacing:0.3px}
+
   /* responsive */
   @media (max-width:900px){
     .grid{grid-template-columns:repeat(2,1fr)}
     .intro h1{font-size:38px}
+    .events .row{grid-template-columns:repeat(2,1fr)}
+    .events .row figure.full{grid-column:1/-1}
   }
   @media (max-width:560px){
     .grid{grid-template-columns:1fr;gap:14px}
     .intro{padding:32px 18px 8px}
     .grid{padding:0 18px}
+    .events{margin-top:48px;padding:0 18px}
+    .events .row{grid-template-columns:1fr}
   }
 
   /* ===== footer (light, brand only) ===== */
@@ -66,6 +82,7 @@
 </header>
 
 <section class="intro">
+  <img class="logo" src="img/gba-eca-logo.jpg" alt="Greater Bay Area Electronic Commerce Association">
   <div class="kicker">GBA E-Commerce Association · Leadership</div>
   <h1>Council & Members</h1>
   <p>The people steering the Greater Bay Area E-Commerce Association, from the council through regional and functional heads.</p>
@@ -157,6 +174,26 @@
   </div>
 
 
+</section>
+
+<section class="events">
+  <div class="kicker">Bay Youth AI · 2 June 2026 · Macao</div>
+  <h2>Where the Council Shows Up</h2>
+  <p class="sub">From the conference room to the closing group shot — the work that turns an association into a real cross-border movement.</p>
+  <div class="row">
+    <figure>
+      <img src="img/events/bay-youth-group-1.jpg" alt="Sean Own and council members with Bay Youth AI banner in front of the Macao landmark">
+      <figcaption>Council &amp; invited guests · Macao landmark</figcaption>
+    </figure>
+    <figure>
+      <img src="img/events/bay-youth-group-2.jpg" alt="Bay Youth AI full group photo inside the Macao Science Centre">
+      <figcaption>Full delegation · Macao Science Centre auditorium</figcaption>
+    </figure>
+    <figure class="long">
+      <img src="img/events/bay-youth-speaker.jpg" alt="Keynote speaker at the Bay Youth AI podium">
+      <figcaption>Keynote address</figcaption>
+    </figure>
+  </div>
 </section>
 
 <footer>
