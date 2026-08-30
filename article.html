@@ -7,6 +7,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="Why Macau should be the free port for China's digital services — Sean Own on the 16th Asian Electronics Forum and the Longyou dual-computing architecture.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sean Own">
+<meta property="og:title" content="Why Macau Should Be The Free Port — Sean Own">
+<meta property="og:description" content="Why Macau should be the free port for China's digital services — Sean Own on the 16th Asian Electronics Forum and the Longyou dual-computing architecture.">
+<meta property="og:image" content="https://ownsean.com/avatar.png">
+<meta property="og:url" content="https://ownsean.com/article.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Macau Should Be The Free Port — Sean Own">
+<meta name="twitter:description" content="Why Macau should be the free port for China's digital services — Sean Own on the 16th Asian Electronics Forum and the Longyou dual-computing architecture.">
+<meta name="twitter:image" content="https://ownsean.com/avatar.png">
+
 <style>
   :root{
     --color-primary:#003262;
@@ -49,6 +62,8 @@
   .nav-links a{color:var(--color-white);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;font-size:13px;transition:color .15s;}
   .nav-links a:hover{color:var(--color-accent);}
   .nav-links a.active{color:var(--color-accent);}
+  .nav-toggle{display:none;}
+  .nav-burger{display:none;}
   .btn{display:inline-block;padding:14px 28px;font-family:var(--font-body);font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;border:2px solid transparent;cursor:pointer;border-radius:0;transition:background-color .15s,color .15s,border-color .15s;}
   .btn-accent{background:var(--color-accent);color:var(--color-primary);border-color:var(--color-accent);}
   .btn-accent:hover{background:var(--color-accent-hover);border-color:var(--color-accent-hover);color:var(--color-blue-dark);}
@@ -144,7 +159,15 @@
     .footer-grid{grid-template-columns:1fr 1fr;}
   }
   @media(max-width:560px){
-    .nav-links a:not(.btn){display:none;}
+    .nav-toggle{position:absolute;opacity:0;width:1px;height:1px;}
+    .nav-burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:30px;height:30px;cursor:pointer;margin-left:auto;}
+    .nav-burger span{display:block;height:3px;width:100%;background:var(--color-white);transition:background .15s;}
+    .nav-burger:hover span{background:var(--color-accent);}
+    .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--color-primary);padding:var(--space-2) var(--space-3);gap:0;box-shadow:0 8px 24px var(--shadow-color-lg);}
+    .nav-links a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:15px;}
+    .nav-links a.active{border-bottom:1px solid rgba(255,255,255,.15);}
+    .nav-links a.btn{margin-top:var(--space-2);text-align:center;border-bottom:none;}
+    .nav-toggle:checked ~ .nav-links{display:flex;}
     .rel-grid{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr;}
   }
@@ -156,6 +179,8 @@
 <nav class="nav">
   <div class="container nav-inner">
     <a href="index.html" class="logo" style="text-decoration:none;">SEAN<span>OWN</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
