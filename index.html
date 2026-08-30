@@ -108,6 +108,10 @@
   .news-body p{color:var(--color-gray-deep);font-size:14px;margin-bottom:var(--space-3);}
   .news-body .read{color:var(--color-gold-dark);font-weight:800;text-transform:uppercase;letter-spacing:0.04em;font-size:13px;}
   .news-body .read:hover{color:var(--color-accent);}
+  .news-body .card-media{list-style:none;padding:0;margin:0 0 12px auto;display:flex;flex-wrap:wrap;gap:6px;}
+  .news-body .card-media li{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;font-size:11px;}
+  .news-body .card-media a{color:var(--color-gold-dark);text-decoration:underline;text-underline-offset:3px;}
+  .news-body .card-media a:hover{color:var(--color-accent);}
 
   /* ---------- FULL CTA ---------- */
   .cta{background:var(--color-accent);color:var(--color-primary);padding:var(--space-8) 0;text-align:center;}
@@ -168,8 +172,6 @@
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="news.html">News</a>
-      <a href="eci.html">ECI</a>
-
       <a href="portfolio.html">Work</a>
       <a href="speaking.html">Speaking</a>
       <a href="contact.html">Contact</a>
@@ -249,16 +251,16 @@
         </div>
       </article>
       <article class="news-card">
-        <svg class="news-cover" viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice">
-          <rect width="400" height="180" fill="#FDB515"/>
-          <rect x="60" y="40" width="280" height="100" fill="#003262"/>
-          <circle cx="200" cy="90" r="26" fill="#FDB515"/>
-        </svg>
+        <img class="news-cover" src="img/eci/card-cover.jpg" alt="ECI Macau AI Forum — keynote with the Macau AI for All forum title slide on screen">
         <div class="news-body">
-          <span class="badge">AI</span>
+          <span class="badge">Forum</span>
           <h3 class="display">ECI Macau AI Forum</h3>
-          <p>Proposed a "teach-the-taught" AI literacy strategy with dual ECI + Education Bureau certification.</p>
-          <span class="read" style="opacity:.45;cursor:default;">Coming Soon</span>
+          <p>Five-way industry-government-academia-research-community partnership to make Macau AI-literate. The "teach-the-taught" model uses the MOP 6,000 lifelong-learning grant as the funding engine.</p>
+          <ul class="card-media">
+            <li><a href="https://news.google.com/search?q=ECI+Macao+AI+literacy+innovation+forum" target="_blank" rel="noopener">Asia Economic Journal →</a></li>
+            <li><a href="https://news.google.com/search?q=%E6%BE%B3%E9%96%80+%E5%85%A8%E6%B0%91+AI+%E7%A7%91%E6%99%AE+%E5%A4%A7%E7%9C%BE%E5%A0%B1" target="_blank" rel="noopener">Macao Daily →</a></li>
+          </ul>
+          <a href="eci.html" class="read">Visit ECI Forum →</a>
         </div>
       </article>
       <article class="news-card">
