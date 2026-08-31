@@ -36,6 +36,7 @@ PAGES = {
     "16th-aef": "16th Asian Electronics Forum",
     "global-influencer-festival": "Global Chinese Influencer Festival",
     "bay-youth-ai": "Bay Youth AI Connects The World",
+    "insights": "Insights & Perspectives",
 }
 
 def wrap(text, font, max_w):

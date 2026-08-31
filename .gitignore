@@ -9,4 +9,8 @@ Thumbs.db
 # local preview artifacts
 preview.log
 *.local
-scripts/
+scripts/*
+# whitelist the maintained content-update tooling (deliverables)
+!scripts/make_event.py
+!scripts/add_insights_nav.py
+!scripts/sample-event.json

@@ -1,0 +1,27 @@
+{
+  "slug": "example-summit-2026",
+  "title": "Example Cross-Border Summit 2026",
+  "kicker": "Forum",
+  "summary": "One-line English summary of the summit — what got signed, what got launched.",
+  "intro": "Opening paragraph in Gary style: blunt, first-person, no fluff. What the room actually did.",
+  "date_blur": "Aug 2026",
+  "venue_name": "Macao Science Centre",
+  "venue_addr": "Avenida Dr. Sun Yat-Sen, Macao",
+  "venue_slug": "macau-science-centre",
+  "stats": [
+    {"num": "5", "label": "Strategic partnerships signed"},
+    {"num": "2", "label": "Flagship IP rights locked"},
+    {"num": "100+", "label": "Delegates in the room"}
+  ],
+  "gallery": [
+    "img/example-summit-2026-g01.webp",
+    "img/example-summit-2026-g02.webp",
+    "img/example-summit-2026-g03.webp"
+  ],
+  "sources": [
+    {"name": "Macao Daily", "url": "https://www.macaodaily.com/REAL-URL"},
+    {"name": "Hou Kong Daily", "url": "https://www.houkongdailynews.com/REAL-URL"}
+  ],
+  "cover": "img/example-summit-2026-cover.webp",
+  "news_blurb": "Short English blurb used on the news card."
+}
