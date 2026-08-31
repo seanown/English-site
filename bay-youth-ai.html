@@ -141,6 +141,12 @@
   .rel-card .body .read{color:var(--color-gold-dark);font-weight:800;text-transform:uppercase;letter-spacing:0.04em;font-size:13px;}
   .rel-card .body .read:hover{color:var(--color-accent);}
 
+  /* ---------- GALLERY ---------- */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-2);margin:var(--space-5) 0;line-height:0;}
+  .gallery img{width:100%;height:240px;object-fit:cover;display:block;border:1px solid var(--color-border);}
+  @media(max-width:700px){.gallery{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:460px){.gallery{grid-template-columns:1fr;}}
+
   /* ---------- CTA + FOOTER ---------- */
   .cta{background:var(--color-accent);color:var(--color-primary);padding:var(--space-8) 0;text-align:center;}
   .cta blockquote{font-family:var(--font-display);font-size:clamp(40px,7vw,96px);text-transform:uppercase;line-height:0.92;max-width:900px;margin:0 auto var(--space-5);}
@@ -341,6 +347,21 @@
       <div class="stat-num">4</div>
       <div class="stat-label">Markets bridged: Macao · HK · Taiwan · Mainland</div>
     </div>
+  </div>
+
+  <!-- ============ THE FLOOR ============ -->
+  <h2>On the floor — what the afternoon actually looked like.</h2>
+  <p>One stage. One hundred and eighty chairs. Eight banner drops. Twenty minutes between signing blocks. The pictures below come straight out of the room in the order they happened.</p>
+
+  <div class="gallery">
+    <img loading="lazy" src="img/byai-g01.jpg" alt="Sean Own delivering the keynote at the Macao Science Centre podium, with 'Simon Si, Chairman' displayed on the screen behind him, Macao, 2 June 2026">
+    <img loading="lazy" src="img/byai-g02.jpg" alt="The Bay Youth AI audience seated in the Macao Science Centre auditorium, Macao, 2 June 2026">
+    <img loading="lazy" src="img/byai-g03.jpg" alt="The audience applauding during the Bay Youth AI forum, Macao, 2 June 2026">
+    <img loading="lazy" src="img/byai-g04.jpg" alt="Two partners signing the Cultural-Study-Base agreement at the Macao Science Centre, 2 June 2026">
+    <img loading="lazy" src="img/byai-g05.jpg" alt="Five partners at the signing table for the Greater Bay Area Youth Entrepreneur-Merchant Alliance, Macao, 2 June 2026">
+    <img loading="lazy" src="img/byai-g06.jpg" alt="Five partners giving a thumbs-up after signing the Youth Entrepreneur-Merchant Alliance agreement, Macao, 2 June 2026">
+    <img loading="lazy" src="img/byai-g07.jpg" alt="A speaker reading from a paper on stage during the Bay Youth AI forum, Macao, 2 June 2026">
+    <img loading="lazy" src="img/byai-g08.jpg" alt="Delegates greeting one another in front of the Macao Science Centre's heart-shaped green wall, 2 June 2026">
   </div>
 
   <!-- ============ SOURCES ============ -->
