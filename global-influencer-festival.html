@@ -108,6 +108,12 @@
   .gstrip img{width:100%;height:auto;display:block;border:1px solid var(--color-border);}
   .gstrip-cap{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:12px;color:var(--color-gray-deep);text-align:center;padding:var(--space-2) 0 0;line-height:1.4;}
 
+  /* ---------- FESTIVAL GALLERY (static grid, NO carousel) ---------- */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-2);margin:var(--space-5) 0;line-height:0;}
+  .gallery img{width:100%;height:240px;object-fit:cover;display:block;border:1px solid var(--color-border);}
+  @media(max-width:700px){.gallery{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:460px){.gallery{grid-template-columns:1fr;}}
+
   /* ---------- SOURCES ---------- */
   .sources{font-family:var(--font-condensed);font-weight:600;font-size:14px;color:var(--color-primary);text-align:center;padding:var(--space-4) 0 var(--space-2);line-height:2;}
   .sources b{text-transform:uppercase;letter-spacing:0.18em;color:var(--color-gold-dark);font-size:13px;display:block;margin-bottom:var(--space-1);}
@@ -214,12 +220,12 @@
 <!-- ============ ARTICLE HERO ============ -->
 <header class="article-hero">
   <div class="container">
-    <div class="eyebrow">Speech · Closing Remarks · Macao · 20 August 2026</div>
+    <div class="eyebrow">Speech · Closing Remarks · Macao · August 2026</div>
     <h1 class="display">The First Global Chinese Influencer Festival</h1>
     <p class="gold-lead">From Macao, a new gateway for Chinese culture going global. Held in the year of Dr. Sun Yat-sen's 160th anniversary.</p>
     <div class="byline">Closing remarks delivered by <b>Sean Own</b> · President, GBA Electronic Commerce Association</div>
-    <img class="hero-img" src="img/gcf-hero.jpg" alt="Sean Own delivering closing remarks at the First Global Chinese Influencer Festival, Macao, 20 August 2026">
-    <p class="hero-cap">Sean Own delivers closing remarks at the First Global Chinese Influencer Festival, Macao, 20 August 2026.</p>
+    <img class="hero-img" src="img/gcf-hero.jpg" alt="Sean Own delivering closing remarks at the First Global Chinese Influencer Festival, Macao, August 2026">
+    <p class="hero-cap">Sean Own delivers closing remarks at the First Global Chinese Influencer Festival, Macao, August 2026.</p>
   </div>
 </header>
 
@@ -228,7 +234,7 @@
 
   <h2>The day Macao stopped being a stopover and started being the doorway.</h2>
 
-  <p>On <span class="hl">20 August 2026</span>, Macao hosted the <span class="hl">inaugural Global Chinese Influencer Festival</span> — the first edition of what its organisers intend to be an annual gathering. The festival sits in the same year the world marks the <span class="hl">160th anniversary of Dr. Sun Yat-sen's birth</span> — and the closing-remarks speaker, <b>Sean Own</b>, <b>President</b> of the <b>Guangdong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association</b>, used that coincidence on purpose.</p>
+  <p>In <span class="hl">August 2026</span>, Macao hosted the <span class="hl">inaugural Global Chinese Influencer Festival</span> — the first edition of what its organisers intend to be an annual gathering. The festival sits in the same year the world marks the <span class="hl">160th anniversary of Dr. Sun Yat-sen's birth</span> — and the closing-remarks speaker, <b>Sean Own</b>, <b>President</b> of the <b>Guangdong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association</b>, used that coincidence on purpose.</p>
 
   <p>"A young Sun Yat-sen first left China <span class="hl">from Macao by ship, bound for Honolulu</span>," Own said. "Macao was his gateway to the world — the place where he first encountered the world and began the work of carrying Chinese spirit outward. He called on Chinese communities across oceans to unite. He knew that the Mainland, Hong Kong, Macao, Taiwan, and overseas Chinese — <span class="hl">all of us are one community of shared national destiny</span>."</p>
 
@@ -299,14 +305,29 @@
 
   <!-- ============ GROUP PHOTO ============ -->
   <div class="gstrip">
-    <img loading="lazy" src="img/gcf-group.jpg" alt="Delegates, organisers and new-media creators gathered at the First Global Chinese Influencer Festival, Macao, 20 August 2026">
-    <div class="gstrip-cap">Delegates, organisers and new-media creators gathered at the First Global Chinese Influencer Festival, Macao, 20 August 2026.</div>
+    <img loading="lazy" src="img/gcf-group.jpg" alt="Delegates, organisers and new-media creators gathered at the First Global Chinese Influencer Festival, Macao, August 2026">
+    <div class="gstrip-cap">Delegates, organisers and new-media creators gathered at the First Global Chinese Influencer Festival, Macao, August 2026.</div>
   </div>
 
   <!-- ============ CREATORS STRIP ============ -->
   <div class="gstrip" style="margin-top:var(--space-3);">
     <img loading="lazy" src="img/gcf-creators.jpg" alt="Sean Own with new-media creators and self-media partners during the First Global Chinese Influencer Festival, Macao, August 2026">
     <div class="gstrip-cap">Sean Own with new-media creators and self-media partners during the First Global Chinese Influencer Festival, Macao, August 2026.</div>
+  </div>
+
+  <!-- ============ FESTIVAL GALLERY ============ -->
+  <div class="gallery">
+    <img loading="lazy" src="img/gcf-organizers.jpg" alt="Festival organisers and hosts at the First Global Chinese Influencer Festival, Macao, August 2026">
+    <img loading="lazy" src="img/gcf-opening.jpg" alt="Opening-ceremony guests at the First Global Chinese Influencer Festival, Macao, August 2026">
+    <img loading="lazy" src="img/gcf-dinner.jpg" alt="Self-media partners at the welcome dinner of the First Global Chinese Influencer Festival, Macao, August 2026">
+    <img loading="lazy" src="img/gcf-g01.jpg" alt="On-site moment from the First Global Chinese Influencer Festival, Macao, August 2026">
+    <img loading="lazy" src="img/gcf-g02.jpg" alt="On-site moment from the First Global Chinese Influencer Festival, Macao, August 2026">
+    <img loading="lazy" src="img/gcf-g03.jpg" alt="On-site moment from the First Global Chinese Influencer Festival, Macao, August 2026">
+    <img loading="lazy" src="img/gcf-g04.jpg" alt="On-site moment from the First Global Chinese Influencer Festival, Macao, August 2026">
+    <img loading="lazy" src="img/gcf-g05.jpg" alt="On-site moment from the First Global Chinese Influencer Festival, Macao, August 2026">
+    <img loading="lazy" src="img/gcf-g06.jpg" alt="On-site moment from the First Global Chinese Influencer Festival, Macao, August 2026">
+    <img loading="lazy" src="img/gcf-g07.jpg" alt="On-site moment from the First Global Chinese Influencer Festival, Macao, August 2026">
+    <img loading="lazy" src="img/gcf-g08.jpg" alt="On-site moment from the First Global Chinese Influencer Festival, Macao, August 2026">
   </div>
 
   <!-- ============ SOURCES ============ -->
@@ -328,7 +349,7 @@
 
   <div class="chairman">
     <blockquote style="text-align:center;font-size:clamp(40px,6vw,80px);">"Peace. Struggle. Revive China."</blockquote>
-    <cite style="text-align:center;">— <b>Dr. Sun Yat-sen</b>, 1925 · recited by Sean Own, Macao, 20 August 2026</cite>
+    <cite style="text-align:center;">— <b>Dr. Sun Yat-sen</b>, 1925 · recited by Sean Own, Macao, August 2026</cite>
   </div>
 
 </article>
