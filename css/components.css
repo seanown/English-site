@@ -1,0 +1,155 @@
+/* =============================================================================
+   SEAN OWN — Brand Component Library (shared site-wide)
+   Linked from every page <head>. Per-page inline <style> still wins for
+   page-specific overrides, so linking this file is non-breaking.
+   See TEMPLATES.md for canonical HTML usage.
+   Brand tokens:
+     --blue          Berkeley Blue  #003262
+     --blue-dark     Hover         #001B3A
+     --gold          California Gold #FDB515
+     --gold-dark     Accent dim    #C4820E
+     --ink           Text          #0A0A0A
+   Fonts (loaded via Google Fonts in each page):
+     Bebas Neue / Oswald (display)  Inter / Open Sans (body)
+   No JS. No carousel. No captions. Square corners. Hover = color swap only.
+   ============================================================================= */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:var(--gap,16px);
+  margin:32px 0;
+}
+.gallery > img,
+.gallery > a > img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  display:block;
+  border:1px solid var(--color-border,#E0E0E0);
+}
+@media (max-width:700px){ .gallery{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:460px){ .gallery{grid-template-columns:1fr;} }
+
+/* ---------- News / Related cards ---------- */
+.news-card,
+.rel-card{
+  display:flex;
+  flex-direction:column;
+  background:var(--color-surface-alt,#F4F4F4);
+  border:1px solid var(--color-border,#E0E0E0);
+  text-decoration:none;
+  color:inherit;
+}
+.news-card .cover,
+.rel-card .cover{
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:#000;
+}
+.news-card .cover img,
+.rel-card .cover img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.news-card .body,
+.rel-card .body{
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  flex:1;
+}
+.news-card .body h3,
+.rel-card .body h3{
+  font-family:"Bebas Neue","Oswald",Impact,sans-serif;
+  font-size:28px;
+  line-height:0.95;
+  text-transform:uppercase;
+  color:var(--blue,#003262);
+  margin:0;
+}
+.news-card .body p,
+.rel-card .body p{ color:#333; margin:0; line-height:1.5; }
+.news-card .body .read,
+.rel-card .body .read{
+  margin-top:auto;
+  color:var(--gold-dark,#C4820E);
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  font-size:13px;
+}
+.news-card:hover .body .read,
+.rel-card:hover .body .read{ color:var(--blue,#003262); }
+
+/* ---------- Card media (sources list under news/event cards) ---------- */
+.card-media{
+  list-style:none;
+  padding:0;
+  margin:8px 0 0;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  font-size:13px;
+}
+.card-media li a{
+  color:var(--gold-dark,#C4820E);
+  text-decoration:none;
+  border-bottom:1px solid currentColor;
+}
+.card-media li a:hover{ color:var(--blue,#003262); }
+
+/* ---------- Section heading pattern ---------- */
+.section-eyebrow{
+  font-family:"Oswald","Inter",sans-serif;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  color:var(--gold-dark,#C4820E);
+  font-size:13px;
+  margin:0 0 8px;
+}
+.section-title{
+  font-family:"Bebas Neue","Oswald",Impact,sans-serif;
+  font-size:48px;
+  line-height:0.95;
+  text-transform:uppercase;
+  color:var(--blue,#003262);
+  margin:0 0 24px;
+}
+@media (max-width:700px){ .section-title{font-size:36px;} }
+
+/* ---------- Container helper ---------- */
+.container{
+  max-width:1180px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+/* ---------- Related cross-link grid ---------- */
+.related-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin:40px 0 0;
+}
+@media (max-width:800px){ .related-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:500px){ .related-grid{grid-template-columns:1fr;} }
+
+/* ---------- Figure (zero-caption rule enforcement) ----------
+   Pages must not render <figcaption>. This rule hides any accidental one. */
+figure figcaption{ display:none !important; }
+
+/* ---------- Text-only "Continue Exploring" cards ---------- */
+.explore-block{margin:64px auto 0;padding:0 24px;max-width:1180px;}
+.explore-block .kicker{font-family:"Oswald","Inter",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.18em;color:var(--gold-dark,#C4820E);font-size:13px;display:block;margin:0 0 6px;}
+.explore-block h2{font-family:"Bebas Neue","Oswald",Impact,sans-serif;font-size:40px;line-height:.98;text-transform:uppercase;color:var(--blue,#003262);margin:0 0 20px;}
+.explore-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.explore-card{display:flex;flex-direction:column;gap:8px;padding:20px;background:var(--color-surface-alt,#F4F4F4);border:1px solid var(--color-border,#E0E0E0);text-decoration:none;color:inherit;transition:border-color .15s;}
+.explore-card:hover{border-color:var(--blue,#003262);}
+.explore-card .ex-kicker{font-family:"Oswald","Inter",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--gold-dark,#C4820E);font-size:11px;}
+.explore-card h3{font-family:"Bebas Neue","Oswald",Impact,sans-serif;font-size:22px;line-height:.98;text-transform:uppercase;color:var(--blue,#003262);margin:0;}
+.explore-card .ex-read{color:var(--gold-dark,#C4820E);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:12px;margin-top:auto;}
+.explore-card:hover .ex-read{color:var(--blue,#003262);}
+@media(max-width:900px){.explore-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.explore-grid{grid-template-columns:1fr;}}
