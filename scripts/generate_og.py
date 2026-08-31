@@ -37,12 +37,12 @@ PAGES = {
     "global-influencer-festival": "Global Chinese Influencer Festival",
     "bay-youth-ai": "Bay Youth AI Connects The World",
     "insights": "Insights & Perspectives",
-    "hangzhou-day-1": "Hangzhou Day 1 \u2014 The Welcome",
-    "hangzhou-day-2": "Hangzhou Day 2 \u2014 Six Little Dragons",
-    "hangzhou-day-3": "Hangzhou Day 3 \u2014 One Net One Create",
-    "hangzhou-day-4": "Hangzhou Day 4 \u2014 Westlake University",
-    "hangzhou-day-5": "Hangzhou Day 5 \u2014 Digital Valley",
-    "hangzhou-culture": "Hangzhou Culture Track",
+    "new-retail-rails": "New Retail's Hidden Operating System",
+    "dragon-corridor": "Six Little Dragons & the Experience Economy",
+    "thousand-brands": "A Thousand Brands, One Operating Partner",
+    "westlake-university": "A Research University, Built From Scratch",
+    "data-valley": "Inside the Province's Data Backbone",
+    "wukong-culture": "When a Videogame Becomes Cultural Diplomacy",
 }
 
 def wrap(text, font, max_w):
