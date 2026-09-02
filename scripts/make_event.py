@@ -137,7 +137,6 @@ NAV = """<nav class="nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="news.html">News</a>
-      <a href="insights.html">Insights</a>
       <a href="portfolio.html">Work</a>
       <a href="speaking.html">Speaking</a>
       <a href="contact.html">Contact</a>
@@ -168,7 +167,6 @@ FOOTER = """<footer class="footer">
         <li><a href="portfolio.html">Work &amp; Ventures</a></li>
         <li><a href="speaking.html">Speaking</a></li>
         <li><a href="news.html">News &amp; Writing</a></li>
-        <li><a href="insights.html">Insights</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul></div>
     </div>

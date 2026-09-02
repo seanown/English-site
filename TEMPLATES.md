@@ -1,7 +1,7 @@
 # TEMPLATES.md — 英文站（ownsean.com）新活動／新頁面標準片段
 
 > 用途：每次要新增一個「活動報導頁」或「專欄頁」時，直接複製下面片段，換字換圖即可。
-> 所有片段都遵守英文站鐵規：**純靜態、零 JS、藍金（Berkeley Blue #003262 / California Gold #FDB515）Gary 風、前台 0 中文、照片下方不加 caption、列表一律 grid 直接排。**
+> 所有片段都遵守英文站鐵規：**純靜態、藍金（Berkeley Blue #003262 / California Gold #FDB515）Gary 風、前台 0 中文、照片下方不加 caption、列表一律 grid 直接排。**
 
 ---
 
@@ -15,7 +15,7 @@
 | 列表 | 人員／照片牆**直接 grid 排出**，不做 carousel / scroll-snap / 任何 JS 控制元件。 |
 | 媒體連結 | sources 區塊**只放用戶提供的真實 URL**；沒有就空著，不編造媒體報導。 |
 | 圖片 | 全部 WebP；`alt` 全英文、含地點＋事件＋日期（例：`...Macao, 2 June 2026`）。 |
-| 動效 | 無 JS 動效、無影片自動播放、無滾動特效；hover 只換色。 |
+| 動效 | 無影片自動播放、無滾動特效；hover 只換色。互動效果可用 vanilla JS（IIFE / defer / `data-*`），但先評估是否值得。 |
 
 ---
 
@@ -58,7 +58,7 @@ OG 圖：`python scripts/generate_og.py`（會讀 `PAGES` dict 生成 `img/og/SL
 
 ---
 
-## 2. NAV（每頁都要有，Insights 已全站接入）
+## 2. NAV（每頁都要有；2026-09-02 起 Insights 不再列入）
 
 ```html
 <nav class="nav">
@@ -70,7 +70,6 @@ OG 圖：`python scripts/generate_og.py`（會讀 `PAGES` dict 生成 `img/og/SL
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="news.html">News</a>
-      <a href="insights.html">Insights</a>
       <a href="portfolio.html">Work</a>
       <a href="speaking.html">Speaking</a>
       <a href="contact.html">Contact</a>
@@ -79,6 +78,8 @@ OG 圖：`python scripts/generate_og.py`（會讀 `PAGES` dict 生成 `img/og/SL
   </div>
 </nav>
 ```
+
+> ⚠️ Insights 入口已撤離頂部 NAV 與全站 footer（2026-09-02 拍板）。頁面 `insights.html` 仍存在（會長專欄原文），但僅由 `news.html` 的 insight 卡片作為唯一入口。
 
 ---
 
@@ -186,5 +187,5 @@ OG 圖：`python scripts/generate_og.py`（會讀 `PAGES` dict 生成 `img/og/SL
 4. 跑 `python scripts/generate_og.py`（生成 OG 圖）。
 5. 在 `sitemap.xml` 加 `<url><loc>https://ownsean.com/SLUG.html</loc>...`。
 6. 在 `news.html` 的 `.news-grid` 加新聞卡（照 §8）。
-7. 全站 NAV 加 `Insights` 已由 `add_insights_nav.py` 處理；新頁 NAV 請照 §2 手寫。
+7. 新頁 NAV 請照 §2 手寫（**不要再帶 `<a href="insights.html">Insights</a>`**）。footer Go 區也照 §2 對齊。
 8. `git add` 後交用戶 GitHub Desktop 推送（AI 不代推）。

@@ -13,4 +13,5 @@ scripts/*
 # whitelist the maintained content-update tooling (deliverables)
 !scripts/make_event.py
 !scripts/add_insights_nav.py
+!scripts/remove_insights_nav_footer.py
 !scripts/sample-event.json
