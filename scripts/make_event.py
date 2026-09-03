@@ -207,10 +207,16 @@ def render_event(spec: dict) -> str:
     vname = spec.get("venue_name", "")
     vaddr = spec.get("venue_addr", "")
     vslug = spec.get("venue_slug", slug)
+    vquery = vname.replace(" ", "+")
     venue = (
         '<section class="section alt"><div class="container"><h2 class="display">Venue</h2>'
-        f'<figure class="venue"><img loading="lazy" src="img/map/{vslug}.webp" '
-        f'alt="{vname} venue map, {vaddr}, Macao — host of {title}"></figure></div></section>\n'
+        '<figure class="venue">'
+        f'<iframe class="venue-map" src="https://maps.google.com/maps?q={vquery}&amp;z=15&amp;output=embed" '
+        f'title="Google Maps — {vname}, {vaddr}, Macao" loading="lazy" '
+        f'referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>'
+        f'<a class="venue-link" href="https://www.google.com/maps/search/?api=1&amp;query={vquery}" '
+        f'target="_blank" rel="noopener">Open in Google Maps &#8599;</a>'
+        '</figure></div></section>\n'
     )
     # sources
     src = '<div class="source-link">Sources:'

@@ -121,15 +121,21 @@ OG 圖：`python scripts/generate_og.py`（會讀 `PAGES` dict 生成 `img/og/SL
 
 ---
 
-## 6. VENUE（靜態場地卡，符合無 JS 鐵規）
+## 6. VENUE（互動 Google Maps，2026-09-03 起取代靜態 PNG）
 
 ```html
 <h2>Venue</h2>
 <figure class="venue">
-  <img loading="lazy" src="img/map/VENUE-SLUG.webp" alt="VENUE NAME venue map, ADDRESS, Macao — host of EVENT on 2 June 2026">
+  <iframe class="venue-map" src="https://maps.google.com/maps?q=VENUE+NAME&amp;z=15&amp;output=embed"
+          title="Google Maps — VENUE NAME, ADDRESS, Macao" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+  <a class="venue-link" href="https://www.google.com/maps/search/?api=1&amp;query=VENUE+NAME" target="_blank" rel="noopener">Open in Google Maps &#8599;</a>
 </figure>
 ```
-場地卡用 `python scripts/generate_map.py` 生成（1200×600 品牌化網格＋金針＋水紋）。
+- 純 `<iframe>`（HTML 元素，**非 JS**），免 API key；Google 會自動重導向到 `google.com/maps/embed?pb=...` 渲染互動地圖。
+- `VENUE NAME` 用 Google 可解析的地標名（如 `Macao+Science+Centre`）；要精準落針可改 `q=lat,lng`。
+- 樣式在 `css/components.css` 的 `.venue` / `.venue-map` / `.venue-link`（藍金、直角、hover 換色）。
+- 舊 `python scripts/generate_map.py` 靜態 PNG 流程已棄用（舊 `img/map/*.webp` 留作備援，未引用）。
 
 ---
 

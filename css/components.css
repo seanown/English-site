@@ -140,6 +140,33 @@
    Pages must not render <figcaption>. This rule hides any accidental one. */
 figure figcaption{ display:none !important; }
 
+/* ---------- Venue map (interactive Google Maps embed) ----------
+   Replaces the old static PNG. No third-party JS needed — it is a plain
+   <iframe> (allowed since the 2026-09-03 rule change). Square corners,
+   brand border, gold "Open in Google Maps" link below. */
+.venue{ margin:24px 0 0; }
+.venue-map{
+  width:100%;
+  aspect-ratio:16/9;
+  border:1px solid var(--color-border,#E0E0E0);
+  display:block;
+}
+.venue-link{
+  display:inline-block;
+  margin-top:12px;
+  font-family:"Oswald","Inter",sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  font-size:13px;
+  color:var(--gold-dark,#C4820E);
+  text-decoration:none;
+  border-bottom:2px solid currentColor;
+  padding-bottom:2px;
+}
+.venue-link:hover{ color:var(--blue,#003262); }
+@media (max-width:700px){ .venue-map{ aspect-ratio:4/3; } }
+
 /* ---------- Text-only "Continue Exploring" cards ---------- */
 .explore-block{margin:64px auto 0;padding:0 24px;max-width:1180px;}
 .explore-block .kicker{font-family:"Oswald","Inter",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.18em;color:var(--gold-dark,#C4820E);font-size:13px;display:block;margin:0 0 6px;}
