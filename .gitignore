@@ -9,6 +9,7 @@ Thumbs.db
 # local preview artifacts
 preview.log
 *.local
+*.bak
 scripts/*
 # whitelist the maintained content-update tooling (deliverables)
 !scripts/make_event.py
