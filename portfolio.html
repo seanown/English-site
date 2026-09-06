@@ -112,6 +112,15 @@
   .card-download .dl-row strong{color:var(--color-primary);font-weight:700;}
   .card-download .dl-row .meta{color:var(--color-gray-mid);font-size:11px;letter-spacing:0.06em;font-weight:500;text-transform:uppercase;}
 
+  /* ---------- EXTERNAL-LINK CARD (opens silklyart.com) ---------- */
+  .card-external{text-decoration:none;color:inherit;display:flex;flex-direction:column;position:relative;}
+  .card-external:hover{box-shadow:0 4px 12px var(--shadow-color-md);}
+  .card-external .ext-row{display:inline-flex;align-items:center;gap:8px;margin-top:auto;padding-top:var(--space-3);font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:13px;color:var(--color-primary);}
+  .card-external .ext-row .arrow{display:inline-block;transition:transform .15s;}
+  .card-external:hover .ext-row .arrow{transform:translate(2px,-2px);}
+  .card-external .ext-row strong{color:var(--color-primary);font-weight:700;}
+  .card-external .ext-row .meta{color:var(--color-gray-mid);font-size:11px;letter-spacing:0.06em;font-weight:500;text-transform:uppercase;}
+
   /* ---------- CTA + FOOTER ---------- */
   .cta{background:var(--color-accent);color:var(--color-primary);padding:var(--space-8) 0;text-align:center;}
   .cta blockquote{font-family:var(--font-display);font-size:clamp(40px,7vw,96px);text-transform:uppercase;line-height:0.92;max-width:900px;margin:0 auto var(--space-5);}
@@ -216,13 +225,17 @@
         <p>Rooted in Macau's East-West gateway advantage, we run a global media hub linking Greater China with mainstream press, freelance correspondents and independent agencies across Europe, America and worldwide markets.</p>
         <span class="badge">Active</span>
       </div>
-      <div class="card">
+      <a class="card card-external" href="https://www.silklyart.com" target="_blank" rel="noopener">
         <div class="icon-wrap"><img loading="lazy" src="img/silk-culture-art-center.webp" alt="Macao Silk Culture &amp; Art Center logo"></div>
         <div class="role">Curator</div>
         <h3 class="display">Macao Silk Culture &amp; Art Center</h3>
         <p>A hub that integrates cross-strait resources to take Chinese-culture IP global — heritage, made commercial and alive.</p>
         <span class="badge">Active</span>
-      </div>
+        <div class="ext-row">
+          <span class="arrow">↗</span>
+          <span><strong>Visit silklyart.com</strong> <span class="meta">Official site</span></span>
+        </div>
+      </a>
       <div class="card">
         <div class="icon-wrap"><img loading="lazy" src="img/culture-ip-copyright.webp" alt="Macao Culture IP Copyright Center logo"></div>
         <div class="role">Founder</div>
