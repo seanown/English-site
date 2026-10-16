@@ -180,3 +180,100 @@ figure figcaption{ display:none !important; }
 .explore-card:hover .ex-read{color:var(--blue,#003262);}
 @media(max-width:900px){.explore-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:480px){.explore-grid{grid-template-columns:1fr;}}
+
+/* ---------- Consent banner (GDPR / GA4 Consent Mode v2) ----------
+   Driven by js/consent-banner.js. Mounts only when no prior choice is stored
+   in localStorage 'seanown_consent' (written by js/analytics.js updateConsent).
+   Brand: Berkeley Blue plate, California Gold primary action, square corners,
+   hover = color swap only (per component-library rules).                 */
+.consent-banner{
+  position:fixed;
+  left:0; right:0; bottom:0;
+  z-index:9999;
+  background:var(--blue,#003262);
+  border-top:3px solid var(--gold,#FDB515);
+  color:#fff;
+  font-family:"Inter","Open Sans",sans-serif;
+  animation:consent-rise .28s ease-out;
+}
+.consent-banner[hidden]{ display:none !important; }
+@keyframes consent-rise{ from{ transform:translateY(100%); } to{ transform:translateY(0); } }
+@media (prefers-reduced-motion:reduce){
+  .consent-banner{ animation:none; }
+}
+.consent-inner{
+  max-width:1180px;
+  margin:0 auto;
+  padding:20px 24px;
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+.consent-copy{ flex:1; min-width:0; }
+.consent-copy .consent-title{
+  display:block;
+  font-family:"Bebas Neue","Oswald",Impact,sans-serif;
+  font-size:22px;
+  line-height:1;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  color:var(--gold,#FDB515);
+  margin:0 0 6px;
+}
+.consent-copy p{
+  margin:0;
+  font-size:13px;
+  line-height:1.55;
+  color:rgba(255,255,255,.86);
+}
+.consent-copy a{
+  color:#fff;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+.consent-copy a:hover{ color:var(--gold,#FDB515); }
+.consent-actions{
+  display:flex;
+  gap:10px;
+  flex-shrink:0;
+}
+.consent-btn{
+  font-family:"Oswald","Inter",sans-serif;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:13px;
+  padding:12px 22px;
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:color .15s, background-color .15s, border-color .15s;
+  white-space:nowrap;
+}
+.consent-btn-accept{
+  background:var(--gold,#FDB515);
+  color:var(--blue,#003262);
+}
+.consent-btn-accept:hover{
+  background:var(--gold-dark,#C4820E);
+  color:#fff;
+}
+.consent-btn-reject{
+  background:transparent;
+  color:#fff;
+  border-color:rgba(255,255,255,.55);
+}
+.consent-btn-reject:hover{
+  border-color:#fff;
+  background:rgba(255,255,255,.1);
+}
+/* Stack on narrow screens: copy above, full-width actions below */
+@media (max-width:760px){
+  .consent-inner{
+    flex-direction:column;
+    align-items:stretch;
+    gap:16px;
+    padding:18px 20px;
+  }
+  .consent-actions{ display:flex; }
+  .consent-btn{ flex:1; text-align:center; padding:13px 16px; }
+}

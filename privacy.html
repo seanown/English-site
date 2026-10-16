@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy — Sean Own</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/components.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="How ownsean.com handles data: two cookieless-style analytics tools, no advertising, no selling of personal data, and how to withdraw consent.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sean Own">
+<meta property="og:title" content="Privacy — Sean Own">
+<meta property="og:description" content="How ownsean.com handles data: two analytics tools, no advertising, no selling of personal data.">
+<meta property="og:url" content="https://ownsean.com/privacy.html">
+<link rel="canonical" href="https://ownsean.com/privacy.html">
+<link rel="alternate" hreflang="en" href="https://ownsean.com/privacy.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://seanown.org/">
+<link rel="alternate" hreflang="x-default" href="https://ownsean.com/">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy — Sean Own">
+<meta name="twitter:description" content="How ownsean.com handles data: two analytics tools, no advertising, no selling of personal data.">
+
+<style>
+  :root{
+    --color-primary:#003262;
+    --color-primary-hover:#001B3A;
+    --color-accent:#FDB515;
+    --color-accent-hover:#FC9313;
+    --color-blue-dark:#010133;
+    --color-gray-deep:#2B2B2B;
+    --color-surface-alt:#F4F4F4;
+    --color-white:#FFFFFF;
+    --color-border:#E0E0E0;
+    --color-ink:#0A0A0A;
+    --shadow-color-sm:rgba(1,27,58,0.08);
+    --shadow-color-md:rgba(1,27,58,0.12);
+    --shadow-color-lg:rgba(1,27,58,0.18);
+    --font-display:"Bebas Neue","Arial Narrow",Impact,sans-serif;
+    --font-body:"Inter","Helvetica Neue",Arial,sans-serif;
+    --font-alt:"Open Sans","Helvetica Neue",Arial,sans-serif;
+    --font-condensed:"Oswald","Arial Narrow",sans-serif;
+    --space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--space-5:48px;--space-6:64px;--space-7:96px;--space-8:128px;
+    --container:1200px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);color:var(--color-primary);background:var(--color-white);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .container{max-width:var(--container);margin:0 auto;padding:0 var(--space-3);}
+  .display{font-family:var(--font-display);text-transform:uppercase;line-height:0.92;letter-spacing:0.01em;font-weight:400;}
+  a{text-decoration:none;}
+
+  /* ---------- NAV ---------- */
+  .nav{background:var(--color-primary);color:var(--color-white);position:sticky;top:0;z-index:100;}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo{font-family:var(--font-display);font-size:30px;color:var(--color-white);letter-spacing:0.04em;}
+  .logo span{color:var(--color-accent);}
+  .nav-links{display:flex;align-items:center;gap:var(--space-3);}
+  .nav-links a{color:var(--color-white);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;font-size:13px;transition:color .15s;}
+  .nav-links a:hover{color:var(--color-accent);}
+  .nav-links a.active{color:var(--color-accent);}
+  .nav-toggle{display:none;}
+  .nav-burger{display:none;}
+  .btn{display:inline-block;padding:14px 28px;font-family:var(--font-body);font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;border:2px solid transparent;cursor:pointer;border-radius:0;transition:background-color .15s,color .15s,border-color .15s;}
+  .btn-accent{background:var(--color-accent);color:var(--color-primary);border-color:var(--color-accent);}
+  .btn-accent:hover{background:var(--color-accent-hover);border-color:var(--color-accent-hover);color:var(--color-blue-dark);}
+
+  /* ---------- HERO (compact: legal pages should not shout) ---------- */
+  .hero{background:var(--color-primary);color:var(--color-white);padding:var(--space-7) 0;}
+  .eyebrow{font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--color-accent);font-size:14px;margin-bottom:var(--space-2);}
+  .hero h1{font-size:clamp(48px,7vw,88px);margin-bottom:var(--space-2);}
+  .hero .gold-line{color:var(--color-accent);font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;font-size:clamp(15px,1.8vw,20px);max-width:680px;}
+
+  /* ---------- PROSE ---------- */
+  .prose{padding:var(--space-7) 0;}
+  .prose-wrap{max-width:760px;}
+  .prose h2{font-family:var(--font-display);font-size:clamp(30px,4vw,44px);text-transform:uppercase;line-height:0.98;margin:var(--space-6) 0 var(--space-3);}
+  .prose h2:first-of-type{margin-top:0;}
+  .prose h3{font-family:var(--font-condensed);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;font-size:19px;margin:var(--space-4) 0 var(--space-2);color:var(--color-primary);}
+  .prose p{color:var(--color-gray-deep);font-size:16px;margin-bottom:var(--space-3);}
+  .prose ul{margin:0 0 var(--space-3) var(--space-4);}
+  .prose li{color:var(--color-gray-deep);font-size:16px;margin-bottom:var(--space-1);}
+  .prose a{color:var(--color-primary);text-decoration:underline;text-underline-offset:2px;}
+  .prose a:hover{color:var(--color-accent-hover);}
+  .prose strong{color:var(--color-primary);}
+
+  .meta-note{
+    background:var(--color-surface-alt);
+    border-left:4px solid var(--color-accent);
+    padding:var(--space-3) var(--space-4);
+    margin-bottom:var(--space-5);
+  }
+  .meta-note p{margin:0;font-size:14px;color:var(--color-gray-deep);}
+
+  .table-2{width:100%;border-collapse:collapse;margin-bottom:var(--space-3);}
+  .table-2 th,.table-2 td{text-align:left;padding:var(--space-2) var(--space-3);border:1px solid var(--color-border);font-size:15px;vertical-align:top;}
+  .table-2 th{background:var(--color-primary);color:var(--color-white);font-family:var(--font-condensed);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:13px;}
+  .table-2 td:first-child{font-weight:700;color:var(--color-primary);}
+  @media(max-width:700px){
+    .table-2 thead{display:none;}
+    .table-2 tr{display:block;margin-bottom:var(--space-3);border:1px solid var(--color-border);}
+    .table-2 td{display:block;border:none;border-bottom:1px solid var(--color-border);}
+    .table-2 td:last-child{border-bottom:none;}
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer{background:var(--color-primary);color:var(--color-white);padding:var(--space-7) 0 var(--space-4);}
+  .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1.4fr;gap:var(--space-5);}
+  .footer h4{font-family:var(--font-condensed);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:15px;color:var(--color-accent);margin-bottom:var(--space-3);}
+  .footer p,.footer li{color:#cfd9e6;font-size:14px;line-height:1.9;list-style:none;}
+  .footer a{color:#cfd9e6;}
+  .footer a:hover{color:var(--color-accent);}
+  .copyright{border-top:1px solid rgba(255,255,255,0.15);margin-top:var(--space-6);padding-top:var(--space-3);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#9fb3c8;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:900px){
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){
+    .nav-toggle{position:absolute;opacity:0;width:1px;height:1px;}
+    .nav-burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:30px;height:30px;cursor:pointer;margin-left:auto;}
+    .nav-burger span{display:block;height:3px;width:100%;background:var(--color-white);transition:background .15s;}
+    .nav-burger:hover span{background:var(--color-accent);}
+    .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--color-primary);padding:var(--space-2) var(--space-3);gap:0;box-shadow:0 8px 24px var(--shadow-color-lg);}
+    .nav-links a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:15px;}
+    .nav-links a.active{border-bottom:1px solid rgba(255,255,255,.15);}
+    .nav-links a.btn{margin-top:var(--space-2);text-align:center;border-bottom:none;}
+    .nav-toggle:checked ~ .nav-links{display:flex;}
+    .footer-grid{grid-template-columns:1fr;}
+  }
+</style>
+<script defer data-domain="ownsean.com" src="https://plausible.io/js/script.js"></script>
+  <!-- Google Analytics 4 — ownsean.com (Consent Mode v2 Basic) -->
+  <script src="js/analytics.js"></script>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=G-J92ZJ07QRW" style="display:none;visibility:hidden" title="ga"></iframe></noscript>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" style="text-decoration:none;">SEAN<span>OWN</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Work</a>
+      <a href="insights.html">Insights</a>
+      <a href="news.html">News</a>
+      <a href="contact.html" class="btn btn-accent">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Last Updated · October 2026</div>
+    <h1 class="display">Privacy</h1>
+    <p class="gold-line">What this site records, what it does not, and how to switch it off.</p>
+  </div>
+</header>
+
+<!-- ============ PROSE ============ -->
+<main class="prose">
+  <div class="container">
+    <div class="prose-wrap">
+
+      <div class="meta-note">
+        <p><strong>In short:</strong> this site uses two analytics tools to understand which pages are read. It runs no advertising, sets no advertising cookies, sells no personal data, and never asks you for your name or email unless you choose to send it. You can decline analytics entirely and read the whole site.</p>
+      </div>
+
+      <h2>Who runs this site</h2>
+      <p>This site is operated by Sean Own (OWN ZHEN XUAN), based in Macau. Questions about this policy, or a request to delete data associated with you, can be sent through the <a href="contact.html">contact page</a>.</p>
+
+      <h2>What is collected</h2>
+      <p>Only aggregate, anonymous reading statistics. Specifically, the two analytics tools may record:</p>
+      <ul>
+        <li>Which page you opened, and which page you opened next</li>
+        <li>Whether the page was opened directly or arrived from a search engine, another site, or a shared link</li>
+        <li>Your approximate region and device type, and a coarse time stamp</li>
+        <li>A shortened, anonymised form of your IP address, used only to derive the region above</li>
+      </ul>
+      <p>None of this is linked to your name, your email address, or any account. There is no login and no user profile on this site.</p>
+
+      <h2>The two tools used</h2>
+      <table class="table-2">
+        <thead>
+          <tr><th>Tool</th><th>What it does</th><th>Your control</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Plausible</td>
+            <td>Counts visits and page views without setting any cookie or storing anything on your device.</td>
+            <td>Runs immediately; it collects nothing personal by design.</td>
+          </tr>
+          <tr>
+            <td>Google Analytics 4</td>
+            <td>Provides the same page-view counts plus richer breakdowns (sources, navigation order, time on page).</td>
+            <td>Runs in <strong>Consent Mode</strong>: the measurement script loads with analytics storage switched <em>off</em>, and only becomes active if you press <strong>Accept</strong> on the banner. If you press <strong>Decline</strong>, no analytics identifiers are stored.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Cookies and local storage</h2>
+      <p>This site does not set any advertising or profiling cookies. The only thing stored on your device is a single local-storage entry recording your analytics choice (<code>granted</code> or <code>denied</code>). It contains no personal data, is readable only by this site, and is never sent anywhere.</p>
+
+      <h2>Google Analytics and international transfers</h2>
+      <p>If you accept, Google Analytics may process data on servers outside your own country, including in the United States. If you decline, no such transfer occurs, because nothing identifying is stored in the first place.</p>
+
+      <h2>Forms and email</h2>
+      <p>If you use the subscribe form or contact form, whatever you type is delivered so I can reply. That information is used only to answer you. It is not added to any mailing list you did not ask for, and it is not shared.</p>
+
+      <h2>Third-party content</h2>
+      <p>Some pages embed or link to external material, such as video and maps. Those providers operate under their own privacy policies once the content loads, and this policy does not cover them. Embedded media is kept to a minimum.</p>
+
+      <h2>Changing your mind later</h2>
+      <p>You can revisit your choice at any time. Every page footer carries a <strong>Cookie settings</strong> button; pressing it clears your stored answer and brings the banner back. Clearing your browser's site data has the same effect.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes, the date at the top of this page is updated. Material changes will also be noted on the site.</p>
+
+    </div>
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>Sean Own (OWN ZHEN XUAN) is a Macau-based entrepreneur, investor, author, and curator — building China's digital services going-global and a global stage for Chinese culture. Let's build what outlasts beyond profit.</p>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/sean-own-36b3108/">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Go</h4>
+        <ul>
+          <li><a href="portfolio.html">Work &amp; Ventures</a></li>
+          <li><a href="speaking.html">Speaking</a></li>
+          <li><a href="news.html">News &amp; Writing</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+</ul>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Sean Own · Built Static · All Rights Reserved</div>
+  </div>
+</footer>
+
+  <script src="js/site.js" defer></script>
+  <script src="js/consent-banner.js" defer></script>
+</body>
+</html>
