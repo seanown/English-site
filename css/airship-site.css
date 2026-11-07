@@ -1,0 +1,140 @@
+/* Hallmark · site layer for the airship bridge · loaded after css/airship.css on every page except the home page
+ * It recolours the site's original tokens (Berkeley blue and gold) into the bridge palette, so each page's own
+ * inline styles keep their layout and pick up the new look, then dresses the page-specific blocks the home page does not have.
+ * Content, links, forms and scripts are untouched. */
+
+/* ---------- the original tokens, mapped onto the bridge ---------- */
+:root{
+  --color-primary: var(--color-ink);            /* was the blue used for headings and text */
+  --color-primary-hover: var(--color-amber);
+  --color-accent-hover: var(--color-amber);
+  --color-blue-dark: var(--color-paper);
+  --color-blue-medium: var(--color-crystal-deep);
+  --color-gold-dark: var(--color-crystal);      /* kickers, dates and links */
+  --color-founders: var(--color-crystal-deep);
+  --color-white: var(--color-paper-2);          /* was the white page and card ground */
+  --color-surface-alt: color-mix(in oklab, var(--color-paper-2) 70%, var(--color-paper-3));
+  --color-gray-mid: var(--color-muted);
+  --color-gray-deep: var(--color-ink-2);
+  --color-border: color-mix(in oklab, var(--color-accent) 45%, transparent);
+  --shadow-color-sm: color-mix(in oklab, var(--color-paper) 50%, transparent);
+  --shadow-color-md: color-mix(in oklab, var(--color-paper) 65%, transparent);
+  --shadow-color-lg: color-mix(in oklab, var(--color-paper) 80%, transparent);
+  --font-alt: var(--font-body);
+  --font-condensed: var(--font-body);
+  /* names css/components.css reads */
+  --blue: var(--color-ink);
+  --blue-dark: var(--color-paper);
+  --gold: var(--color-accent);
+}
+
+html{background:var(--color-paper);}
+/* blocks that set text in the old white keep it light: the token is re-pointed on the element itself */
+.nav,.nav a,.btn,.btn-primary,.btn-ghost,.cta,.footer,.hero,.article-hero,.consent-banner{--color-white: var(--color-ink);}
+.nav-links a.btn-primary{color:var(--color-ink);}
+.nav-links a.btn-primary:hover{color:var(--color-amber);}
+body{background:transparent;color:var(--color-ink);font-family:var(--font-body);}
+h1,h2,h3,h4{font-family:var(--font-display);text-transform:none;letter-spacing:var(--tracking-display);line-height:1.12;}
+h4{letter-spacing:0.02em;}
+img{border-radius:2px;}
+
+/* labels: the body face, sentence case, untracked */
+.eyebrow,.kicker,.ckicker,.pkicker,.hkicker,.ipk,.vk,.ik,.cp-kicker,.ex-kicker,.section-eyebrow,.byline,.news-date,.badge,.role,.meta,.cp-meta,.hint,.stat-label,.lbl,.tl-year,.filter,.source-link,.meta-link,.gstrip-cap,.hero-cap,.copyright,.crumb,.fineprint,.name{text-transform:none;letter-spacing:0;font-family:var(--font-body);}
+.eyebrow,.kicker,.ckicker,.pkicker,.hkicker,.ipk,.vk,.ik,.cp-kicker,.ex-kicker,.section-eyebrow{font-style:italic;color:var(--color-crystal);text-shadow:var(--glow-crystal);}
+
+/* ---------- blocks that were painted in the old blue: dark glass with a brass edge ---------- */
+.article-hero,.hero{--color-white: var(--color-ink);background:linear-gradient(180deg,var(--glass-deep),var(--glass));color:var(--color-ink);border-bottom:2px solid var(--color-accent);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);}
+.article-hero h1,.hero h1{color:var(--color-ink);text-shadow:0 2px 0 var(--color-accent-ink),0 0 30px color-mix(in oklab,var(--color-amber) 25%,transparent);}
+.gold-lead,.gold-line{color:var(--color-amber);text-transform:none;letter-spacing:0;font-family:var(--font-body);}
+.hero-img,.article-hero .hero-img{border:3px solid var(--color-accent);box-shadow:0 0 0 1px var(--color-accent-ink),0 0 0 6px color-mix(in oklab,var(--color-accent-2) 60%,transparent),var(--shadow-deep);}
+
+.chairman,.feature-card,.info-card,.stat,.report-icon,.card .icon-wrap,.table-2 th,.gallery-item .gi-num{--color-white: var(--color-ink);background:var(--color-paper-2);color:var(--color-ink);}
+.chairman{border:1px solid var(--color-accent);border-radius:6px;box-shadow:inset 0 0 0 5px color-mix(in oklab,var(--color-paper) 50%,transparent),inset 0 0 0 6px color-mix(in oklab,var(--color-accent) 40%,transparent);}
+.chairman blockquote{color:var(--color-amber);font-family:var(--font-display);}
+.news-cover,.news-card-photo,.rel-card .thumb,.gallery-item{background:var(--color-paper-3);}
+.news-card--coming .news-cover{background:var(--color-paper-3);}
+.filter{background:transparent;color:var(--color-ink-2);border:1px solid color-mix(in oklab,var(--color-accent) 50%,transparent);border-radius:6px;font-size:1rem;}
+.filter:hover{background:var(--color-paper-2);color:var(--color-amber);border-color:var(--color-amber);}
+.filter.active{background-color:var(--color-accent);background-image:var(--brass-edge);color:var(--color-accent-ink);border-color:var(--color-accent-ink);}
+.filter:focus-visible{outline:2px solid var(--color-focus);outline-offset:3px;}
+.btn-apply{background-color:var(--color-accent);background-image:var(--brass-edge);color:var(--color-accent-ink);border-color:var(--color-accent-ink);border-radius:6px;font-family:var(--font-display);text-transform:none;letter-spacing:0.02em;}
+.btn-apply:hover{color:var(--color-accent-ink);box-shadow:var(--glow-amber);}
+
+/* ---------- page bands: glass decks with the sky between them ---------- */
+.section.alt,.related,.photo-gallery,.venue-section,.apply-section,.explore-block,.article-body,main.prose,.post,.intro,.grid,.events{position:relative;}
+.section.alt{background:linear-gradient(180deg,var(--glass-deep),color-mix(in oklab,var(--color-paper-3) 55%,transparent));}
+.related,.photo-gallery,.venue-section,.apply-section,.article-body,main.prose,.intro,.grid,.events{background:linear-gradient(180deg,var(--glass-deep),var(--glass));border-top:2px solid var(--color-accent);border-bottom:2px solid var(--color-accent);box-shadow:inset 0 3px 0 color-mix(in oklab,var(--color-accent-2) 70%,transparent),inset 0 -3px 0 color-mix(in oklab,var(--color-accent-2) 70%,transparent);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);margin-top:var(--space-2xl);}
+.post{background:linear-gradient(180deg,var(--glass-deep),var(--glass));border-top:2px solid var(--color-accent);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);}
+.explore-block{padding-top:var(--space-xl);padding-bottom:var(--space-xl);}
+.explore-block h2{color:var(--color-ink);}
+.explore-card{background:var(--color-paper-2);border:1px solid color-mix(in oklab,var(--color-accent) 45%,transparent);border-radius:6px;}
+.explore-card:hover{border-color:var(--color-accent);box-shadow:var(--glow-amber);}
+.explore-card h3{color:var(--color-amber);}
+.explore-card .ex-read{color:var(--color-crystal);text-transform:none;letter-spacing:0;}
+.section-title{color:var(--color-ink);text-transform:none;}
+
+/* prose */
+.article-body p,.prose p,.post p,.intro p,.lead p,.intro-grid p{color:var(--color-ink-2);}
+.article-body h2,.prose h2,.post h2,.apply-h2{color:var(--color-amber);}
+.article-body a,.prose a,.post a,.lead a,.sources a,.links a,.info-row .v a{color:var(--color-crystal);}
+.article-body a:hover,.prose a:hover,.post a:hover,.sources a:hover,.links a:hover,.info-row .v a:hover{color:var(--color-amber);}
+.hl,.article-body p .hl,.intro-grid p .hl,.post p .hl{color:var(--color-amber);background:none;}
+.pull{color:var(--color-amber);border-color:var(--color-accent);font-family:var(--font-display);}
+.article-body p:first-of-type::first-line{color:var(--color-ink);}
+
+/* every card-like block: a lacquered panel in brass */
+.rel-card,.venue-card,.ip-feat,.companion-paper,.policy,.report-card,.index-card,.pcard,.hcard,.fit-card,.stat-card,.tile,.card-download,.card-external,.contact-form,.meta-note,.source-link,.info-card,.feature-card,.stat{border:1px solid color-mix(in oklab,var(--color-accent) 55%,transparent);border-radius:8px;box-shadow:inset 0 0 0 4px color-mix(in oklab,var(--color-paper) 40%,transparent),inset 0 0 0 5px color-mix(in oklab,var(--color-accent) 25%,transparent);}
+.rel-card,.venue-card,.ip-feat,.companion-paper,.policy,.report-card,.index-card,.pcard,.hcard,.fit-card,.stat-card,.tile,.card-download,.card-external,.contact-form,.meta-note,.source-link{background:var(--color-paper-2);color:var(--color-ink);}
+.rel-card:hover,.index-card:hover,.card-download:hover,.card-external:hover,.pcard:hover,.hcard:hover{border-color:var(--color-accent);box-shadow:inset 0 0 0 4px color-mix(in oklab,var(--color-paper) 40%,transparent),inset 0 0 0 5px color-mix(in oklab,var(--color-accent) 45%,transparent),var(--glow-amber);}
+.rel-card .body h3,.venue-card h3,.ip-feat h3,.companion-paper h3,.policy h3,.index-card h3,.pcard h3,.hcard h3,.fit-card h3,.feature-card h3,.info-card h3,.tl-body h3{color:var(--color-amber);text-transform:none;}
+.rel-card .body .read,.card-download .dl-row strong,.card-external .ext-row strong{color:var(--color-crystal);text-transform:none;letter-spacing:0;}
+.stat .num,.stat-card .stat-num{color:var(--color-amber);font-family:var(--font-display);}
+.timeline{border-color:color-mix(in oklab,var(--color-accent) 50%,transparent);}
+.tl-item{border-color:color-mix(in oklab,var(--color-accent) 40%,transparent);}
+.tl-year{color:var(--color-crystal);}
+.table-2,.table-2 td{border-color:color-mix(in oklab,var(--color-accent) 35%,transparent);color:var(--color-ink-2);}
+.table-2 th{color:var(--color-amber);text-transform:none;letter-spacing:0;font-family:var(--font-body);}
+.gallery img,.gallery > img,.gallery > a > img,.gstrip img,.events figure img,.cover-img,.gallery-item img{border:2px solid color-mix(in oklab,var(--color-accent) 70%,transparent);}
+.gallery-item:hover{box-shadow:0 0 0 2px var(--color-accent),var(--glow-amber);}
+
+/* forms */
+.field label{color:var(--color-ink-2);text-transform:none;letter-spacing:0;font-family:var(--font-body);}
+.field input,.field textarea,.apply-form input,.apply-form textarea,.apply-form select{background:var(--color-paper);color:var(--color-ink);border:1px solid color-mix(in oklab,var(--color-accent) 55%,transparent);border-radius:6px;font-family:var(--font-body);font-size:1.0625rem;}
+.field input::placeholder,.field textarea::placeholder,.apply-form input::placeholder{color:var(--color-muted);font-style:italic;}
+.field input:focus,.field textarea:focus,.apply-form input:focus,.apply-form textarea:focus{outline:none;border-color:var(--color-crystal);box-shadow:0 0 0 2px var(--color-crystal),var(--glow-crystal);}
+.form-ok{background:var(--color-paper-2);color:var(--color-crystal);border-color:var(--color-crystal);}
+.form-ok .ok-mark{background:var(--color-crystal);color:var(--color-paper);}
+button,input[type="submit"]{font-family:var(--font-display);}
+
+/* the gallery lightbox keeps its own dark stage */
+.lightbox{background:color-mix(in oklab,var(--color-paper) 94%,transparent);}
+.lightbox-cap{color:var(--color-ink-2);font-family:var(--font-body);text-transform:none;letter-spacing:0;}
+.lightbox-nav .lb-close,.lightbox-nav .lb-prev,.lightbox-nav .lb-next{border-color:var(--color-accent);color:var(--color-ink);}
+.lightbox-nav .lb-close:hover,.lightbox-nav .lb-prev:hover,.lightbox-nav .lb-next:hover{background-color:var(--color-accent);color:var(--color-accent-ink);}
+
+/* the leadership page and the small notice pages use their own header and footer */
+body > header:not(.hero):not(.article-hero){background:color-mix(in oklab,var(--color-paper-2) 92%,transparent);border-bottom:3px solid var(--color-accent);color:var(--color-ink);}
+body > header .brand a,body > header .crumb a{color:var(--color-ink);}
+body > header .brand a:hover,body > header .crumb a:hover{color:var(--color-amber);}
+body > footer:not(.footer){background:var(--color-paper-2);border-top:3px solid var(--color-accent);color:var(--color-ink-2);}
+body > footer:not(.footer) a{color:var(--color-crystal);}
+.tile .name,.tile .name.on-dark{color:var(--color-ink);}
+.wrap{position:relative;}
+body > .wrap{padding:var(--space-xl);border:1px solid var(--color-accent);border-radius:8px;background:var(--glass-deep);box-shadow:inset 0 0 0 5px color-mix(in oklab,var(--color-paper) 60%,transparent),inset 0 0 0 6px color-mix(in oklab,var(--color-accent) 40%,transparent);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);}
+body > .wrap h1{color:var(--color-ink);}
+body > .wrap p{color:var(--color-ink-2);}
+.code{font-family:var(--font-display);color:var(--color-amber);text-shadow:var(--glow-amber);}
+
+@media (prefers-reduced-motion: reduce){ .rel-card,.explore-card,.filter{transition:none;} }
+
+/* an inline placeholder tile painted in the old blue keeps a dark ground */
+[style*="background:var(--color-primary)"]{--color-primary: var(--color-paper-2);}
+
+/* names css/components.css sets in its own faces */
+.explore-block h2,.explore-card h3,.section-title,.news-card .body h3,.rel-card .body h3,.consent-copy .consent-title{font-family:var(--font-display);text-transform:none;letter-spacing:var(--tracking-display);}
+.explore-block .kicker,.explore-card .ex-kicker,.section-eyebrow,.venue-link,.consent-btn{font-family:var(--font-body);text-transform:none;letter-spacing:0;}
+
+/* the wider serif must never push a grid column past the screen */
+[class*="grid"] > *{min-width:0;}
+.stats{grid-template-columns:repeat(2,minmax(0,1fr));}
+.stat .num{font-size:clamp(1.75rem,8vw,3rem);overflow-wrap:anywhere;}
