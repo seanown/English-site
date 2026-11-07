@@ -1,0 +1,93 @@
+/* Hallmark · scene: ocean · the viewport scene for the home page, a layer apart from the cabin
+ * How to swap a scene: set data-scene on .viewport in the page (e.g. data-scene="song"), link css/scenes/song.css in place of this file,
+ * and give the new file its own .scene-song layers. The cabin (css/cabin.css) never changes. */
+
+/* scene palette: golden hour over open ocean */
+:root{
+  --scene-sky-top:  oklch(30% 0.06 285);
+  --scene-sky-mid:  oklch(44% 0.07 310);
+  --scene-sky-low:  oklch(68% 0.10 40);
+  --scene-sky-glow: oklch(88% 0.11 78);
+  --scene-sea-far:  oklch(52% 0.06 235);
+  --scene-sea-near: oklch(30% 0.06 245);
+  --scene-swell:    oklch(78% 0.08 70);
+  --scene-cloud:    oklch(92% 0.04 70);
+  --scene-cloud-shade: oklch(70% 0.05 330);
+  --scene-isle-rock: oklch(40% 0.04 310);
+  --scene-isle-shade: oklch(32% 0.04 300);
+  --scene-isle-top:  oklch(52% 0.06 160);
+  --scene-haze:     oklch(80% 0.06 50);
+}
+
+.viewport[data-scene="ocean"] .scene{position:absolute;inset:0;filter:saturate(.95) blur(.3px);}
+
+/* sky */
+.scene-ocean .sky{position:absolute;inset:0;background:var(--scene-sky-top);}
+.scene-ocean .sky::before{content:"";position:absolute;left:-20%;right:-20%;top:-6%;height:50%;background:radial-gradient(ellipse 60% 70% at 50% 80%,var(--scene-sky-mid),transparent 78%);}
+.scene-ocean .sky::after{content:"";position:absolute;left:-10%;right:-10%;top:16%;height:24%;background:radial-gradient(ellipse 60% 70% at 52% 85%,var(--scene-sky-low),transparent 80%);}
+.scene-ocean .sun{position:absolute;left:52%;top:36%;width:min(80vw,1000px);aspect-ratio:2/1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,var(--scene-sky-glow),color-mix(in oklab,var(--scene-sky-glow) 35%,transparent) 40%,transparent 75%);animation:ocean-sun 12s ease-in-out infinite;}
+
+/* sea, with swells rolling toward the bow */
+.scene-ocean .sea{position:absolute;left:0;right:0;top:38%;bottom:0;background:linear-gradient(180deg,var(--scene-sea-far),var(--scene-sea-near) 60%);overflow:hidden;perspective:320px;perspective-origin:50% 0;}
+.scene-ocean .sea::before{content:"";position:absolute;left:28%;right:20%;top:0;height:40%;background:radial-gradient(ellipse 50% 100% at 50% 0,color-mix(in oklab,var(--scene-sky-glow) 70%,transparent),transparent 70%);animation:ocean-shimmer 6s ease-in-out infinite;}
+.scene-ocean .swell{position:absolute;left:-60%;right:-60%;top:0;height:200%;transform-origin:50% 0;transform:rotateX(72deg);}
+.scene-ocean .swell i{position:absolute;inset:0 0 -60px;display:block;background:repeating-linear-gradient(180deg,color-mix(in oklab,var(--scene-swell) 26%,transparent) 0 2px,transparent 2px 60px);animation:ocean-roll 3.2s linear infinite;}
+
+/* floating continents, far off in the haze */
+.scene-ocean .isles{position:absolute;inset:0;}
+.scene-ocean .isle{position:absolute;display:block;}
+.scene-ocean .isle svg{width:100%;height:auto;overflow:visible;}
+.scene-ocean .isle .rock{fill:var(--scene-isle-rock);}
+.scene-ocean .isle .rock-shade{fill:var(--scene-isle-shade);}
+.scene-ocean .isle .top{fill:var(--scene-isle-top);}
+.scene-ocean .isle .fall{stroke:color-mix(in oklab,var(--scene-cloud) 60%,transparent);stroke-width:2;fill:none;stroke-linecap:round;stroke-dasharray:4 7;animation:ocean-fall 1.6s linear infinite;}
+.scene-ocean .isle-a{left:9%;top:15%;width:clamp(120px,15vw,240px);opacity:.62;animation:ocean-bob 14s ease-in-out infinite;}
+.scene-ocean .isle-b{right:10%;top:11%;width:clamp(80px,9vw,150px);opacity:.48;animation:ocean-bob 18s ease-in-out -6s infinite;}
+.scene-ocean .isle-c{left:62%;top:26%;width:clamp(50px,5vw,84px);opacity:.36;animation:ocean-bob 22s ease-in-out -11s infinite;}
+.scene-ocean .isle svg{filter:drop-shadow(0 0 22px color-mix(in oklab,var(--scene-haze) 40%,transparent));}
+
+/* clouds: a slow high layer, and banks that come out of the horizon toward the ship */
+.scene-ocean .clouds{position:absolute;inset:0;}
+.scene-ocean .clouds span{position:absolute;display:block;border-radius:50%;background:radial-gradient(ellipse at 50% 40%,color-mix(in oklab,var(--scene-cloud) 90%,transparent) 0,color-mix(in oklab,var(--scene-cloud-shade) 55%,transparent) 55%,transparent 72%);filter:blur(2px);}
+.scene-ocean .clouds span::before,.scene-ocean .clouds span::after{content:"";position:absolute;border-radius:50%;background:inherit;}
+.scene-ocean .clouds span::before{width:60%;height:120%;left:12%;top:-48%;}
+.scene-ocean .clouds span::after{width:48%;height:100%;right:6%;top:-30%;}
+.scene-ocean .clouds-high span{opacity:.4;animation:ocean-drift 180s linear infinite;left:-12%;}
+.scene-ocean .clouds-high span:nth-child(1){width:280px;height:52px;top:9%;animation-delay:-30s;}
+.scene-ocean .clouds-high span:nth-child(2){width:360px;height:60px;top:16%;animation-delay:-110s;}
+.scene-ocean .clouds-high span:nth-child(3){width:220px;height:40px;top:4%;animation-delay:-150s;}
+.scene-ocean .clouds-near span{left:50%;top:35%;width:300px;height:62px;margin:-32px 0 0 -152px;opacity:0;animation:ocean-approach 26s linear infinite;}
+.scene-ocean .clouds-near span:nth-child(1){--dx:-62vw;--dy:30vh;--o:.75;animation-delay:0s;}
+.scene-ocean .clouds-near span:nth-child(2){--dx:58vw;--dy:24vh;--o:.7;animation-delay:-6.5s;}
+.scene-ocean .clouds-near span:nth-child(3){--dx:-48vw;--dy:-14vh;--o:.6;animation-delay:-13s;}
+.scene-ocean .clouds-near span:nth-child(4){--dx:64vw;--dy:-10vh;--o:.6;animation-delay:-19.5s;}
+.scene-ocean .clouds-near span:nth-child(5){--dx:-20vw;--dy:40vh;--o:.55;animation-delay:-9s;animation-duration:30s;}
+.scene-ocean .clouds-near span:nth-child(6){--dx:26vw;--dy:42vh;--o:.55;animation-delay:-22s;animation-duration:30s;}
+
+/* scroll parallax inside the viewport */
+@supports (animation-timeline: scroll()){
+  .scene-ocean .clouds-high{animation:ocean-para-1 linear both;animation-timeline:scroll(root);}
+  .scene-ocean .isles{animation:ocean-para-2 linear both;animation-timeline:scroll(root);}
+  .scene-ocean .clouds-near{animation:ocean-para-3 linear both;animation-timeline:scroll(root);}
+}
+
+@media (max-width:560px){ .scene-ocean .isle-b{display:none;} .scene-ocean .clouds-near span{width:200px;height:44px;margin:calc(var(--space-lg) * -1) 0 0 -100px;} }
+
+@keyframes ocean-sun{0%,100%{opacity:.85;}50%{opacity:1;}}
+@keyframes ocean-shimmer{0%,100%{opacity:.55;}50%{opacity:.9;}}
+@keyframes ocean-roll{from{transform:translateY(0);}to{transform:translateY(60px);}}
+@keyframes ocean-bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+@keyframes ocean-fall{from{stroke-dashoffset:0;}to{stroke-dashoffset:-22;}}
+@keyframes ocean-drift{from{transform:translateX(0);}to{transform:translateX(130vw);}}
+@keyframes ocean-approach{0%{transform:translate(0,0) scale(.25);opacity:0;}18%{opacity:var(--o);}80%{opacity:var(--o);}100%{transform:translate(var(--dx),var(--dy)) scale(2.4);opacity:0;}}
+@keyframes ocean-para-1{from{transform:translateY(0);}to{transform:translateY(-4vh);}}
+@keyframes ocean-para-2{from{transform:translateY(0);}to{transform:translateY(-8vh);}}
+@keyframes ocean-para-3{from{transform:translateY(0);}to{transform:translateY(-16vh);}}
+
+@media (prefers-reduced-motion: reduce){
+  .viewport[data-scene="ocean"] *, .viewport[data-scene="ocean"] *::before{animation:none !important;}
+  .scene-ocean .clouds-near span{opacity:.5;}
+  .scene-ocean .clouds-near span:nth-child(1){transform:translate(-30vw,12vh);}
+  .scene-ocean .clouds-near span:nth-child(2){transform:translate(28vw,10vh);}
+  .scene-ocean .clouds-near span:nth-child(n+3){display:none;}
+}
