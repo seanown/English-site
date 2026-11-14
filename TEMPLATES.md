@@ -58,7 +58,7 @@ OG 圖：`python scripts/generate_og.py`（會讀 `PAGES` dict 生成 `img/og/SL
 
 ---
 
-## 2. NAV（每頁都要有；2026-09-02 起 Insights 不再列入）
+## 2. NAV（每頁都要有；頂部 NAV 不列 Insights）
 
 ```html
 <nav class="nav">
@@ -71,6 +71,8 @@ OG 圖：`python scripts/generate_og.py`（會讀 `PAGES` dict 生成 `img/og/SL
       <a href="about.html">About</a>
       <a href="news.html">News</a>
       <a href="portfolio.html">Work</a>
+      <a href="curated.html">Curated</a>
+      <a href="conversations.html">Conversations</a>
       <a href="speaking.html">Speaking</a>
       <a href="contact.html">Contact</a>
       <a href="index.html#subscribe" class="btn btn-accent">Subscribe</a>
@@ -79,7 +81,23 @@ OG 圖：`python scripts/generate_og.py`（會讀 `PAGES` dict 生成 `img/og/SL
 </nav>
 ```
 
-> ⚠️ Insights 入口已撤離頂部 NAV 與全站 footer（2026-09-02 拍板）。頁面 `insights.html` 仍存在（會長專欄原文），但僅由 `news.html` 的 insight 卡片作為唯一入口。
+footer「Go」欄（以現行頁面如 `contact.html` 為準）：
+
+```html
+<h4>Go</h4>
+<ul>
+  <li><a href="portfolio.html">Work &amp; Ventures</a></li>
+  <li><a href="curated.html">Curated</a></li>
+  <li><a href="conversations.html">Conversations</a></li>
+  <li><a href="insights.html">Insights</a></li>
+  <li><a href="speaking.html">Speaking</a></li>
+  <li><a href="news.html">News &amp; Writing</a></li>
+  <li><a href="privacy.html">Privacy</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+```
+
+> ⚠️ Insights 入口已撤離頂部 NAV（2026-09-02 拍板），頂部 NAV 維持不列。全站 footer「Go」欄自 2026-10-16 統一 footer（`tools/unify_footer.py`）起重新列入 Insights。頁面 `insights.html` 仍存在（會長專欄原文），入口為 footer「Go」欄與 `news.html` 的 insight 卡片。
 
 ---
 
@@ -193,5 +211,5 @@ OG 圖：`python scripts/generate_og.py`（會讀 `PAGES` dict 生成 `img/og/SL
 4. 跑 `python scripts/generate_og.py`（生成 OG 圖）。
 5. 在 `sitemap.xml` 加 `<url><loc>https://ownsean.com/SLUG.html</loc>...`。
 6. 在 `news.html` 的 `.news-grid` 加新聞卡（照 §8）。
-7. 新頁 NAV 請照 §2 手寫（**不要再帶 `<a href="insights.html">Insights</a>`**）。footer Go 區也照 §2 對齊。
+7. 新頁 NAV 請照 §2 手寫（**頂部 NAV 不帶 `<a href="insights.html">Insights</a>`**）；footer「Go」欄照 §2 的 footer 片段（含 Insights）。
 8. `git add` 後交用戶 GitHub Desktop 推送（AI 不代推）。

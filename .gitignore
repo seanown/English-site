@@ -10,6 +10,10 @@ Thumbs.db
 preview.log
 *.local
 *.bak
+
+# graphify knowledge-graph output (local only)
+graphify-out/
+
 scripts/*
 # whitelist the maintained content-update tooling (deliverables)
 !scripts/make_event.py

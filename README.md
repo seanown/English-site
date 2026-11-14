@@ -29,8 +29,8 @@
 
 ## 上線前待補（軒哥）
 - [ ] 社交連結實際網址（contact / speaking 頁目前為 `#` 佔位）
-- [ ] 聯絡信箱確認（目前用 `hello@seanown.org`）
-- [ ] 表單接後端（三個表單皆 `onsubmit="return false;"` 假表單）
+- [x] 聯絡信箱確認：`hello@ownsean.com`（contact.html 已使用）
+- [ ] 表單接後端（contact.html 已接 Netlify Forms；其餘表單待確認）
 - [ ] 是否需多語言（目前英文站）
 
 ## 技術約束
