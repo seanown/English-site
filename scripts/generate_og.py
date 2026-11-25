@@ -43,6 +43,7 @@ PAGES = {
     "westlake-university": "A Research University, Built From Scratch",
     "data-valley": "Inside the Province's Data Backbone",
     "wukong-culture": "When a Videogame Becomes Cultural Diplomacy",
+    "mahbubani-49-questions": "Mahbubani in 49 Questions: The China–US Rivalry",
 }
 
 def wrap(text, font, max_w):
